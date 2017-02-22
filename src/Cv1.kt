@@ -2,92 +2,107 @@
  * Created by mseleng on 2/21/17.
  */
 
+import org.jfree.graphics2d.svg.SVGGraphics2D
 import java.awt.Color
-import java.io.File
-import java.lang.Math.abs
 
 fun main(args: Array<String>) {
-    val n = args[0].toIntOrNull() ?: 1
 //    collatz(mutableN)
 //    collatzWithMax(mutableN)
-//    squareBitmapImage(500, 500)
-//            .colorize { _, _ -> Color.CYAN.rgb }
-//            .writeToJPG(File("obrazok.jpg"))
-    val size = 10000
-    val blackR = Color.BLACK.red
-    val blackG = Color.BLACK.green
-    val blackB = Color.BLACK.blue
-    val whiteR = Color.WHITE.red
-    val whiteG = Color.WHITE.green
-    val whiteB = Color.WHITE.blue
-    val topLeft = Color.BLACK
-    val topRight = Color.RED
-    val bottomLeft = Color.BLUE
-    val bottomRight = Color.MAGENTA
-    bitmapImage(size, size)
-            .colorize { x, y ->
-                fwgcfcII(x, y, size, size, topLeft, topRight, bottomLeft, bottomRight)
-            }
-            .writeToJPG(File("gradient.jpg"))
-//    squareBitmapImage(size) //FIXME should not be divided by 2 here?
+    val size = 5000
+//    squareBitmapImage(size)
 //            .colorize { x, y ->
-//                topToBottomLinearGradientColorForCoordinates(x, y, size, size, bottomRight, bottomLeft)
+//                fourWayGradient(x, y, size, size, Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA)
 //            }
-//            .writeToJPG(File("LR_gradient.jpg"))
+//            .writeTo(fileWithName("gradient.png"))
+    val svg = SVGGraphics2D(size, size)
+    svg.paint = Color.CYAN
+    svg.fillRect(0, 0, 100, 100)
+    svg.paint = Color.YELLOW
+    svg.fillRect(100, 100, 200, 200)
+    svg.writeTo(svgFileWithName("cyanFile"))
 }
 
-fun leftToRightLinearGradientColorForCoordinates(x: Int, y: Int, width: Int, height: Int, left: Color, right: Color): Int {
-    return fwgcfcII(x, y, width, height, left, right, left, right)
-}
-
-fun topToBottomLinearGradientColorForCoordinates(x: Int, y: Int, width: Int, height: Int, top: Color, bottom: Color): Int {
-    return fwgcfcII(x, y, width, height, top, top, bottom, bottom)
-}
-
-fun fourWayGradientColorForCoordinates(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
-    val leftRightRatio = x.toDouble().div(width)
-    val topBottomRatio = y.toDouble().div(height)
-
-    val topLeftCoef = minOf((1 - leftRightRatio), (1 - topBottomRatio))
-    val topRightCoef = minOf(leftRightRatio, (1 - topBottomRatio))
-    val bottomLeftCoef = minOf((1 - leftRightRatio), topBottomRatio)
-    val bottomRightCoef = minOf(leftRightRatio, topBottomRatio)
-
-    val newR = topLeft.red * topLeftCoef + topRight.red * topRightCoef + bottomLeft.red * bottomLeftCoef + bottomRight.red * bottomRightCoef
-    val newG = topLeft.green * topLeftCoef + topRight.green * topRightCoef + bottomLeft.green * bottomLeftCoef + bottomRight.green * bottomRightCoef
-    val newB = topLeft.blue * topLeftCoef + topRight.blue * topRightCoef + bottomLeft.blue * bottomLeftCoef + bottomRight.blue * bottomRightCoef
-
-    return Color(newR.toInt(), newG.toInt(), newB.toInt()).rgb
-}
-
-fun fwgcfcII(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
-    val leftRightRatio = x.toDouble().div(width)
-    val topBottomRatio = y.toDouble().div(height)
-
-    abs(topLeft.red - topRight.red)
-    abs(topLeft.red - bottomLeft.red)
-    abs(bottomLeft.red - bottomRight.red)
-    abs(bottomRight.red - topRight.red)
-
-    val newRed =
-            ((leftRightRatio * abs(topLeft.red - topRight.red)) +
-            (leftRightRatio * abs(bottomLeft.red - bottomRight.red)) +
-            (topBottomRatio * abs(topRight.red - bottomRight.red)) +
-            (topBottomRatio * abs(topLeft.red - bottomLeft.red))) / 2
-
-    val newGreen =
-            ((leftRightRatio * abs(topLeft.green - topRight.green)) +
-                    (leftRightRatio * abs(bottomLeft.green - bottomRight.green)) +
-                    (topBottomRatio * abs(topRight.green - bottomRight.green)) +
-                    (topBottomRatio * abs(topLeft.green - bottomLeft.green))) / 2
-
-    val newBlue =
-            ((leftRightRatio * abs(topLeft.blue - topRight.blue)) +
-                    (leftRightRatio * abs(bottomLeft.blue - bottomRight.blue)) +
-                    (topBottomRatio * abs(topRight.blue - bottomRight.blue)) +
-                    (topBottomRatio * abs(topLeft.blue - bottomLeft.blue))) / 2
+fun fourWayGradient(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
+    val newRed = bilinearInterpolation(x, y, width, height, topLeft.red, topRight.red, bottomLeft.red, bottomRight.red)
+    val newGreen = bilinearInterpolation(x, y, width, height, topLeft.green, topRight.green, bottomLeft.green, bottomRight.green)
+    val newBlue = bilinearInterpolation(x, y, width, height, topLeft.blue, topRight.blue, bottomLeft.blue, bottomRight.blue)
 
     return Color(newRed.toInt(), newGreen.toInt(), newBlue.toInt()).rgb
+}
+
+/**
+ * Computes the value of the "point" defined by its coordinates ([x], [y]) using the bilinear interpolation:
+ *
+ *  tl        q     tr
+ *  +- - - - + - - -+
+ *  |        |
+ *  |          p    |
+ * y+        +
+ *  |               |
+ *  |        |
+ *  |               |
+ *  |        |r
+ *  +--------+------+
+ *  bl       x      br
+ *
+ * This function uses the [linearInterpolation] function three times:
+ *   1. computes the value q by interpolating the values [tl] and [tr]
+ *   2. computes the value r by interpolating the values [bl] and [br]
+ *   3. computes the result value p by interpolating the values q and r
+ *
+ * @param x the horizontal part of target point's coordinates
+ * @param y the vertical part of target point's coordinates
+ * @param width the width of the 2D grid
+ * @param height the height of the 2D grid
+ * @param tl the top-left value
+ * @param tr the top-right value
+ * @param bl the bottom-left value
+ * @param br the bottom-right value
+ * @return an interpolated value of the point with coordinates ([x], [y])
+ */
+fun bilinearInterpolation(x: Int, y: Int, width: Int, height: Int, tl: Int, tr: Int, bl: Int, br: Int): Double {
+    return linearInterpolation(
+            y,
+            height,
+            linearInterpolation(x, width, tl, tr),
+            linearInterpolation(x, width, bl, br))
+}
+
+/**
+ * Computes the value on the [x]-th position using the linear interpolation
+ *
+ * This function just calls the overloaded one (with the *Value parameters of type Double)
+ *
+ * @param x the position whose value we want to compute
+ * @param width the width of the interval
+ * @param firstValue the start value
+ * @param secondValue the target value
+ * @return an interpolated value of [x]
+ */
+fun linearInterpolation(x: Int, width: Int, firstValue: Int, secondValue: Int): Double {
+    return linearInterpolation(x, width, firstValue.toDouble(), secondValue.toDouble())
+}
+
+/**
+ * Computes the value on the [x]-th position using the linear interpolation:
+ *
+ * firstValue              secondValue
+ *     |-------------+----------|
+ *                   x
+ *
+ * @param x the position whose value we want to compute
+ * @param width the width of the interval
+ * @param firstValue the start value
+ * @param secondValue the target value
+ * @return an interpolated value of [x]
+ */
+fun linearInterpolation(x: Int, width: Int, firstValue: Double, secondValue: Double): Double {
+    val ratio = fraction(x, width)
+    return (1 - ratio) * firstValue + ratio * secondValue
+}
+
+fun fraction(part: Int, whole: Int): Double {
+    return part.toDouble().div(whole)
 }
 
 fun collatz(n: Int) {

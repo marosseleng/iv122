@@ -55,14 +55,14 @@ fun BufferedImage.colorize(colorFunction: (x: Int, y: Int) -> Int): BufferedImag
 }
 
 /**
- * An extension function that writes this [BufferedImage] instance to a specified [File] in the "jpg" format
+ * An extension function that writes this [BufferedImage] instance to a specified [File]
  *
  * @param file the target file
  * @return true iff save was successful, false otherwise
  * @see [writeToFile]
  */
-fun BufferedImage.writeToJPG(file: File): Boolean {
-    return writeToFile("jpg", file)
+fun BufferedImage.writeTo(file: File): Boolean {
+    return writeToFile(file.extension, file)
 }
 
 /**
@@ -71,7 +71,6 @@ fun BufferedImage.writeToJPG(file: File): Boolean {
  * @param fileFormat the target file's format
  * @param file the target file
  * @return true iff save was successful, false otherwise
- * @see [writeToJPG]
  */
 fun BufferedImage.writeToFile(fileFormat: String, file: File): Boolean {
     return ImageIO.write(this, fileFormat, file)
