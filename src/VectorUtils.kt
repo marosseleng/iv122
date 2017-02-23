@@ -26,6 +26,14 @@ class SVG(val width: Int, val height: Int) {
                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"$width\" height=\"$height\" text-rendering=\"auto\" shape-rendering=\"auto\">")
     }
 
+    fun horizontalFullWidthLine(y: Int, style: Style): SVG {
+        return line(0, y, width, y, style)
+    }
+
+    fun verticalFullHeightLine(x: Int, style: Style): SVG {
+        return line(x, 0, x, height, style)
+    }
+
     fun line(x1: Int, y1: Int, x2: Int, y2: Int, style: Style): SVG {
         builder.append("<line x1=\"$x1\" y1=\"$y1\" x2=\"$x2\" y2=\"$y2\" ${printStyle(style)}/>")
         return this
