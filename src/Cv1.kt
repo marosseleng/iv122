@@ -14,12 +14,41 @@ fun main(args: Array<String>) {
 //                fourWayGradient(x, y, size, size, Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA)
 //            }
 //            .writeTo(fileWithName("gradient.png"))
-    val svg = SVGGraphics2D(size, size)
-    svg.paint = Color.CYAN
-    svg.fillRect(0, 0, 100, 100)
-    svg.paint = Color.YELLOW
-    svg.fillRect(100, 100, 200, 200)
-    svg.writeTo(svgFileWithName("cyanFile"))
+//    val svg = SVGGraphics2D(size, size)
+//    svg.paint = Color.CYAN
+//    svg.fillRect(0, 0, 100, 100)
+//    svg.paint = Color.YELLOW
+//    svg.fillRect(100, 100, 200, 200)
+//    svg.writeTo(svgFileWithName("cyanFile"))
+//    SVG(1000, 1000)
+//            .circle(300, 300, 250, Style(Color.BLUE, 10, Color.RED))
+//            .line(0, 0, 800, 500, Style(Color.GREEN, 5, Color.RED))
+//            .polyline(Style(Color.YELLOW, 8), Pair(0, 0), Pair(100, 524), Pair(500, 999))
+//            .writeTo(svgFileWithName("rect"))
+    drawStar(200, 10)
+}
+
+fun drawStar(steps: Int, stepWidth: Int) {
+    val size = steps.times(2).times(stepWidth)
+    val blackLineStyle = Style(stroke = Color.BLACK, strokeWidth = 1)
+    val yellowRectStyle = Style(stroke = Color.GREEN, strokeWidth = 1, fill = Color.YELLOW)
+    val horizontal = Pair(Pair(0, steps.times(stepWidth)), Pair(steps.times(2).times(stepWidth), steps.times(stepWidth)))
+    val vertical = Pair(Pair(steps.times(stepWidth), 0), Pair(steps.times(stepWidth), steps.times(2).times(stepWidth)))
+    val star = SVG(size)
+            .rect(0, 0, size, size, yellowRectStyle)
+            .line(horizontal.first.first, horizontal.first.second, horizontal.second.first, horizontal.second.second, blackLineStyle)
+            .line(vertical.first.first, vertical.first.second, vertical.second.first, vertical.second.second, blackLineStyle)
+
+    for (x in 0..steps) {
+        val y1 = steps - (x + 1)
+        val y2 = steps + (x + 1)
+        star.line(x.times(stepWidth), steps.times(stepWidth), steps.times(stepWidth), y1.times(stepWidth), blackLineStyle)
+            .line(x.times(stepWidth), steps.times(stepWidth), steps.times(stepWidth), y2.times(stepWidth), blackLineStyle)
+//        for (y in steps downTo 0) {
+//
+//        }
+    }
+    star.writeTo(svgFileWithName("star"))
 }
 
 fun fourWayGradient(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
