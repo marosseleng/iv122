@@ -1,3 +1,5 @@
+package util
+
 import java.awt.image.BufferedImage
 import java.awt.image.BufferedImage.TYPE_INT_RGB
 import java.io.File

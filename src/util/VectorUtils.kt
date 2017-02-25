@@ -1,3 +1,5 @@
+package util
+
 import org.jfree.graphics2d.svg.SVGGraphics2D
 import java.awt.Color
 import java.io.File
@@ -22,7 +24,7 @@ class SVG(val width: Int, val height: Int) {
     init {
         builder.append(
                 "<?xml version=\"1.0\"?>" +
-                "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\">" +
+                "<!DOCTYPE svg PUBLIC \"-//W3C//DTD util.SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-util.SVG-20010904/DTD/svg10.dtd\">" +
                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"$width\" height=\"$height\" text-rendering=\"auto\" shape-rendering=\"auto\">")
     }
 

@@ -1,3 +1,4 @@
+import util.*
 import java.awt.Color
 
 fun main(args: Array<String>) {
@@ -93,16 +94,12 @@ fun linearInterpolation(x: Int, width: Int, firstValue: Double, secondValue: Dou
     return (1 - ratio) * firstValue + ratio * secondValue
 }
 
-fun fraction(part: Int, whole: Int): Double {
-    return part.toDouble().div(whole)
-}
-
 /**
  * Prints the "tangent" star. The result image can be seen in the file 'outputs/star.png'
  *
  * @param steps the number of lines of the half of the horizontal/vertical center line (the size of the result file is (2*[steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: `Style(stroke = Color.BLACK, strokeWidth = 1)`
+ * @param lineStyle the style of the line. Default: `util.Style(stroke = Color.BLACK, strokeWidth = 1)`
  * @param fileName the name of the result file WITHOUT '.svg'
  */
 fun printStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Color.BLACK, strokeWidth = 1), fileName: String = "star") {
@@ -128,7 +125,7 @@ fun printStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Colo
  *
  * @param steps the number of lines per frame edge (how many starting points are on the edge) (the size of the result file is ([steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: `Style(stroke = Color.BLACK, strokeWidth = 1)`
+ * @param lineStyle the style of the line. Default: `util.Style(stroke = Color.BLACK, strokeWidth = 1)`
  * @param fileName the name of the result file WITHOUT '.svg'
  */
 fun printInsideOutStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Color.BLACK, strokeWidth = 1), fileName: String = "weird-star") {
