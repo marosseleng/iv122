@@ -1,10 +1,6 @@
 import util.*
 import java.awt.Color
 
-/**
- * Created by mseleng on 2/23/17.
- */
-
 private typealias UlamSpiralCondition = (Int) -> Boolean
 
 fun main(args: Array<String>) {
@@ -16,6 +12,13 @@ fun main(args: Array<String>) {
     ulam(99999, { it.times(Math.E).rem(Math.PI) >= 2 }, "ulam-[*EmodPI>=2].png")
 }
 
+/**
+ * Creates the file containing the Ulam's spiral.
+ *
+ * @param n the maximum number we want to have in the spiral
+ * @param condition the condition of numbers coloring (if the number meets this condition, its pixel is colored)
+ * @param fileName the name of the resulting file
+ */
 fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
     val dimensions = computeDimensions(n)
     bitmapImage(dimensions.first, dimensions.second) {
@@ -24,9 +27,9 @@ fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
         var lastDirection: Direction? = null
         for (i in 1..n) {
             val rgb = if (condition(i)) { Color.BLACK.rgb } else { Color.WHITE.rgb }
-            val (coords, dir) = getNextMove(center, lastCoordinates, lastDirection)
-            lastCoordinates = coords
-            lastDirection = dir
+            val (coordinates, direction) = getNextMove(center, lastCoordinates, lastDirection)
+            lastCoordinates = coordinates
+            lastDirection = direction
             if (lastCoordinates.isOutOfRange(dimensions.first, dimensions.second)) {
                 continue
             }
@@ -35,6 +38,14 @@ fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
     }.writeTo(fileWithName(fileName))
 }
 
+/**
+ * Computes the minimum grid dimension for the given [n]
+ *
+ * The function tries to compute a square-like grid
+ *
+ * @param n the maximum number that we want to have in the spiral
+ * @return the dimensions of the grid
+ */
 fun computeDimensions(n: Int): Pair<Int, Int> {
     val x = Math.sqrt(n.toDouble())
     if (x.rem(1) == 0.toDouble()) {
@@ -48,12 +59,22 @@ fun computeDimensions(n: Int): Pair<Int, Int> {
     }
 }
 
-fun computeCenter(width: Int, height: Int): Coordinates {
-    return Coordinates(width.div(2), height.div(2))
-}
+/**
+ * Computes the coordinates for the center point (one containing the number 1)
+ *
+ * @param width the width of the grid
+ * @param height the height of the grid
+ * @return the center coordinates
+ */
+fun computeCenter(width: Int, height: Int) = Coordinates(width.div(2), height.div(2))
 
 /**
+ * Computes the next move (where to place the next number on a spiral)
  *
+ * @param center the coordinates of the center pixel (where number 1 is)
+ * @param lastCoordinates the coordinates of the place with the last number (if the current number is i, then this param represents the coordinates of (x-1))
+ * @param lastDirection the direction which we moved from the number (i-2) to (i-1)
+ * @return a pair containing the coordinates and the direction to the current number (i)
  */
 fun getNextMove(center: Coordinates, lastCoordinates: Coordinates?, lastDirection: Direction?): Pair<Coordinates, Direction?> {
     if (lastCoordinates == null) {
@@ -85,7 +106,7 @@ fun getNextDirection(a: Int, lastDirection: Direction?): Direction {
             }}
         else -> {
             if (a == 0) {
-                lastDirection.next()
+                lastDirection.counterClockwiseNext()
             } else {
                 lastDirection
             }
@@ -100,23 +121,9 @@ fun getNextDirection(a: Int, lastDirection: Direction?): Direction {
  * @param lastCoordinates the coordinates of the previous number
  * @return the coordinates for the next number
  */
-fun getNextCoordinates(direction: Direction, lastCoordinates: Coordinates): Coordinates {
-    return when (direction) {
+fun getNextCoordinates(direction: Direction, lastCoordinates: Coordinates) = when (direction) {
         Direction.EAST -> lastCoordinates.copy(x = lastCoordinates.x + 1)
         Direction.NORTH -> lastCoordinates.copy(y = lastCoordinates.y - 1)
         Direction.WEST -> lastCoordinates.copy(x = lastCoordinates.x - 1)
         Direction.SOUTH -> lastCoordinates.copy(y = lastCoordinates.y + 1)
-    }
-}
-enum class Direction {
-    EAST {
-        override fun next() = NORTH
-    }, NORTH {
-        override fun next() = WEST
-    }, WEST {
-        override fun next() = SOUTH
-    }, SOUTH {
-        override fun next() = EAST
-    };
-    abstract fun next(): Direction
 }

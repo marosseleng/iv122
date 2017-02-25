@@ -13,3 +13,16 @@ data class Coordinates(val x: Int, val y: Int) {
     }
 }
 
+enum class Direction {
+    EAST {
+        override fun counterClockwiseNext() = NORTH
+    }, NORTH {
+        override fun counterClockwiseNext() = WEST
+    }, WEST {
+        override fun counterClockwiseNext() = SOUTH
+    }, SOUTH {
+        override fun counterClockwiseNext() = EAST
+    };
+    abstract fun counterClockwiseNext(): Direction
+}
+
