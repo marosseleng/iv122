@@ -12,7 +12,7 @@ fun printFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft:
             .colorize { x, y ->
                 colorForCoordinates(x, y, size, size, topLeft, topRight, bottomLeft, bottomRight)
             }
-            .writeTo(fileWithName(fileName))
+            .writeTo(fileWithName(1, fileName))
 }
 
 /**
@@ -117,7 +117,7 @@ fun printStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Colo
                 .line(x2, size.div(2), size.div(2), y1, lineStyle)
                 .line(x2, size.div(2), size.div(2), y2, lineStyle)
     }
-    star.writeTo(svgFileWithName(fileName))
+    star.writeTo(svgFileWithName(1, fileName))
 }
 
 /**
@@ -141,5 +141,5 @@ fun printInsideOutStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stro
                 .line(x1, 0, size, y2, lineStyle)
                 .line(x2, size, size, y2, lineStyle)
     }
-    star.writeTo(svgFileWithName(fileName))
+    star.writeTo(svgFileWithName(1, fileName))
 }

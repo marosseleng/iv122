@@ -35,7 +35,7 @@ fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
             }
             setRGB(lastCoordinates.x, lastCoordinates.y, rgb)
         }
-    }.writeTo(fileWithName(fileName))
+    }.writeTo(fileWithName(1, fileName))
 }
 
 /**

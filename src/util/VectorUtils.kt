@@ -1,16 +1,11 @@
 package util
 
-import org.jfree.graphics2d.svg.SVGGraphics2D
 import java.awt.Color
 import java.io.File
 
 /**
  * Created by mseleng on 2/22/17.
  */
-
-fun SVGGraphics2D.writeTo(file: File) {
-    file.writeText(this.svgDocument)
-}
 
 data class Style(val stroke: Color? = null, val strokeWidth: Int? = null, val fill: Color? = null)
 
