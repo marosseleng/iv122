@@ -1,5 +1,8 @@
+import org.jfree.data.xy.XYSeries
 import util.Chart
 import util.fileWithName
+import java.awt.Color
+import java.awt.Paint
 
 fun main(args: Array<String>) {
     collatz(8000)
@@ -15,7 +18,7 @@ fun main(args: Array<String>) {
  * @param n the maximum number to show on the graph ((1..n) interval will be shown)
  */
 fun collatz(n: Int) {
-    val resultMap = mutableMapOf<Int, Int>()
+    val result = XYSeries("")
     for (number in 1..n) {
         var mutableNumber = number
         var steps = 1
@@ -27,9 +30,9 @@ fun collatz(n: Int) {
             }
             steps++
         }
-        resultMap.put(number, steps)
+        result.add(number, steps)
     }
-    Chart("", resultMap).writeToPNG(fileWithName(1, "collatz.png"), 1000, 1000)
+    Chart("", mapOf(Color.BLACK to result)).writeToPNG(fileWithName(1, "collatz.png"), 1000, 1000)
 }
 
 /**
@@ -41,7 +44,7 @@ fun collatz(n: Int) {
  * @param n the maximum number to show on the graph ((1..n) interval will be shown)
  */
 fun collatzWithMax(n: Int) {
-    val resultMap = mutableMapOf<Int, Int>()
+    val result = XYSeries("")
     for (number in 1..n) {
         var mutableNumber = number
         var max = mutableNumber
@@ -53,7 +56,7 @@ fun collatzWithMax(n: Int) {
             }
             max = maxOf(mutableNumber, max)
         }
-        resultMap.put(number, max)
+        result.add(number, max)
     }
-    Chart("", resultMap).writeToPNG(fileWithName(1, "collatz-max.png"), 1000, 1000)
+    Chart("", mapOf(Color.BLACK to result)).writeToPNG(fileWithName(1, "collatz-max.png"), 1000, 1000)
 }

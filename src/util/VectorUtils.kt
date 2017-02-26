@@ -89,10 +89,7 @@ class SVG(val width: Int, val height: Int) {
         return if (stroke == null) {
             "stroke:none"
         } else {
-            val r = stroke.red
-            val g = stroke.green
-            val b = stroke.blue
-            "stroke:rgb($r,$g,$b)"
+            "stroke:rgb(${stroke.red},${stroke.green},${stroke.blue})"
         }
     }
 
@@ -108,10 +105,7 @@ class SVG(val width: Int, val height: Int) {
         return if (fill == null) {
             "fill:none"
         } else {
-            val r = fill.red
-            val g = fill.green
-            val b = fill.blue
-            "fill:rgb($r,$g,$b)"
+            "fill:rgb(${fill.red},${fill.green},${fill.blue})"
         }
     }
 

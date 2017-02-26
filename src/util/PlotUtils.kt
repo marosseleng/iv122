@@ -2,28 +2,29 @@ package util
 
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartUtilities
-import org.jfree.chart.JFreeChart
-import org.jfree.data.general.Dataset
 import org.jfree.data.xy.XYSeries
 import org.jfree.data.xy.XYSeriesCollection
+import java.awt.Paint
 import java.io.File
 
 
 /**
  * Created by mseleng on 2/22/17.
  */
-class Chart<X: Number, out Y: Number>(chartName: String, data: Map<X, Y>) {
-    private val dataSet: Dataset
-    private val chart: JFreeChart
+class Chart(chartName: String, data: Map<Paint, XYSeries>, showLegend: Boolean = false) {
+    private val dataSet = XYSeriesCollection()
+    private val chart = ChartFactory.createScatterPlot(chartName, "x", "y", dataSet)
 
     init {
-        val series = XYSeries("")
-        for ((x, y) in data) {
-            series.add(x, y)
+        if (!showLegend) {
+            chart.removeLegend()
         }
-        dataSet = XYSeriesCollection(series)
-        chart = ChartFactory.createScatterPlot(chartName, "x", "y", dataSet)
-        chart.removeLegend()
+        var i = 0
+        for ((x, y) in data) {
+            dataSet.addSeries(y)
+            chart.xyPlot.renderer.setSeriesPaint(i, x)
+            i = i.inc()
+        }
     }
 
     fun writeToPNG(file: File, width: Int, height: Int) {
