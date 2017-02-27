@@ -1,4 +1,4 @@
-package util
+package com.github.mseleng.iv122.util
 
 /**
  * Created by mseleng on 2/25/17.
