@@ -1,6 +1,11 @@
+package com.github.mseleng.iv122.assignment1
+
 import util.*
 import java.awt.Color
 
+/**
+ * @suppress
+ */
 fun main(args: Array<String>) {
     printFourWayGradient(2500, Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA)
     printStar(28, 50)
@@ -52,15 +57,25 @@ fun colorForCoordinates(x: Int, y: Int, width: Int, height: Int, topLeft: Color,
  * Computes the value of the "point" defined by its coordinates ([x], [y]) using the bilinear interpolation:
  *
  *  tl        q     tr
+ *
  *  +- - - - + - - -+
+ *
  *  |        |
+ *
  *  |          p    |
+ *
  * y+        +
+ *
  *  |               |
+ *
  *  |        |
+ *
  *  |               |
+ *
  *  |        |r
+ *
  *  +--------+------+
+ *
  *  bl       x      br
  *
  * This function uses the [linearInterpolation] function three times:
@@ -90,7 +105,9 @@ fun bilinearInterpolation(x: Int, y: Int, width: Int, height: Int, tl: Int, tr: 
  * Computes the value on the [x]-th position using the linear interpolation:
  *
  * firstValue              secondValue
+ *
  *     |-------------+----------|
+ *
  *                   x
  *
  * @param x the position whose value we want to compute
