@@ -7,6 +7,16 @@ fun main(args: Array<String>) {
     printInsideOutStar(28, 50)
 }
 
+/**
+ * Prints the "4-way" gradient (using 4 colors in the edges of a 2D square grid)
+ *
+ * @param size the size of a grid
+ * @param topLeft the [Color] in the top-left corner
+ * @param topRight the [Color] in the top-right corner
+ * @param bottomLeft the [Color] in the bottom-left corner
+ * @param bottomRight the [Color] in the bottom-right corner
+ * @param fileName the name of the output file (default "gradient.png")
+ */
 fun printFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color, fileName: String = "gradient.png") {
     squareBitmapImage(size)
             .colorize { x, y ->

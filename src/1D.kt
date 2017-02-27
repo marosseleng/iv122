@@ -27,7 +27,7 @@ fun euclidMod(maxX: Int, maxY: Int) {
     }
     Chart("The number of steps needed to compute GCD of two numbers using the Euclid's modulus algorithm.",
             result.mapKeys { it.key.getPaint() }, true)
-            .writeToPNG(fileWithName(1, "euclid[modulus].png"), 2000, 2000)
+            .writeToPNG(fileWithName(1, "euclid-[modulus].png"), 2000, 2000)
 }
 
 private fun euclidMod_recursive(x: Int, y: Int): EuclidSolution {
@@ -54,7 +54,7 @@ fun euclidSub(maxX: Int, maxY: Int) {
     }
     Chart("The number of steps needed to compute GCD of two numbers using the Euclid's subtraction algorithm.",
             result.mapKeys { it.key.getPaint() }, true)
-            .writeToPNG(fileWithName(1, "euclid[subtraction].png"), 2000, 2000)
+            .writeToPNG(fileWithName(1, "euclid-[subtraction].png"), 2000, 2000)
 }
 
 private fun euclidSub_recursive(x: Int, y: Int): EuclidSolution {
