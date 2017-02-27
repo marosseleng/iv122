@@ -1,8 +1,13 @@
+package com.github.mseleng.iv122.assignment1
+
 import util.*
 import java.awt.Color
 
 private typealias UlamSpiralCondition = (Int) -> Boolean
 
+/**
+ * @suppress
+ */
 fun main(args: Array<String>) {
     // display all x such that (x is prime)
     ulam(99999, Int::isPrime, "ulam-[prime].png")

@@ -1,3 +1,5 @@
+package com.github.mseleng.iv122.assignment1
+
 import org.jfree.data.xy.XYSeries
 import util.Chart
 import util.fileWithName
@@ -6,6 +8,9 @@ import java.awt.Paint
 
 /**
  * Created by mseleng on 2/23/17.
+ */
+/**
+ * @suppress
  */
 fun main(args: Array<String>) {
     euclidMod(500, 500)
