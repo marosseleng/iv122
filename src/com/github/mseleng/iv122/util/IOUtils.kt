@@ -1,4 +1,4 @@
-package util
+package com.github.mseleng.iv122.util
 
 import java.io.File
 

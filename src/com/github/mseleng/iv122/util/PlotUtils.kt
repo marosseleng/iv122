@@ -1,4 +1,4 @@
-package util
+package com.github.mseleng.iv122.util
 
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartUtilities
