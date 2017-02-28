@@ -3,10 +3,6 @@ package com.github.mseleng.iv122.util
 import java.awt.Color
 import java.io.File
 
-/**
- * Created by mseleng on 2/22/17.
- */
-
 data class Style(val stroke: Color? = null, val strokeWidth: Int? = null, val fill: Color? = null)
 
 class SVG(val width: Int, val height: Int) {
