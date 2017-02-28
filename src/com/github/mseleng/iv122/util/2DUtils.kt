@@ -1,9 +1,21 @@
 package com.github.mseleng.iv122.util
 
 /**
- * Created by mseleng on 2/25/17.
+ * Data class representing the coordinates of a single point in the 2D space
+ *
+ * @param x the horizontal part
+ * @param y the vertical part
+ * @constructor creates the coordinates with the given values
  */
 data class Coordinates(val x: Int, val y: Int) {
+
+    /**
+     * Says whether this coordinates are out of the given range
+     *
+     * @param width the width of a 2D grid
+     * @param height the height of a 2D grid
+     * @return true iff this coordinates are out of the given range, false otherwise
+     */
     fun isOutOfRange(width: Int, height: Int): Boolean {
         return (x >= width || y >= height || x < 0 || y < 0)
     }
@@ -13,6 +25,9 @@ data class Coordinates(val x: Int, val y: Int) {
     }
 }
 
+/**
+ * Enum representing directions in a 2D grid
+ */
 enum class Direction {
     EAST {
         override fun counterClockwiseNext() = NORTH

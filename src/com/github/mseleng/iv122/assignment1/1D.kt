@@ -1,8 +1,8 @@
 package com.github.mseleng.iv122.assignment1
 
+import com.github.mseleng.iv122.util.Chart
+import com.github.mseleng.iv122.util.fileWithName
 import org.jfree.data.xy.XYSeries
-import util.Chart
-import util.fileWithName
 import java.awt.Color
 import java.awt.Paint
 

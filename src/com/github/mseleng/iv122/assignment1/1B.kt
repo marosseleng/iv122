@@ -1,6 +1,6 @@
 package com.github.mseleng.iv122.assignment1
 
-import util.*
+import com.github.mseleng.iv122.util.*
 import java.awt.Color
 
 private typealias UlamSpiralCondition = (Int) -> Boolean
