@@ -6,12 +6,6 @@ import java.io.File
 import javax.imageio.ImageIO
 
 /**
- * This file contains utility functions to work with the bitmap graphics (using the BufferedImage)
- *
- * @author Maroš Šeleng
- */
-
-/**
  * Creates an instance of [BufferedImage] of the square shape
  *
  * **An instance uses the RGB coloring**

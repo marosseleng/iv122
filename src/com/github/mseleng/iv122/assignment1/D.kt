@@ -1,20 +1,21 @@
 package com.github.mseleng.iv122.assignment1
 
+import com.github.mseleng.iv122.util.Chart
+import com.github.mseleng.iv122.util.fileWithName
 import org.jfree.data.xy.XYSeries
-import util.Chart
-import util.fileWithName
 import java.awt.Color
 import java.awt.Paint
 
-/**
- * Created by mseleng on 2/23/17.
- */
 /**
  * @suppress
  */
 fun main(args: Array<String>) {
     euclidMod(500, 500)
     euclidSub(500, 500)
+}
+
+fun gcd(first: Int, second: Int): Int {
+    return euclidMod_recursive(first, second).gcd
 }
 
 fun euclidMod(maxX: Int, maxY: Int) {
