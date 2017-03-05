@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>bisection - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="index.html">com.github.mseleng.iv122.util</a>&nbsp;/&nbsp;<a href=".">bisection</a><br/>
+<br/>
+<h1>bisection</h1>
+<a name="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))"></a>
+<code><span class="keyword">fun </span><span class="identifier">bisection</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/num">num</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.00001<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/validate">validate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Double</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Approximates the number using bisection</p>
+<p>As this function cannot take a parameter representing the number that we want to approximate (because we do not know
+the value of that number, that's why we want to approximate) one should provide the "validation function", which takes
+the actual approximated number as a parameter and test whether that "validated" value is near enough to the target.</p>
+<p>Let's say, we want to approximate the square root of 5 (√5); we pass 5 to the <a href="bisection.html#com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/num">num</a> parameter and the squaring function
+to the <a href="bisection.html#com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/validate">validate</a> parameter</p>
+<h3>Parameters</h3>
+
+<p><a name="num"></a>
+<code>num</code> - the "target" number; This is not he number that we want to approximate; this is the number,
+close to which we want to get by applying <a href="bisection.html#com.github.mseleng.iv122.util$bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Function1((kotlin.Double, )))/validate">validate</a> on the approximated one
+<p><a name="from"></a>
+<code>from</code> - the lower bound of the interval
+<p><a name="to"></a>
+<code>to</code> - the upper bound of the interval
+<p><a name="eps"></a>
+<code>eps</code> - the desired accuracy (default = 0.000001)
+<p><a name="validate"></a>
+<code>validate</code> - the validation function
+<p><strong>Return</strong><br/>
+null, iff the value with the given accuracy could not be found within the given interval, or the approximated value otherwise</p>
+</BODY>
+</HTML>
