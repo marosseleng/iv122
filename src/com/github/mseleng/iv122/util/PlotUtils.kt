@@ -2,11 +2,11 @@ package com.github.mseleng.iv122.util
 
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartUtilities
+import org.jfree.data.category.CategoryDataset
 import org.jfree.data.xy.XYSeries
 import org.jfree.data.xy.XYSeriesCollection
 import java.awt.Paint
 import java.io.File
-
 
 /**
  * This class is used as a simple facade above the jfreechart library, providing simple chart actions

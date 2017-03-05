@@ -7,14 +7,15 @@ import java.awt.Color
 import java.awt.Paint
 
 /**
- * Created by mseleng on 2/23/17.
- */
-/**
  * @suppress
  */
 fun main(args: Array<String>) {
     euclidMod(500, 500)
     euclidSub(500, 500)
+}
+
+fun gcd(first: Int, second: Int): Int {
+    return euclidMod_recursive(first, second).gcd
 }
 
 fun euclidMod(maxX: Int, maxY: Int) {
