@@ -21,4 +21,4 @@ java -jar outputs/iv122.jar <path-to-existent-output-dir>
     
 ```
 
-[SEE DOCS HERE](docs/iv122/index.md)
+[SEE DOCS HERE](javadoc/iv122/index.md)
