@@ -1,32 +1,23 @@
 package com.github.mseleng.iv122.assignment1
 
-import com.github.mseleng.iv122.util.*
+import com.github.mseleng.iv122.util.Coordinates
+import com.github.mseleng.iv122.util.Direction
+import com.github.mseleng.iv122.util.bitmapImage
 import java.awt.Color
+import java.awt.image.BufferedImage
 
 private typealias UlamSpiralCondition = (Int) -> Boolean
 
 /**
- * @suppress
- */
-fun main(args: Array<String>) {
-    // display all x such that (x is prime)
-    ulam(99999, Int::isPrime, "ulam-[prime].png")
-    // display all x such that (x mod 5 > 1)
-    ulam(99999, { it.rem(5) > 1 }, "ulam-[mod5>1].png")
-    // display all x such that (((x * E) mod PI) >= 2)
-    ulam(99999, { it.times(Math.E).rem(Math.PI) >= 2 }, "ulam-[*EmodPI>=2].png")
-}
-
-/**
- * Creates the file containing the Ulam's spiral.
+ * Returns a file containing the Ulam's spiral.
  *
  * @param n the maximum number we want to have in the spiral
  * @param condition the condition of numbers coloring (if the number meets this condition, its pixel is colored)
- * @param fileName the name of the resulting file
+ * @return an image containing Ulam's spiral
  */
-fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
+fun getUlamsSpiral(n: Int, condition: UlamSpiralCondition): BufferedImage {
     val dimensions = computeDimensions(n)
-    bitmapImage(dimensions.first, dimensions.second) {
+    return bitmapImage(dimensions.first, dimensions.second) {
         val center = computeCenter(dimensions.first, dimensions.second)
         var lastCoordinates: Coordinates? = null
         var lastDirection: Direction? = null
@@ -38,9 +29,9 @@ fun ulam(n: Int, condition: UlamSpiralCondition, fileName: String) {
             if (lastCoordinates.isOutOfRange(dimensions.first, dimensions.second)) {
                 continue
             }
-            setRGB(lastCoordinates.x, lastCoordinates.y, rgb)
+            setRGB(lastCoordinates.x.toInt(), lastCoordinates.y.toInt(), rgb)
         }
-    }.writeTo(fileWithName(1, fileName))
+    }
 }
 
 /**
@@ -88,7 +79,7 @@ fun getNextMove(center: Coordinates, lastCoordinates: Coordinates?, lastDirectio
     // we need to compute the coordinates of the last point as if the center was [0,0]
     val centeredCoordinates = lastCoordinates.minus(center)
     val a = Math.abs(centeredCoordinates.x) - Math.abs(centeredCoordinates.y)
-    val newDirection = getNextDirection(a, lastDirection)
+    val newDirection = getNextDirection(a.toInt(), lastDirection)
     val newCoordinates = getNextCoordinates(newDirection, lastCoordinates)
     return Pair(newCoordinates, newDirection)
 }

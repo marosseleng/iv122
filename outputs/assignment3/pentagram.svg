@@ -1,0 +1,9 @@
+<?xml version="1.0"?><!DOCTYPE svg PUBLIC "-//W3C//DTD util.SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-util.SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" text-rendering="auto" shape-rendering="auto">
+    <line x1="500.0" y1="0.0" x2="904.51" y2="293.89" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+    <line x1="904.51" y1="293.89" x2="750.0" y2="769.42" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+    <line x1="750.0" y1="769.42" x2="250.0" y2="769.42" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+    <line x1="250.0" y1="769.42" x2="95.49000000000001" y2="293.89" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+    <line x1="95.49000000000001" y1="293.89" x2="500.0" y2="0.0" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+    <line x1="500.0" y1="0.0" x2="745.16" y2="754.52" style="stroke-width:1;stroke:rgb(0,0,0);fill:none"/>
+</svg>

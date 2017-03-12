@@ -1,17 +1,8 @@
 package com.github.mseleng.iv122.assignment1
 
 import com.github.mseleng.iv122.util.Chart
-import com.github.mseleng.iv122.util.fileWithName
 import org.jfree.data.xy.XYSeries
 import java.awt.Color
-
-/**
- * @suppress
- */
-fun main(args: Array<String>) {
-    collatz(8000)
-    collatzWithMax(8000)
-}
 
 /**
  * Creates a chart containing data about Collatz's sequence
@@ -21,7 +12,7 @@ fun main(args: Array<String>) {
  *
  * @param n the maximum number to show on the graph ((1..n) interval will be shown)
  */
-fun collatz(n: Int) {
+fun collatz(n: Int): Chart {
     val result = XYSeries("")
     for (number in 1..n) {
         var mutableNumber = number
@@ -36,7 +27,7 @@ fun collatz(n: Int) {
         }
         result.add(number, steps)
     }
-    Chart("", mapOf(Color.BLACK to result)).writeToPNG(fileWithName(1, "collatz.png"), 1000, 1000)
+    return Chart("", mapOf(Color.BLACK to result))
 }
 
 /**
@@ -47,7 +38,7 @@ fun collatz(n: Int) {
  *
  * @param n the maximum number to show on the graph ((1..n) interval will be shown)
  */
-fun collatzWithMax(n: Int) {
+fun collatzWithMax(n: Int): Chart {
     val result = XYSeries("")
     for (number in 1..n) {
         var mutableNumber = number
@@ -62,5 +53,5 @@ fun collatzWithMax(n: Int) {
         }
         result.add(number, max)
     }
-    Chart("", mapOf(Color.BLACK to result)).writeToPNG(fileWithName(1, "collatz-max.png"), 1000, 1000)
+    return Chart("", mapOf(Color.BLACK to result))
 }

@@ -1,49 +1,30 @@
 package com.github.mseleng.iv122.util
 
-import com.github.mseleng.iv122.assignment1.gcd
-
-/**
- * A typealias representing the "decimal fraction", in other words numbers like 3(27/29)
- *
- * If we take the PI as 3.14, we could write 3.14 == 314/100 == 157/50 == 3(7/50)
- *
- * This "type" just helps us to prevent stack overflow when doing high exponentiations like 2^157
- */
-typealias DecimalFraction = Pair<Int, Fraction>
-
-/**
- * A class representing rational numbers as the fraction in the format [part]/[whole]
- *
- * E.g.: 3.14 == 157/50
- *
- * @param part
- * @param whole
- * @constructor creates a rational number in the format of a fraction
- */
-data class Fraction(val part: Int, val whole: Int) {
-    /**
-     * Returns this rational number represented as a decimal fraction (when possible)
-     *
-     * If the number is less than one, this method returns something like this 0([part]/[whole])
-     *
-     * @return the [DecimalFraction] representing this rational number
-     */
-    fun toDecimalFraction(): DecimalFraction {
-        if (part < whole) {
-            return DecimalFraction(0, this)
-        } else {
-            val int = part.div(whole)
-            return DecimalFraction(int, copy(part = part.minus(int.times(whole))))
-        }
-    }
-}
-
 /**
  * Says whether this is a prime number or not.
  *
  * @return true iff this is a prime number, false otherwise
  */
-fun Int.isPrime() = this > 1 && (2..(this.div(2))).all{ this.rem(it) != 0 }
+fun Int.isPrime() = this > 1 && (2..(this.div(2))).all { this.rem(it) != 0 }
+
+/**
+ * Computes the factorial of this number
+ */
+fun Int.factorial(): Int {
+    if (this <= 1) {
+        return 1
+    }
+    var result = 1
+    for (i in 1..this) {
+        result *= i
+    }
+    return result
+}
+
+/**
+ * @suppress
+ */
+fun Int.pow(exp: Int) = pow(exp.toDouble()).toInt()
 
 /**
  * Computes the fraction for the given part and the whole
@@ -53,22 +34,6 @@ fun Int.isPrime() = this > 1 && (2..(this.div(2))).all{ this.rem(it) != 0 }
  * @return a double = [part].div([whole])
  */
 fun fraction(part: Int, whole: Int) = part.toDouble().div(whole)
-
-/**
- * Says whether this and [other] differ at most by [eps]
- *
- * @param other
- * @param eps
- * @return true, iff this and [other] differ at most by [eps], false otherwise
- */
-fun Double.isAlmostEqual(other: Double, eps: Double): Boolean = Math.abs(this.minus(other)) <= eps
-
-/**
- * Returns the square of this
- *
- * @return the square
- */
-fun Double.square(): Double = times(this)
 
 /**
  * Returns the square of this
@@ -91,23 +56,23 @@ fun Int.pow(exp: Double) = toDouble().pow(exp)
  * @param exp the integral exponent
  * @return the [exp]-th power of this
  */
-fun Int.integralPow(exp: Int) = toDouble().integralPow(exp).toInt()
+fun Int.integralPow(exp: Int) = toDouble().integralPow(exp.toLong()).toInt()
 
 /**
- * Returns the **simplified** fraction of this
+ * Says whether this and [other] differ at most by [eps]
  *
- * 3.14.toFraction() = 157/50
+ * @param other
+ * @param eps
+ * @return true, iff this and [other] differ at most by [eps], false otherwise
  */
-fun Double.toFraction(): Fraction {
-    val s = toString()
-    val numerator = s.substringBefore('.').plus(s.substringAfter('.')).toInt()
-    var denominator = 1
-    for (i in 1..s.substringAfter('.').length) {
-        denominator *= 10
-    }
-    val gcd = gcd(numerator, denominator)
-    return Fraction(numerator.div(gcd), denominator.div(gcd))
-}
+fun Double.isAlmostEqual(other: Double, eps: Double): Boolean = Math.abs(this.minus(other)) <= eps
+
+/**
+ * Returns the square of this
+ *
+ * @return the square
+ */
+fun Double.square(): Double = times(this)
 
 /**
  * Returns true iff this decimal number has decimal part == 0
@@ -124,14 +89,7 @@ fun Double.isWhole(): Boolean = rem(1) == 0.toDouble()
  * @param exp a (potentionally) decimal exponent
  * @return the [exp]-th power of this
  */
-fun Double.pow(exp: Double): Double {
-    if (exp.isWhole()) {
-        return integralPow(exp.toInt())
-    } else {
-        val (int, frac) = exp.toFraction().toDecimalFraction()
-        return integralPow(int) * (nthRoot_approx_bisection(integralPow(frac.part), frac.whole) ?: 0.0)
-    }
-}
+fun Double.pow(exp: Double) = com.github.mseleng.iv122.assignment2.rationalPower_1(this, exp)
 
 /**
  * Returns the [exp]-th power of this number, when the exponent is an integer
@@ -139,9 +97,9 @@ fun Double.pow(exp: Double): Double {
  * @param exp the integral exponent
  * @return the [exp]-th power of this
  */
-fun Double.integralPow(exp: Int): Double {
+fun Double.integralPow(exp: Long): Double {
     return when {
-        exp == 0 -> {
+        exp == 0L -> {
             1.toDouble()
         }
         exp > 0 -> {
@@ -166,7 +124,7 @@ fun Double.integralPow(exp: Int): Double {
  * @param eps the desired accuracy (default = 0.000001)
  * @return see [bisection]
  */
-fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.floor(num.div(2.0)).plus(1), eps: Double = 0.00001)
+fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.floor(num.div(2.0)).plus(1), eps: Double = 0.0001)
         = bisection(num, from, to, eps, Double::square)
 
 /**
@@ -179,7 +137,7 @@ fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.flo
  * @param eps the desired accuracy (default = 0.000001)
  * @return see [bisection]
  */
-fun nthRoot_approx_bisection(num: Double, order: Int, from: Double = 0.0, to: Double = Math.floor(num.div(order)).plus(1), eps: Double = 0.00001)
+fun nthRoot_approx_bisection(num: Double, order: Long, from: Double = 0.0, to: Double = Math.floor(num.div(order)).plus(1), eps: Double = 0.0001)
         = bisection(num, from, to, eps) { it.integralPow(order) }
 
 /**
@@ -201,9 +159,6 @@ fun nthRoot_approx_bisection(num: Double, order: Int, from: Double = 0.0, to: Do
  * @return null, iff the value with the given accuracy could not be found within the given interval, or the approximated value otherwise
  */
 fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double? {
-    if (to < from) {
-        return null
-    }
     val mid: Double = from.plus(to).div(2)
     val midValidated = validate(mid)
     if (midValidated.isAlmostEqual(num, eps)) {
@@ -213,4 +168,53 @@ fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, vali
     } else {
         return bisection(num, from, mid.minus(eps), eps, validate)
     }
+}
+
+/**
+ * Approximates the Euler's number
+ *
+ * e = SUM(n in [0,inf]) (1/n!)
+ *
+ * @param eps the desired accuracy (default = 0.000001)
+ * @return the approximated value of e
+ */
+fun e(eps: Double = 0.000001): Double {
+    var n = 0
+    var fact = 1
+    var result = 0.0
+
+    do {
+        val last = result
+        result += 1.0 / fact
+        n = n.inc()
+        fact *= n
+    } while (Math.abs(result - last) > eps)
+
+    return result
+}
+
+/**
+ * Approximates the natural logarithm of the given [x]
+ *
+ * ln(x) = 2 * SUM(n in [0,inf]) ((1/(2n+1)) * (((x-1)/(x+1))^(2n+1)))
+ * WIKI: https://en.wikipedia.org/wiki/Logarithm#Calculation
+ *
+ * @param x the number, whose logarithm we are approximating
+ * @param eps the desired accuracy (default = 0.000001)
+ * @return the natural logarithm of [x]
+ */
+fun ln(x: Double, eps: Double = 0.000001): Double {
+    var n = 1
+    val secondPart = x.minus(1) / (x.plus(1))
+    var result = secondPart
+
+    do {
+        val last = result
+        val first = 1.00 / (2.times(n).plus(1))
+        val second = secondPart.integralPow(2L.times(n).plus(1))
+        result += first.times(second)
+        n = n.inc()
+    } while (Math.abs(2 * result - 2 * last) > eps)
+
+    return 2.times(result)
 }
