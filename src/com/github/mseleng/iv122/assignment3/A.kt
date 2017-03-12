@@ -16,9 +16,9 @@ fun main(args: Array<String>) {
     turtle.forward(100)
     turtle.right(120.0)
     turtle.forward(100)
-    SVG().lines(turtle.lines).writeTo(fileWithName(3, "turtle.svg"))
+    SVG().lines(turtle.lines).writeTo(fileWithName("outputs", 3, "turtle.svg"))
 
-    SVG().lines(pentagram(500)).writeTo(fileWithName(3, "pentagram.svg"))
+    SVG().lines(pentagram(500)).writeTo(fileWithName("outputs", 3, "pentagram.svg"))
 }
 
 fun pentagram(length: Int): List<Line> {

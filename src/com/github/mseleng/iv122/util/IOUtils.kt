@@ -5,17 +5,20 @@ import java.io.File
 /**
  * Returns an instance of [File] somewhere in the `/outputs/` directory
  *
+ * @param rootDirName the relative (on the classpath) or absolute path to the root output directory. Must be an existent directory!!
  * @param assignmentNo the number of an assignment (the file will be located inside '/outputs/assignment[assignmentNo]/` directory
  * @param name the name of the desired file **WITH** the extension (eg. something.png, nothing.xml, etc.)
  * @return the desired file
  */
-fun fileWithName(assignmentNo: Int, name: String): File {
-    return File("outputs").resolve("assignment$assignmentNo").resolve(name)
+fun fileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): File {
+    val subdirectory = File(rootDirName).resolve("assignment$assignmentNo")
+    subdirectory.mkdir()
+    return subdirectory.resolve(name)
 }
 
 /**
  * @suppress
  */
-fun svgFileWithName(assignmentNo: Int, name: String): File {
-    return fileWithName(assignmentNo, "$name.svg")
+fun svgFileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): File {
+    return fileWithName(rootDirName, assignmentNo, "$name.svg")
 }

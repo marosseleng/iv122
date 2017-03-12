@@ -3,7 +3,7 @@ package com.github.mseleng.iv122.assignment2
 import com.github.mseleng.iv122.util.factorial
 import com.github.mseleng.iv122.util.pow
 
-fun run() {
+fun run(args: Array<String>) {
     //A
     val input = listOf(1, 2, 3, 4, 5)
     val k = 3
