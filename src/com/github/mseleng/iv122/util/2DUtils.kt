@@ -1,5 +1,8 @@
 package com.github.mseleng.iv122.util
 
+import java.math.BigDecimal
+import java.math.RoundingMode
+
 /**
  * Data class representing the coordinates of a single point in the 2D space
  *
@@ -7,7 +10,9 @@ package com.github.mseleng.iv122.util
  * @param y the vertical part
  * @constructor creates the coordinates with the given values
  */
-data class Coordinates(val x: Int, val y: Int) {
+data class Coordinates(val x: Double, val y: Double) {
+
+    constructor(x: Int, y: Int) : this(x.toDouble(), y.toDouble())
 
     /**
      * Says whether this coordinates are out of the given range
@@ -22,6 +27,21 @@ data class Coordinates(val x: Int, val y: Int) {
 
     operator fun minus(other: Coordinates): Coordinates {
         return Coordinates(x.minus(other.x), y.minus(other.y))
+    }
+
+    operator fun times(other: Int): Coordinates = copy(x.times(other), y.times(other))
+    operator fun times(other: Double): Coordinates = copy(x.times(other), y.times(other))
+
+    operator fun plus(other: Coordinates?) = copy(x.plus(other?.x ?: 0.0), y.plus(other?.y ?: 0.0))
+
+    /**
+     * Trims this decimal number, so there is no scientific exponentiation in toString()
+     *
+     * @param n the desired scale
+     * @return this number scaled
+     */
+    fun trimToNDecimalPoints(n: Int): Coordinates {
+        return copy(BigDecimal(x).setScale(n, RoundingMode.HALF_EVEN).toDouble(), BigDecimal(y).setScale(n, RoundingMode.HALF_EVEN).toDouble())
     }
 }
 

@@ -1,51 +1,89 @@
 package com.github.mseleng.iv122.assignment1
 
 import com.github.mseleng.iv122.util.Chart
-import com.github.mseleng.iv122.util.fileWithName
 import org.jfree.data.xy.XYSeries
 import java.awt.Color
 import java.awt.Paint
 
 /**
+ * Class representing tuple of two numbers (gcd and the number of steps needed to get it)
+ *
+ * @param gcd the resulting greatest common divisor
+ * @param steps the number of steps needed to calculate that gcd
+ * @constructor creates a simple tuple/pair
+ */
+data class EuclidSolution(val gcd: Long, val steps: Int)
+
+/**
+ * Computes the greatest common divisor of two given integers
+ */
+fun gcd(first: Int, second: Int): Long {
+    return gcd(first.toLong(), second.toLong())
+}
+
+/**
+ * Computes the greatest common divisor of two given long integers
+ */
+fun gcd(first: Long, second: Long): Long {
+    return euclidMod(first, second).gcd
+}
+
+/**
+ * Returns the [Chart] visualizing the number of steps needed to compute the gcd of two numbers (x,y)
+ *
+ * The resulting [Chart] vizualizes the computation using the modulo-based method
+ *
+ * @param maxX the maximum number on the x-axis
+ * @param maxY the maximum number on the y-axis
+ * @return a [Chart] visualizing the number of steps of computing the gcd
+ */
+fun getChartOfModulo(maxX: Int, maxY: Int): Chart {
+    // setting the colors
+    val result = mutableMapOf(
+            NumberOfSteps.ONE_TO_THREE to XYSeries("1-3"),
+            NumberOfSteps.FOUR_TO_FIVE to XYSeries("4-5"),
+            NumberOfSteps.SIX_TO_EIGHT to XYSeries("6-8"),
+            NumberOfSteps.NINE_TO_TEN to XYSeries("9-10"),
+            NumberOfSteps.MORE_THAN_TEN to XYSeries("10<"))
+    for (x in 1..maxX) {
+        for (y in 1..maxY) {
+            val (_, steps) = euclidMod(x, y)
+            result[getNumberOfStepsEnum(steps)]?.add(x, y)
+        }
+    }
+    return Chart("The number of steps needed to compute GCD of two numbers using the Euclid's modulus algorithm.",
+            result.mapKeys { it.key.getPaint() }, true)
+}
+
+/**
  * @suppress
  */
-fun main(args: Array<String>) {
-    euclidMod(500, 500)
-    euclidSub(500, 500)
+private fun euclidMod(x: Int, y: Int): EuclidSolution {
+    return euclidMod(x.toLong(), y.toLong())
 }
 
-fun gcd(first: Int, second: Int): Int {
-    return euclidMod_recursive(first, second).gcd
-}
-
-fun euclidMod(maxX: Int, maxY: Int) {
-    val result = mutableMapOf(
-            NumberOfSteps.ONE_TO_THREE to XYSeries("1-3"),
-            NumberOfSteps.FOUR_TO_FIVE to XYSeries("4-5"),
-            NumberOfSteps.SIX_TO_EIGHT to XYSeries("6-8"),
-            NumberOfSteps.NINE_TO_TEN to XYSeries("9-10"),
-            NumberOfSteps.MORE_THAN_TEN to XYSeries("10<"))
-    for (x in 1..maxX) {
-        for (y in 1..maxY) {
-            val (_, steps) = euclidMod_recursive(x, y)
-            result[getNumberOfStepsEnum(steps)]?.add(x, y)
-        }
-    }
-    Chart("The number of steps needed to compute GCD of two numbers using the Euclid's modulus algorithm.",
-            result.mapKeys { it.key.getPaint() }, true)
-            .writeToPNG(fileWithName(1, "euclid-[modulus].png"), 2000, 2000)
-}
-
-private fun euclidMod_recursive(x: Int, y: Int): EuclidSolution {
-    if (y == 0) {
+/**
+ * @suppress
+ */
+private fun euclidMod(x: Long, y: Long): EuclidSolution {
+    if (y == 0L) {
         return EuclidSolution(x, 1)
     } else {
-        val (gcd, steps) = euclidMod_recursive(y, x.rem(y))
-        return EuclidSolution(gcd, steps + 1)
+        return euclidMod(y, x.rem(y)).let { EuclidSolution(it.gcd, it.steps + 1) }
     }
 }
 
-fun euclidSub(maxX: Int, maxY: Int) {
+/**
+ * Returns the [Chart] visualizing the number of steps needed to compute the gcd of two numbers (x,y)
+ *
+ * The resulting [Chart] visualizes the computation using the subtraction-based method
+ *
+ * @param maxX the maximum number on the x-axis
+ * @param maxY the maximum number on the y-axis
+ * @return a [Chart] visualizing the number of steps of computing the gcd
+ */
+fun getChartOfSubtraction(maxX: Int, maxY: Int): Chart {
+    // setting the colors
     val result = mutableMapOf(
             NumberOfSteps.ONE_TO_THREE to XYSeries("1-3"),
             NumberOfSteps.FOUR_TO_FIVE to XYSeries("4-5"),
@@ -54,28 +92,32 @@ fun euclidSub(maxX: Int, maxY: Int) {
             NumberOfSteps.MORE_THAN_TEN to XYSeries("10<"))
     for (x in 1..maxX) {
         for (y in 1..maxY) {
-            val (_, steps) = euclidSub_recursive(x, y)
+            val (_, steps) = euclidSub(x, y)
             result[getNumberOfStepsEnum(steps)]?.add(x, y)
         }
     }
-    Chart("The number of steps needed to compute GCD of two numbers using the Euclid's subtraction algorithm.",
+    return Chart("The number of steps needed to compute GCD of two numbers using the Euclid's subtraction algorithm.",
             result.mapKeys { it.key.getPaint() }, true)
-            .writeToPNG(fileWithName(1, "euclid-[subtraction].png"), 2000, 2000)
 }
 
-private fun euclidSub_recursive(x: Int, y: Int): EuclidSolution {
+/**
+ * @suppress
+ */
+private fun euclidSub(x: Int, y: Int): EuclidSolution {
     val bigger = maxOf(x, y)
     val smaller = minOf(x, y)
     if (bigger == smaller) {
-        return EuclidSolution(smaller, 1)
+        return EuclidSolution(smaller.toLong(), 1)
     } else {
-        val (gcd, steps) = euclidSub_recursive(bigger - smaller, smaller)
-        return EuclidSolution(gcd, steps + 1)
+        return euclidSub(bigger - smaller, smaller).let { EuclidSolution(it.gcd, it.steps + 1) }
     }
 }
 
-private data class EuclidSolution(val gcd: Int, val steps: Int)
-
+/**
+ * An enum class representing the different colors of the graph
+ *
+ * @suppress
+ */
 private enum class NumberOfSteps(val from: Int, val to: Int) {
     ONE_TO_THREE(1, 3) {
         override fun getPaint(): Paint = Color.RED
@@ -96,4 +138,9 @@ private enum class NumberOfSteps(val from: Int, val to: Int) {
     abstract fun getPaint(): Paint
 }
 
+/**
+ * A helper function that 'parses' the given int to the enum
+ *
+ * @suppress
+ */
 private fun getNumberOfStepsEnum(steps: Int) = NumberOfSteps.values().filter { steps >= it.from && steps <= it.to }.first()

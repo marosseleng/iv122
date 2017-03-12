@@ -2,15 +2,7 @@ package com.github.mseleng.iv122.assignment1
 
 import com.github.mseleng.iv122.util.*
 import java.awt.Color
-
-/**
- * @suppress
- */
-fun main(args: Array<String>) {
-    printFourWayGradient(2500, Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA)
-    printStar(28, 50)
-    printInsideOutStar(28, 50)
-}
+import java.awt.image.BufferedImage
 
 /**
  * Prints the "4-way" gradient (using 4 colors in the edges of a 2D square grid)
@@ -20,14 +12,11 @@ fun main(args: Array<String>) {
  * @param topRight the [Color] in the top-right corner
  * @param bottomLeft the [Color] in the bottom-left corner
  * @param bottomRight the [Color] in the bottom-right corner
- * @param fileName the name of the output file (default "gradient.png")
+ * @return an instance of [BufferedImage] containing the output gradient
  */
-fun printFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color, fileName: String = "gradient.png") {
-    squareBitmapImage(size)
-            .colorize { x, y ->
-                colorForCoordinates(x, y, size, size, topLeft, topRight, bottomLeft, bottomRight)
-            }
-            .writeTo(fileWithName(1, fileName))
+fun getFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): BufferedImage {
+    return squareBitmapImage(size)
+            .colorize { x, y -> gradientColorForCoordinates(x, y, size, size, topLeft, topRight, bottomLeft, bottomRight) }
 }
 
 /**
@@ -46,7 +35,7 @@ fun printFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft:
  * @return an interpolated color of the pixel with coordinates ([x], [y])
  * @see bilinearInterpolation
  */
-fun colorForCoordinates(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
+fun gradientColorForCoordinates(x: Int, y: Int, width: Int, height: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): Int {
     return Color(
             bilinearInterpolation(x, y, width, height, topLeft.red, topRight.red, bottomLeft.red, bottomRight.red).toInt(),
             bilinearInterpolation(x, y, width, height, topLeft.green, topRight.green, bottomLeft.green, bottomRight.green).toInt(),
@@ -126,14 +115,13 @@ fun linearInterpolation(x: Int, width: Int, firstValue: Double, secondValue: Dou
  *
  * @param steps the number of lines of the half of the horizontal/vertical center line (the size of the result file is (2*[steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: `util.Style(stroke = Color.BLACK, strokeWidth = 1)`
- * @param fileName the name of the result file WITHOUT '.svg'
+ * @param lineStyle the style of the line. Default: [defaultStyle]
  */
-fun printStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Color.BLACK, strokeWidth = 1), fileName: String = "star") {
+fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultStyle): SVG {
     val size = steps.times(2).times(stepWidth)
     val star = SVG(size)
-            .horizontalFullWidthLine(size.div(2), lineStyle)
-            .verticalFullHeightLine(size.div(2), lineStyle)
+            .horizontalLine(size.div(2), size, lineStyle)
+            .verticalLine(size.div(2), size, lineStyle)
     for (x1 in 0..size.div(2) step stepWidth) {
         val x2 = size.minus(x1)
         val y1 = (size.div(2).minus(x1.plus(stepWidth)))
@@ -144,18 +132,18 @@ fun printStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Colo
                 .line(x2, size.div(2), size.div(2), y1, lineStyle)
                 .line(x2, size.div(2), size.div(2), y2, lineStyle)
     }
-    star.writeTo(svgFileWithName(1, fileName))
+    return star
 }
 
 /**
- * Prints the "inside-out" star. The result image can be seen in the file 'outputs/weird-star.png'
+ * Returns the "inside-out" star. The result image can be seen in the file 'outputs/weird-star.png'
  *
  * @param steps the number of lines per frame edge (how many starting points are on the edge) (the size of the result file is ([steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: `util.Style(stroke = Color.BLACK, strokeWidth = 1)`
- * @param fileName the name of the result file WITHOUT '.svg'
+ * @param lineStyle the style of the line. Default: [defaultStyle]
+ * @return an SVG containing the output
  */
-fun printInsideOutStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stroke = Color.BLACK, strokeWidth = 1), fileName: String = "weird-star") {
+fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: Style = defaultStyle): SVG {
     val size = steps.times(stepWidth)
     val star = SVG(size)
     for (x1 in 0..size step stepWidth) {
@@ -168,5 +156,5 @@ fun printInsideOutStar(steps: Int, stepWidth: Int, lineStyle: Style = Style(stro
                 .line(x1, 0, size, y2, lineStyle)
                 .line(x2, size, size, y2, lineStyle)
     }
-    star.writeTo(svgFileWithName(1, fileName))
+    return star
 }
