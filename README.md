@@ -10,7 +10,7 @@ Currently the docs pages are in the development.
   
 ~~Both of the dependencies could be found at mvnrepository.~~
 
-###~~I am using the Kotlin programming language, so you may need to download and add it as dependency as well.~~
+###I am using the Kotlin programming language, ~~so you may need to download and add it as dependency as well.~~
 
 There is a jar archive inside the `outputs` directory of the `gh-pages` branch. That jar includes all the dependencies needed.
 
