@@ -8,13 +8,15 @@
 <a href="index.html">com.github.mseleng.iv122.util</a>&nbsp;/&nbsp;<a href=".">fileWithName</a><br/>
 <br/>
 <h1>fileWithName</h1>
-<a name="com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)"></a>
-<code><span class="keyword">fun </span><span class="identifier">fileWithName</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
+<a name="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">fileWithName</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/rootDirName">rootDirName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"outputs"<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
 <p>Returns an instance of <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html">File</a> somewhere in the <code>/outputs/</code> directory</p>
 <h3>Parameters</h3>
 
+<p><a name="rootDirName"></a>
+<code>rootDirName</code> - the relative (on the classpath) or absolute path to the root output directory. Must be an existent directory!!
 <p><a name="assignmentNo"></a>
-<code>assignmentNo</code> - the number of an assignment (the file will be located inside '/outputs/assignment<a href="file-with-name.html#com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</a>/` directory
+<code>assignmentNo</code> - the number of an assignment (the file will be located inside '/outputs/assignment<a href="file-with-name.html#com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</a>/` directory
 <p><a name="name"></a>
 <code>name</code> - the name of the desired file <strong>WITH</strong> the extension (eg. something.png, nothing.xml, etc.)
 <p><strong>Return</strong><br/>

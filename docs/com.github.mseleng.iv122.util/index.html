@@ -37,14 +37,6 @@
 </tr>
 <tr>
 <td>
-<a href="-fraction/index.html">Fraction</a></td>
-<td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Fraction</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
-<p>A class representing rational numbers as the fraction in the format <a href="-fraction/part.html">part</a>/<a href="-fraction/whole.html">whole</a></p>
-</td>
-</tr>
-<tr>
-<td>
 <a href="-s-v-g/index.html">SVG</a></td>
 <td>
 <code><span class="keyword">class </span><span class="identifier">SVG</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code></td>
@@ -55,6 +47,14 @@
 <td>
 <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Style</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code></td>
 </tr>
+<tr>
+<td>
+<a href="-turtle/index.html">Turtle</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Turtle</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Created by mseleng on 3/7/17.</p>
+</td>
+</tr>
 </tbody>
 </table>
 <h3>Type Aliases</h3>
@@ -62,11 +62,9 @@
 <tbody>
 <tr>
 <td>
-<a href="-decimal-fraction.html">DecimalFraction</a></td>
+<a href="-line.html">Line</a></td>
 <td>
-<code><span class="keyword">typealias </span><span class="identifier">DecimalFraction</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">,</span>&nbsp;<a href="-fraction/index.html"><span class="identifier">Fraction</span></a><span class="symbol">&gt;</span></code>
-<p>A typealias representing the "decimal fraction", in other words numbers like 3(27/29)</p>
-</td>
+<code><span class="keyword">typealias </span><span class="identifier">Line</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&lt;</span><a href="-coordinates/index.html"><span class="identifier">Coordinates</span></a><span class="symbol">,</span>&nbsp;<a href="-coordinates/index.html"><span class="identifier">Coordinates</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -93,6 +91,17 @@
 </tr>
 </tbody>
 </table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="default-style.html">defaultStyle</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultStyle</span><span class="symbol">: </span><a href="-style/index.html"><span class="identifier">Style</span></a></code></td>
+</tr>
+</tbody>
+</table>
 <h3>Functions</h3>
 <table>
 <tbody>
@@ -114,9 +123,17 @@
 </tr>
 <tr>
 <td>
+<a href="e.html">e</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">e</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$e(kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.000001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Approximates the Euler's number</p>
+</td>
+</tr>
+<tr>
+<td>
 <a href="file-with-name.html">fileWithName</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">fileWithName</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.Int, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
+<code><span class="keyword">fun </span><span class="identifier">fileWithName</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/rootDirName">rootDirName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"outputs"<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/assignmentNo">assignmentNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$fileWithName(kotlin.String, kotlin.Int, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
 <p>Returns an instance of <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html">File</a> somewhere in the <code>/outputs/</code> directory</p>
 </td>
 </tr>
@@ -130,17 +147,25 @@
 </tr>
 <tr>
 <td>
+<a href="ln.html">ln</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ln</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.000001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Approximates the natural logarithm of the given <a href="ln.html#com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/x">x</a></p>
+</td>
+</tr>
+<tr>
+<td>
 <a href="nth-root_approx_bisection.html">nthRoot_approx_bisection</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">nthRoot_approx_bisection</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;Math.floor(num.div(order)).plus(1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.00001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
-<p>Approximates (using the bisection) the <a href="nth-root_approx_bisection.html#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/order">order</a>-th root of <a href="nth-root_approx_bisection.html#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Int, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</a></p>
+<code><span class="keyword">fun </span><span class="identifier">nthRoot_approx_bisection</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;Math.floor(num.div(order)).plus(1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Approximates (using the bisection) the <a href="nth-root_approx_bisection.html#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/order">order</a>-th root of <a href="nth-root_approx_bisection.html#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</a></p>
 </td>
 </tr>
 <tr>
 <td>
 <a href="sqrt_approx_bisection.html">sqrt_approx_bisection</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">sqrt_approx_bisection</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;Math.floor(num.div(2.0)).plus(1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.00001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<code><span class="keyword">fun </span><span class="identifier">sqrt_approx_bisection</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/num">num</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;Math.floor(num.div(2.0)).plus(1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.util$sqrt_approx_bisection(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/eps">eps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span>&nbsp;<span class="symbol">=</span>&nbsp;0.0001<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
 <p>Approximates (using the bisection) the square root of the given number</p>
 </td>
 </tr>

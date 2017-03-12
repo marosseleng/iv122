@@ -8,6 +8,19 @@
 <a href=".">com.github.mseleng.iv122.assignment1</a><br/>
 <br/>
 <h2>Package com.github.mseleng.iv122.assignment1</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-euclid-solution/index.html">EuclidSolution</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EuclidSolution</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Class representing tuple of two numbers (gcd and the number of steps needed to get it)</p>
+</td>
+</tr>
+</tbody>
+</table>
 <h3>Functions</h3>
 <table>
 <tbody>
@@ -23,7 +36,7 @@
 <td>
 <a href="collatz.html">collatz</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">collatz</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$collatz(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<code><span class="keyword">fun </span><span class="identifier">collatz</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$collatz(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-chart/index.html"><span class="identifier">Chart</span></a></code>
 <p>Creates a chart containing data about Collatz's sequence</p>
 </td>
 </tr>
@@ -31,16 +44,8 @@
 <td>
 <a href="collatz-with-max.html">collatzWithMax</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">collatzWithMax</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$collatzWithMax(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<code><span class="keyword">fun </span><span class="identifier">collatzWithMax</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$collatzWithMax(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-chart/index.html"><span class="identifier">Chart</span></a></code>
 <p>Creates a chart containing data about Collatz's sequence</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="color-for-coordinates.html">colorForCoordinates</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">colorForCoordinates</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/width">width</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/height">height</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topLeft">topLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topRight">topRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomLeft">bottomLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$colorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomRight">bottomRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
-<p>Computes the color in the 4-way gradient in 2D grid using the bilinear interpolation</p>
 </td>
 </tr>
 <tr>
@@ -61,21 +66,45 @@
 </tr>
 <tr>
 <td>
-<a href="euclid-mod.html">euclidMod</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">euclidMod</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$euclidMod(kotlin.Int, kotlin.Int)/maxX">maxX</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$euclidMod(kotlin.Int, kotlin.Int)/maxY">maxY</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
-</tr>
-<tr>
-<td>
-<a href="euclid-sub.html">euclidSub</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">euclidSub</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$euclidSub(kotlin.Int, kotlin.Int)/maxX">maxX</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$euclidSub(kotlin.Int, kotlin.Int)/maxY">maxY</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
-</tr>
-<tr>
-<td>
 <a href="gcd.html">gcd</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">gcd</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Int, kotlin.Int)/first">first</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Int, kotlin.Int)/second">second</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+<code><span class="keyword">fun </span><span class="identifier">gcd</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Int, kotlin.Int)/first">first</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Int, kotlin.Int)/second">second</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Computes the greatest common divisor of two given integers</p>
+<code><span class="keyword">fun </span><span class="identifier">gcd</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Long, kotlin.Long)/first">first</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gcd(kotlin.Long, kotlin.Long)/second">second</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Computes the greatest common divisor of two given long integers</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-chart-of-modulo.html">getChartOfModulo</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getChartOfModulo</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getChartOfModulo(kotlin.Int, kotlin.Int)/maxX">maxX</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getChartOfModulo(kotlin.Int, kotlin.Int)/maxY">maxY</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-chart/index.html"><span class="identifier">Chart</span></a></code>
+<p>Returns the <a href="../com.github.mseleng.iv122.util/-chart/index.html">Chart</a> visualizing the number of steps needed to compute the gcd of two numbers (x,y)</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-chart-of-subtraction.html">getChartOfSubtraction</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getChartOfSubtraction</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getChartOfSubtraction(kotlin.Int, kotlin.Int)/maxX">maxX</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getChartOfSubtraction(kotlin.Int, kotlin.Int)/maxY">maxY</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-chart/index.html"><span class="identifier">Chart</span></a></code>
+<p>Returns the <a href="../com.github.mseleng.iv122.util/-chart/index.html">Chart</a> visualizing the number of steps needed to compute the gcd of two numbers (x,y)</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-four-way-gradient.html">getFourWayGradient</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getFourWayGradient</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topLeft">topLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topRight">topRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomLeft">bottomLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomRight">bottomRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html"><span class="identifier">BufferedImage</span></a></code>
+<p>Prints the "4-way" gradient (using 4 colors in the edges of a 2D square grid)</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-inside-out-star-s-v-g.html">getInsideOutStarSVG</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInsideOutStarSVG</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getInsideOutStarSVG(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/steps">steps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getInsideOutStarSVG(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/stepWidth">stepWidth</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getInsideOutStarSVG(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/lineStyle">lineStyle</span><span class="symbol">:</span>&nbsp;<a href="../com.github.mseleng.iv122.util/-style/index.html"><span class="identifier">Style</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultStyle<span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-s-v-g/index.html"><span class="identifier">SVG</span></a></code>
+<p>Returns the "inside-out" star. The result image can be seen in the file 'outputs/weird-star.png'</p>
+</td>
 </tr>
 <tr>
 <td>
@@ -103,6 +132,30 @@
 </tr>
 <tr>
 <td>
+<a href="get-star.html">getStar</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStar</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/steps">steps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/stepWidth">stepWidth</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style)/lineStyle">lineStyle</span><span class="symbol">:</span>&nbsp;<a href="../com.github.mseleng.iv122.util/-style/index.html"><span class="identifier">Style</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultStyle<span class="symbol">)</span><span class="symbol">: </span><a href="../com.github.mseleng.iv122.util/-s-v-g/index.html"><span class="identifier">SVG</span></a></code>
+<p>Prints the "tangent" star. The result image can be seen in the file 'outputs/star.png'</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-ulams-spiral.html">getUlamsSpiral</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUlamsSpiral</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getUlamsSpiral(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Boolean)))/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$getUlamsSpiral(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Boolean)))/condition">condition</span><span class="symbol">:</span>&nbsp;<span class="identifier">UlamSpiralCondition</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html"><span class="identifier">BufferedImage</span></a></code>
+<p>Returns a file containing the Ulam's spiral.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="gradient-color-for-coordinates.html">gradientColorForCoordinates</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">gradientColorForCoordinates</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/width">width</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/height">height</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topLeft">topLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/topRight">topRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomLeft">bottomLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$gradientColorForCoordinates(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color)/bottomRight">bottomRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Computes the color in the 4-way gradient in 2D grid using the bilinear interpolation</p>
+</td>
+</tr>
+<tr>
+<td>
 <a href="linear-interpolation.html">linearInterpolation</a></td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">linearInterpolation</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$linearInterpolation(kotlin.Int, kotlin.Int, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$linearInterpolation(kotlin.Int, kotlin.Int, kotlin.Double, kotlin.Double)/width">width</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$linearInterpolation(kotlin.Int, kotlin.Int, kotlin.Double, kotlin.Double)/firstValue">firstValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$linearInterpolation(kotlin.Int, kotlin.Int, kotlin.Double, kotlin.Double)/secondValue">secondValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
@@ -111,35 +164,9 @@
 </tr>
 <tr>
 <td>
-<a href="print-four-way-gradient.html">printFourWayGradient</a></td>
+<a href="run.html">run</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">printFourWayGradient</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/topLeft">topLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/topRight">topRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/bottomLeft">bottomLeft</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/bottomRight">bottomRight</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html"><span class="identifier">Color</span></a><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printFourWayGradient(kotlin.Int, java.awt.Color, java.awt.Color, java.awt.Color, java.awt.Color, kotlin.String)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"gradient.png"<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
-<p>Prints the "4-way" gradient (using 4 colors in the edges of a 2D square grid)</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="print-inside-out-star.html">printInsideOutStar</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">printInsideOutStar</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printInsideOutStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/steps">steps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printInsideOutStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/stepWidth">stepWidth</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printInsideOutStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/lineStyle">lineStyle</span><span class="symbol">:</span>&nbsp;<a href="../com.github.mseleng.iv122.util/-style/index.html"><span class="identifier">Style</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Style(stroke = Color.BLACK, strokeWidth = 1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printInsideOutStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"weird-star"<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
-<p>Prints the "inside-out" star. The result image can be seen in the file 'outputs/weird-star.png'</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="print-star.html">printStar</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">printStar</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/steps">steps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/stepWidth">stepWidth</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/lineStyle">lineStyle</span><span class="symbol">:</span>&nbsp;<a href="../com.github.mseleng.iv122.util/-style/index.html"><span class="identifier">Style</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Style(stroke = Color.BLACK, strokeWidth = 1)<span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$printStar(kotlin.Int, kotlin.Int, com.github.mseleng.iv122.util.Style, kotlin.String)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"star"<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
-<p>Prints the "tangent" star. The result image can be seen in the file 'outputs/star.png'</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="ulam.html">ulam</a></td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">ulam</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$ulam(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.String)/n">n</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$ulam(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.String)/condition">condition</span><span class="symbol">:</span>&nbsp;<span class="identifier">UlamSpiralCondition</span><span class="symbol">, </span><span class="identifier" id="com.github.mseleng.iv122.assignment1$ulam(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.String)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
-<p>Creates the file containing the Ulam's spiral.</p>
-</td>
+<code><span class="keyword">fun </span><span class="identifier">run</span><span class="symbol">(</span><span class="identifier" id="com.github.mseleng.iv122.assignment1$run(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
 </tr>
 </tbody>
 </table>
