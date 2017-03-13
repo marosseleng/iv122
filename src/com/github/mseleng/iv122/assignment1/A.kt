@@ -115,9 +115,9 @@ fun linearInterpolation(x: Int, width: Int, firstValue: Double, secondValue: Dou
  *
  * @param steps the number of lines of the half of the horizontal/vertical center line (the size of the result file is (2*[steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: [defaultStyle]
+ * @param lineStyle the style of the line. Default: [defaultLineStyle]
  */
-fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultStyle): SVG {
+fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultLineStyle): SVG {
     val size = steps.times(2).times(stepWidth)
     val star = SVG(size)
             .horizontalLine(size.div(2), size, lineStyle)
@@ -140,10 +140,10 @@ fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultStyle): SVG {
  *
  * @param steps the number of lines per frame edge (how many starting points are on the edge) (the size of the result file is ([steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: [defaultStyle]
+ * @param lineStyle the style of the line. Default: [defaultLineStyle]
  * @return an SVG containing the output
  */
-fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: Style = defaultStyle): SVG {
+fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: Style = defaultLineStyle): SVG {
     val size = steps.times(stepWidth)
     val star = SVG(size)
     for (x1 in 0..size step stepWidth) {

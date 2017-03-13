@@ -158,7 +158,7 @@ fun nthRoot_approx_bisection(num: Double, order: Long, from: Double = 0.0, to: D
  * @param validate the validation function
  * @return null, iff the value with the given accuracy could not be found within the given interval, or the approximated value otherwise
  */
-fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double? {
+fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double {
     val mid: Double = from.plus(to).div(2)
     val midValidated = validate(mid)
     if (midValidated.isAlmostEqual(num, eps)) {
