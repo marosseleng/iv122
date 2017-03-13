@@ -6,7 +6,7 @@ title: sqrt_approx_bisection - iv122
 
 # sqrt_approx_bisection
 
-`fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.floor(num.div(2.0)).plus(1), eps: Double = 0.0001): Double?`
+`fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.floor(num.div(2.0)).plus(1), eps: Double = 0.0001): Double`
 
 Approximates (using the bisection) the square root of the given number
 

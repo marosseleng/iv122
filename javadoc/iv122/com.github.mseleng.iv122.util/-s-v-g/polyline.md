@@ -7,3 +7,15 @@ title: SVG.polyline - iv122
 # polyline
 
 `fun polyline(style: `[`Style`](../-style/index.md)`, vararg points: <ERROR CLASS><Int, Int>): `[`SVG`](index.md)
+
+Adds a polyline
+
+### Parameters
+
+`style` - the desired style of an ellipse
+
+`points` - (possibly multiple) points to add
+
+**Return**
+this
+

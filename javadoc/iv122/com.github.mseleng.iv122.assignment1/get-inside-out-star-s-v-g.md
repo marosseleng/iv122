@@ -6,7 +6,7 @@ title: getInsideOutStarSVG - iv122
 
 # getInsideOutStarSVG
 
-`fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: `[`Style`](../com.github.mseleng.iv122.util/-style/index.md)` = defaultStyle): `[`SVG`](../com.github.mseleng.iv122.util/-s-v-g/index.md)
+`fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: `[`Style`](../com.github.mseleng.iv122.util/-style/index.md)` = defaultLineStyle): `[`SVG`](../com.github.mseleng.iv122.util/-s-v-g/index.md)
 
 Returns the "inside-out" star. The result image can be seen in the file 'outputs/weird-star.png'
 
@@ -16,7 +16,7 @@ Returns the "inside-out" star. The result image can be seen in the file 'outputs
 
 `stepWidth` - the size of the gap between each step (how far from each other the points are)
 
-`lineStyle` - the style of the line. Default: [defaultStyle](../com.github.mseleng.iv122.util/default-style.md)
+`lineStyle` - the style of the line. Default: [defaultLineStyle](../com.github.mseleng.iv122.util/default-line-style.md)
 
 **Return**
 an SVG containing the output

@@ -8,7 +8,9 @@ title: Direction.NORTH - iv122
 
 `NORTH`
 
+Direction to the top (12 o'clock)
+
 ### Functions
 
-| [counterClockwiseNext](counter-clockwise-next.md) | `fun counterClockwiseNext(): `[`Direction`](../index.md) |
+| [counterClockwiseNext](counter-clockwise-next.md) | `fun counterClockwiseNext(): `[`Direction`](../index.md)<br>Returns the counter-clockwise next direction |
 

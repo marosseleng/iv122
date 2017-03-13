@@ -8,7 +8,9 @@ title: Direction.EAST - iv122
 
 `EAST`
 
+Direction to the right (3 o'clock)
+
 ### Functions
 
-| [counterClockwiseNext](counter-clockwise-next.md) | `fun counterClockwiseNext(): `[`Direction`](../index.md) |
+| [counterClockwiseNext](counter-clockwise-next.md) | `fun counterClockwiseNext(): `[`Direction`](../index.md)<br>Returns the counter-clockwise next direction |
 

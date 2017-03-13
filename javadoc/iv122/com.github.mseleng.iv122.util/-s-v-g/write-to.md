@@ -7,3 +7,9 @@ title: SVG.writeTo - iv122
 # writeTo
 
 `fun writeTo(file: `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`): Unit`
+
+Writes the SVG data into the passed file
+
+### Parameters
+
+`file` - to save SVG data

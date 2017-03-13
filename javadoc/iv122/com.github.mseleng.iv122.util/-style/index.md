@@ -8,9 +8,19 @@ title: Style - iv122
 
 `data class Style : Any`
 
+The class representing the style of the SVG elements
+
+### Parameters
+
+`stroke` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the stroke
+
+`strokeWidth` - the width of the stroke
+
+`fill` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the fill
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Style(stroke: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`? = null, strokeWidth: Int? = null, fill: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`? = null)` |
+| [&lt;init&gt;](-init-.md) | `Style(stroke: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`? = null, strokeWidth: Int? = null, fill: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`? = null)`<br>creates the Style with the given parameters |
 
 ### Properties
 

@@ -10,3 +10,8 @@ title: Direction.EAST.counterClockwiseNext - iv122
 
 Overrides [Direction.counterClockwiseNext](../counter-clockwise-next.md)
 
+Returns the counter-clockwise next direction
+
+**Return**
+the next [Direction](../index.md)
+

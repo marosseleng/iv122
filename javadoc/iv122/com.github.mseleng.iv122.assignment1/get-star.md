@@ -6,7 +6,7 @@ title: getStar - iv122
 
 # getStar
 
-`fun getStar(steps: Int, stepWidth: Int, lineStyle: `[`Style`](../com.github.mseleng.iv122.util/-style/index.md)` = defaultStyle): `[`SVG`](../com.github.mseleng.iv122.util/-s-v-g/index.md)
+`fun getStar(steps: Int, stepWidth: Int, lineStyle: `[`Style`](../com.github.mseleng.iv122.util/-style/index.md)` = defaultLineStyle): `[`SVG`](../com.github.mseleng.iv122.util/-s-v-g/index.md)
 
 Prints the "tangent" star. The result image can be seen in the file 'outputs/star.png'
 
@@ -16,4 +16,4 @@ Prints the "tangent" star. The result image can be seen in the file 'outputs/sta
 
 `stepWidth` - the size of the gap between each step (how far from each other the points are)
 
-`lineStyle` - the style of the line. Default: [defaultStyle](../com.github.mseleng.iv122.util/default-style.md)
+`lineStyle` - the style of the line. Default: [defaultLineStyle](../com.github.mseleng.iv122.util/default-line-style.md)

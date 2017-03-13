@@ -18,7 +18,7 @@ Data class representing the coordinates of a single point in the 2D space
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Coordinates(x: Int, y: Int)``Coordinates(x: Double, y: Double)`<br>creates the coordinates with the given values |
+| [&lt;init&gt;](-init-.md) | `Coordinates(x: Int, y: Int)`<br>A constructor that accepts the integral values`Coordinates(x: Double, y: Double)`<br>creates the coordinates with the given values |
 
 ### Properties
 

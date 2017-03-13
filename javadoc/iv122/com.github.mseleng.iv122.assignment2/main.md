@@ -7,4 +7,3 @@ title: main - iv122
 # main
 
 `fun main(args: Array<String>): Unit`
-`fun main(args: Array<String>): Unit`

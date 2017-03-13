@@ -7,3 +7,6 @@ title: SVG.finalize - iv122
 # finalize
 
 `fun finalize(): `[`SVG`](index.md)
+
+Adds a footer
+

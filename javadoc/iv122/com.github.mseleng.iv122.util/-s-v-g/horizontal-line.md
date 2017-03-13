@@ -6,4 +6,18 @@ title: SVG.horizontalLine - iv122
 
 # horizontalLine
 
-`fun horizontalLine(y: Int, width: Int, style: `[`Style`](../-style/index.md)` = defaultStyle): `[`SVG`](index.md)
+`fun horizontalLine(y: Int, width: Int, style: `[`Style`](../-style/index.md)` = defaultLineStyle): `[`SVG`](index.md)
+
+Adds the horizontal line
+
+### Parameters
+
+`y` - the y coordinate of the line's points
+
+`width` - the desired width of the line
+
+`style` - the desired style of the line (default: [defaultLineStyle](../default-line-style.md))
+
+**Return**
+this
+

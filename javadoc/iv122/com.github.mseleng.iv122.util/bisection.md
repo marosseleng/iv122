@@ -6,7 +6,7 @@ title: bisection - iv122
 
 # bisection
 
-`fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double?`
+`fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double`
 
 Approximates the number using bisection
 

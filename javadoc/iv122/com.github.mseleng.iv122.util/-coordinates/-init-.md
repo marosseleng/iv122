@@ -8,6 +8,8 @@ title: Coordinates.<init> - iv122
 
 `Coordinates(x: Int, y: Int)`
 
+A constructor that accepts the integral values
+
 `Coordinates(x: Double, y: Double)`
 
 creates the coordinates with the given values
