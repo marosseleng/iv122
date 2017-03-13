@@ -12,6 +12,9 @@ import java.math.RoundingMode
  */
 data class Coordinates(val x: Double, val y: Double) {
 
+    /**
+     * A constructor that accepts the integral values
+     */
     constructor(x: Int, y: Int) : this(x.toDouble(), y.toDouble())
 
     /**
@@ -21,18 +24,7 @@ data class Coordinates(val x: Double, val y: Double) {
      * @param height the height of a 2D grid
      * @return true iff this coordinates are out of the given range, false otherwise
      */
-    fun isOutOfRange(width: Int, height: Int): Boolean {
-        return (x >= width || y >= height || x < 0 || y < 0)
-    }
-
-    operator fun minus(other: Coordinates): Coordinates {
-        return Coordinates(x.minus(other.x), y.minus(other.y))
-    }
-
-    operator fun times(other: Int): Coordinates = copy(x.times(other), y.times(other))
-    operator fun times(other: Double): Coordinates = copy(x.times(other), y.times(other))
-
-    operator fun plus(other: Coordinates?) = copy(x.plus(other?.x ?: 0.0), y.plus(other?.y ?: 0.0))
+    fun isOutOfRange(width: Int, height: Int) = (x >= width || y >= height || x < 0 || y < 0)
 
     /**
      * Trims this decimal number, so there is no scientific exponentiation in toString()
@@ -43,21 +35,47 @@ data class Coordinates(val x: Double, val y: Double) {
     fun trimToNDecimalPoints(n: Int): Coordinates {
         return copy(BigDecimal(x).setScale(n, RoundingMode.HALF_EVEN).toDouble(), BigDecimal(y).setScale(n, RoundingMode.HALF_EVEN).toDouble())
     }
+
+    operator fun plus(other: Coordinates?) = copy(x.plus(other?.x ?: 0.0), y.plus(other?.y ?: 0.0))
+    operator fun minus(other: Coordinates) = Coordinates(x.minus(other.x), y.minus(other.y))
+    operator fun times(other: Int): Coordinates = copy(x.times(other), y.times(other))
+    operator fun times(other: Double): Coordinates = copy(x.times(other), y.times(other))
 }
 
 /**
  * Enum representing directions in a 2D grid
  */
 enum class Direction {
+    /**
+     * Direction to the right (3 o'clock)
+     */
     EAST {
         override fun counterClockwiseNext() = NORTH
-    }, NORTH {
+    },
+    /**
+     * Direction to the top (12 o'clock)
+     */
+    NORTH {
         override fun counterClockwiseNext() = WEST
-    }, WEST {
+    },
+    /**
+     * Direction to the left (9 o'clock)
+     */
+    WEST {
         override fun counterClockwiseNext() = SOUTH
-    }, SOUTH {
+    },
+    /**
+     * Direction to the bottom (6 o'clock)
+     */
+    SOUTH {
         override fun counterClockwiseNext() = EAST
     };
+
+    /**
+     * Returns the counter-clockwise next direction
+     *
+     * @return the next [Direction]
+     */
     abstract fun counterClockwiseNext(): Direction
 }
 

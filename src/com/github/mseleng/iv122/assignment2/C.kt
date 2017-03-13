@@ -1,7 +1,9 @@
 package com.github.mseleng.iv122.assignment2
 
 import com.github.mseleng.iv122.assignment1.gcd
-import com.github.mseleng.iv122.util.*
+import com.github.mseleng.iv122.util.integralPow
+import com.github.mseleng.iv122.util.isWhole
+import com.github.mseleng.iv122.util.nthRoot_approx_bisection
 
 /**
  * A typealias representing the "decimal fraction", in other words numbers like 3(27/29)
@@ -50,7 +52,7 @@ fun rationalPower_1(base: Double, exp: Double): Double {
         return base.integralPow(exp.toLong())
     } else {
         val (int, frac) = exp.toFraction().toDecimalFraction()
-        return base.integralPow(int) * (nthRoot_approx_bisection(base.integralPow(frac.part), frac.whole) ?: 0.0)
+        return base.integralPow(int) * (nthRoot_approx_bisection(base.integralPow(frac.part), frac.whole))
     }
 }
 
