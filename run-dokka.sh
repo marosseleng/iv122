@@ -11,7 +11,7 @@ cp out/artifacts/iv122/iv122.jar outputs/iv122.jar
 
 #run the jar and save the console output
 touch outputs/console-output.md
-echo '```bash' > outputs/console-output.md
+echo '```' > outputs/console-output.md
 echo  >> outputs/console-output.md
 java -jar outputs/iv122.jar >> outputs/console-output.md
 echo '```' >> outputs/console-output.md
