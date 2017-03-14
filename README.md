@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ##Repository with sources for the IV122 class @ FI MU Brno
 
 Currently the docs pages are in the development. 
