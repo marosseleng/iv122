@@ -9,7 +9,10 @@ title: com.github.mseleng.iv122.assignment2 - iv122
 ### Types
 
 | [ArchimedesπRange](-archimedesπ-range/index.md) | `data class ArchimedesπRange : Any`<br>Class representing an interval, within which the value of π is. This is used just in the Archimedes method |
+| [EvenOddColorGenerator](-even-odd-color-generator/index.md) | `class EvenOddColorGenerator : `[`PascalTriangleColorGenerator`](-pascal-triangle-color-generator/index.md)<br>A generator that supplies colors based on the parity of the numbers in the current line |
 | [Fraction](-fraction/index.md) | `data class Fraction : Any`<br>A class representing rational numbers as the fraction in the format [part](-fraction/part.md)/[whole](-fraction/whole.md) |
+| [ModuloColorGenerator](-modulo-color-generator/index.md) | `class ModuloColorGenerator : `[`PascalTriangleColorGenerator`](-pascal-triangle-color-generator/index.md)<br>A generator that supplies colors based on current line's modulus |
+| [PascalTriangleColorGenerator](-pascal-triangle-color-generator/index.md) | `interface PascalTriangleColorGenerator : Any`<br>An interface providing simple method for the Pascal's triangle color retrieval |
 
 ### Type Aliases
 
@@ -23,7 +26,7 @@ title: com.github.mseleng.iv122.assignment2 - iv122
 ### Functions
 
 | [combinations](combinations.md) | `fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean): <ERROR CLASS>`<br>Returns the list of [k](combinations.md#com.github.mseleng.iv122.assignment2$combinations(kotlin.collections.List((kotlin.Int)), kotlin.Int, kotlin.Boolean)/k)-combinations of the given numbers |
-| [main](main.md) | `fun main(args: Array<String>): Unit` |
+| [pascal](pascal.md) | `fun pascal(n: Int, generator: `[`PascalTriangleColorGenerator`](-pascal-triangle-color-generator/index.md)`): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>Creates a Pascal's triangle that visualizes the numbers from the given generator |
 | [permutations](permutations.md) | `fun permutations(numbers: List<Int>): List<String>`<br>Returns the list of permutations of the given numbers |
 | [pi_Archimedes](pi_-archimedes.md) | `fun pi_Archimedes(interval_ms: Long, sqrt: (Double) -> Double): `[`ArchimedesπRange`](-archimedesπ-range/index.md)<br>Approximates the value of π using the [Archimedes'](https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Polygon_approximation_to_a_circle) method |
 | [pi_GregoryLeibniz](pi_-gregory-leibniz.md) | `fun pi_GregoryLeibniz(interval_ms: Long): Double`<br>Approximates the value of π using the [Gregory-Leibniz](https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Gregory.E2.80.93Leibniz_series) series |
