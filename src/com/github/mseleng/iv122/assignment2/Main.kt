@@ -1,8 +1,7 @@
 package com.github.mseleng.iv122.assignment2
 
-import com.github.mseleng.iv122.util.factorial
-import com.github.mseleng.iv122.util.pow
-import com.github.mseleng.iv122.util.sqrt_approx_bisection
+import com.github.mseleng.iv122.util.*
+import java.awt.Color
 
 /**
  * @suppress
@@ -35,6 +34,15 @@ fun run(args: Array<String>) {
     println("\t$variationsWithRep\n==========")
 
     //B
+    print("-> Pascal's triangle (mod 5)......")
+    pascal(30, ModuloColorGenerator(5, Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod5.png"))
+    print(" ✓ (assignment2/pascal-mod5.png)\n-> Pascal's triangle (mod 7)......")
+    pascal(100, ModuloColorGenerator(7, Color.RED, Color.BLUE, Color.GRAY, Color.BLACK, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod7.png"))
+    print(" ✓ (assignment2/pascal-mod7.png)\n-> Pascal's triangle (mod 3)......")
+    pascal(100, ModuloColorGenerator(3, Color.RED, Color.BLUE, Color.GRAY)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod3.png"))
+    print(" ✓ (assignment2/pascal-mod3.png)\n-> Pascal's triangle (mod 2)......")
+    pascal(30, EvenOddColorGenerator(Color.YELLOW, Color.RED)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-evenOdd.png"))
+    print(" ✓ (assignment2/pascal-evenOdd.png)\n==========\n")
 
     //C
     println("-> √2 = 2^0.5 = ${rationalPower_1(2.0, 0.5)}; Library value = ${Math.pow(2.0, 0.5)}")

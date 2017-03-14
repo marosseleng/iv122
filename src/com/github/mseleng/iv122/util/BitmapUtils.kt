@@ -1,5 +1,6 @@
 package com.github.mseleng.iv122.util
 
+import java.awt.Color
 import java.awt.image.BufferedImage
 import java.awt.image.BufferedImage.TYPE_INT_RGB
 import java.io.File
@@ -16,7 +17,7 @@ import javax.imageio.ImageIO
  * @see [bitmapImage]
  */
 fun squareBitmapImage(size: Int, init: BufferedImage.() -> Unit = {}): BufferedImage {
-    return bitmapImage(size, size, init)
+    return bitmapImage(size, size, init = init)
 }
 
 /**
@@ -29,8 +30,9 @@ fun squareBitmapImage(size: Int, init: BufferedImage.() -> Unit = {}): BufferedI
  * @param init a block of code to execute on a newly created [BufferedImage]
  * @return an instance of [BufferedImage]
  */
-fun bitmapImage(width: Int, height: Int, init: BufferedImage.() -> Unit = {}): BufferedImage {
+fun bitmapImage(width: Int, height: Int, backgroundColor: Color = Color.WHITE, init: BufferedImage.() -> Unit = {}): BufferedImage {
     val img = BufferedImage(width, height, TYPE_INT_RGB)
+    img.colorize { _, _ -> backgroundColor.rgb }
     img.init()
     return img
 }
