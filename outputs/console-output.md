@@ -1,3 +1,4 @@
+## The console output
 [Home](../)
 
 ```
@@ -47,8 +48,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1417038202951586
-	Gregory-Leibnitz method: 3.1416094849229794
+	Monte Carlo method (using the library square (root) function): 3.141762557431749
+	Gregory-Leibnitz method: 3.1415763844328337
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
