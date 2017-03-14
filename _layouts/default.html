@@ -15,12 +15,12 @@
 <body>
 <div class="wrapper">
     <header>
-        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+        <a href="https://mseleng.github.io/iv122"><h1 class="header">{{ site.title | default: site.github.repository_name }}</h1></a>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
 
         <ul>
             {% if site.show_downloads %}
-            <li class="download"><a class="buttons" href="{{ site.github.zip_url }}">Download Sources</a></li>
+            <li class="download"><a class="buttons" href="{{ site.github.zip_url }}">Download ZIP</a></li>
             <li class="download"><a class="buttons" href="https://github.com/mseleng/iv122/raw/gh-pages/outputs/iv122.jar">Download JAR</a></li>
             {% endif %}
             <li><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></li>
