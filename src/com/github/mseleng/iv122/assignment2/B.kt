@@ -4,6 +4,13 @@ import com.github.mseleng.iv122.util.squareBitmapImage
 import java.awt.Color
 import java.awt.image.BufferedImage
 
+/**
+ * Creates a Pascal's triangle that visualizes the numbers from the given generator
+ *
+ * @param n the height of a triangle
+ * @param generator the colors generator
+ * @return and image containing the Pascal's triangle
+ */
 fun pascal(n: Int, generator: PascalTriangleColorGenerator): BufferedImage {
     var offset = n.minus(1)
     var colors = generator.next()
@@ -25,10 +32,23 @@ fun pascal(n: Int, generator: PascalTriangleColorGenerator): BufferedImage {
     }
 }
 
+/**
+ * An interface providing simple method for the Pascal's triangle color retrieval
+ */
 interface PascalTriangleColorGenerator {
+    /**
+     * Returns a [List] of [Color]s to be put to the next line
+     */
     fun next(): List<Color>
 }
 
+/**
+ * A generator that supplies colors based on current line's modulus
+ *
+ * @param mod the desired modulus base
+ * @param colors (possibly mutliple) [Color]s
+ * @constructor
+ */
 class ModuloColorGenerator(val mod: Int, vararg val colors: Color) : PascalTriangleColorGenerator {
     private var list = listOf<Int>()
 
@@ -51,6 +71,13 @@ class ModuloColorGenerator(val mod: Int, vararg val colors: Color) : PascalTrian
     }
 }
 
+/**
+ * A generator that supplies colors based on the parity of the numbers in the current line
+ *
+ * @param evenColor a color to apply on the even numbers
+ * @param oddColor a color to apply on the odd numbers
+ * @constructor
+ */
 class EvenOddColorGenerator(val evenColor: Color, val oddColor: Color) : PascalTriangleColorGenerator {
     private var list = listOf<Int>()
 
