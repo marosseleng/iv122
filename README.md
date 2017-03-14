@@ -21,6 +21,6 @@ java -jar outputs/iv122.jar <path-to-existent-output-dir>
     
 ```
 
-#####The console output of the previous command can be found [here](outputs/console-output.txt)
+#####The console output of the previous command can be found [here](outputs/console-output.md)
 
-SEE DOCS [HERE](javadoc/iv122/index.md)
+[Javadoc here](javadoc/iv122/index.md)

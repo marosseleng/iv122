@@ -1,3 +1,5 @@
+```bash
+
 ***The first assignment***
 -> Four-way gradient...... ✓ (assignment1/gradient.png)
 -> A star...... ✓ (assignment1/star.svg)
@@ -44,8 +46,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141710550054342
-	Gregory-Leibnitz method: 3.1415762579968995
+	Monte Carlo method (using the library square (root) function): 3.1417371635690925
+	Gregory-Leibnitz method: 3.141609289480037
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -53,3 +55,4 @@ Complete.
 ***The third assignment***
 Complete.
 
+```
