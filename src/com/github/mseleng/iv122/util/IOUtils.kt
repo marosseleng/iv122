@@ -11,7 +11,9 @@ import java.io.File
  * @return the desired file
  */
 fun fileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): File {
-    val subdirectory = File(rootDirName).resolve("assignment$assignmentNo")
+    val rootDirectory = File(rootDirName)
+    rootDirectory.mkdir()
+    val subdirectory = rootDirectory.resolve("assignment$assignmentNo")
     subdirectory.mkdir()
     return subdirectory.resolve(name)
 }
