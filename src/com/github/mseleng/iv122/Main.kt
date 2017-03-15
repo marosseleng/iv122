@@ -9,6 +9,6 @@ fun main(args: Array<String>) {
     println("Complete.\n\n***The second assignment***")
     com.github.mseleng.iv122.assignment2.run(args)
     println("Complete.\n\n***The third assignment***")
-//    com.github.mseleng.iv122.assignment3.run(args)
+    com.github.mseleng.iv122.assignment3.run(args)
     println("Complete.\n")
 }

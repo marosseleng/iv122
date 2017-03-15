@@ -5,7 +5,7 @@ import java.awt.Color
 /**
  * Created by mseleng on 3/7/17.
  */
-class Turtle(val offset: Coordinates? = null) {
+class Turtle(offset: Coordinates? = null) {
 
     var currentPosition = offset ?: Coordinates(0.0, 0.0)
     var currentDirection: Double = 0.0
@@ -31,7 +31,6 @@ class Turtle(val offset: Coordinates? = null) {
     fun forward(amount: Double) {
         val a = Coordinates(Math.cos(currentDirectionRadians), Math.sin(currentDirectionRadians).unaryMinus())
                 .times(amount)
-//                .plus(offset)
                 .trimToNDecimalPoints(2)
         val newPosition = a + currentPosition
         if (isPenDown) {
