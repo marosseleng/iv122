@@ -4,7 +4,6 @@ import com.github.mseleng.iv122.util.Coordinates
 import com.github.mseleng.iv122.util.Line
 import com.github.mseleng.iv122.util.Turtle
 
-//fun Double.toPlainString(): String = BigDecimal(this).setScale(2, RoundingMode.HALF_EVEN).toPlainString()
 /**
  * Creates a "regular multistar" (a star-like shape inscribed into a [n]-edges regular polygon with the size of an edge [a]
  *
@@ -23,7 +22,7 @@ fun multistar(n: Int, a: Int): List<Line> {
     val vertexInnerAngle = (180 - ((n - 2) * 180.0) / n) / 2
     val firstAngle = (180 - vertexInnerAngle) / 2
     val otherAngle = 180 - vertexInnerAngle
-    val turtle = Turtle(Coordinates(n / 4 * a, 0))
+    val turtle = Turtle(Coordinates(n / 3 * a, 0))
     turtle.right(firstAngle)
     for (i in 1..n) {
         turtle.forward(x)
@@ -40,7 +39,7 @@ fun multistar(n: Int, a: Int): List<Line> {
  * @return the list of [Line]s representing the regular polygon
  */
 fun polygon(n: Int, a: Int): List<Line> {
-    val turtle = Turtle(Coordinates(n / 4 * a, 0))
+    val turtle = Turtle(Coordinates(n / 3 * a, 0))
     val innerAngleDegrees = ((n - 2) * 180.0) / n
     val firstAngle = (180 - innerAngleDegrees) / 2
     turtle.right(firstAngle)
@@ -50,4 +49,20 @@ fun polygon(n: Int, a: Int): List<Line> {
         turtle.right(otherAngles)
     }
     return turtle.lines
+}
+
+/**
+ * Creates a polygon by "connecting the given [points]"
+ *
+ * @param points the points to connect
+ * @return the list of [Line]s reprezenting the polygon
+ */
+fun polygonFromPoints(points: List<Coordinates>): List<Line> {
+    var current = points.last()
+
+    return points.map {
+        val tmp = current
+        current = it
+        Line(tmp, current)
+    }
 }

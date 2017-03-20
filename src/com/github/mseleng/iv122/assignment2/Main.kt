@@ -6,7 +6,7 @@ import java.awt.Color
 /**
  * @suppress
  */
-fun run(args: Array<String>) {
+fun run(path: String) {
     //A
     val input = listOf(1, 2, 3, 4, 5)
     val k = 3
@@ -35,13 +35,13 @@ fun run(args: Array<String>) {
 
     //B
     print("-> Pascal's triangle (mod 5)......")
-    pascal(30, ModuloColorGenerator(5, Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod5.png"))
+    pascal(30, ModuloColorGenerator(5, Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(path, 2, "pascal-mod5.png"))
     print(" ✓ (assignment2/pascal-mod5.png)\n-> Pascal's triangle (mod 7)......")
-    pascal(100, ModuloColorGenerator(7, Color.RED, Color.BLUE, Color.GRAY, Color.BLACK, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod7.png"))
+    pascal(100, ModuloColorGenerator(7, Color.RED, Color.BLUE, Color.GRAY, Color.BLACK, Color.GREEN, Color.YELLOW, Color.CYAN)).writeTo(fileWithName(path, 2, "pascal-mod7.png"))
     print(" ✓ (assignment2/pascal-mod7.png)\n-> Pascal's triangle (mod 3)......")
-    pascal(100, ModuloColorGenerator(3, Color.RED, Color.BLUE, Color.GRAY)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-mod3.png"))
+    pascal(100, ModuloColorGenerator(3, Color.RED, Color.BLUE, Color.GRAY)).writeTo(fileWithName(path, 2, "pascal-mod3.png"))
     print(" ✓ (assignment2/pascal-mod3.png)\n-> Pascal's triangle (mod 2)......")
-    pascal(30, EvenOddColorGenerator(Color.YELLOW, Color.RED)).writeTo(fileWithName(assignmentNo = 2, name = "pascal-evenOdd.png"))
+    pascal(30, EvenOddColorGenerator(Color.YELLOW, Color.RED)).writeTo(fileWithName(path, 2, "pascal-evenOdd.png"))
     print(" ✓ (assignment2/pascal-evenOdd.png)\n==========\n")
 
     //C

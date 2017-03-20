@@ -9,8 +9,7 @@ import java.awt.Color
 /**
  * @suppress
  */
-fun run(args: Array<String>) {
-    val path = args.getOrElse(0) { "outputs" }
+fun run(path: String) {
     // A
     print("-> Four-way gradient......")
     getFourWayGradient(2500, Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA).writeTo(fileWithName(path, 1, "gradient.png"))

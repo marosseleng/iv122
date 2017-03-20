@@ -10,7 +10,7 @@ import java.io.File
  * @param name the name of the desired file **WITH** the extension (eg. something.png, nothing.xml, etc.)
  * @return the desired file
  */
-fun fileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): File {
+fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): File {
     val rootDirectory = File(rootDirName)
     rootDirectory.mkdir()
     val subdirectory = rootDirectory.resolve("assignment$assignmentNo")
