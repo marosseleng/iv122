@@ -19,4 +19,18 @@ Príklady v tomto cvičení boli zamerané na vyskúšanie a demonštráciu funk
     ![Ulam](../iv122_outputs/assignment1/ulamsSpiral-[*EmodPI>=2].png)
 * Posledné dve úlohy boli vizualizovať Collatzovu postupnosť a Euklidov algoritmus pre spočítanie najmenšieho spoločného deliteľa
     - Grafy Collatzovej postupnosti je možné nájsť [tu](../iv122_outputs/assignment1/collatz.png), respektíve [tu](../iv122_outputs/assignment1/collatz-max.png)
-    - Grafy viyualizácie beh Euklidovho algoritmu je možné nájsť [tu](../iv122_outputs/assignment1/euclid-[modulus].png), respektíve [tu](../iv122_outputs/assignment1/euclid-[subtraction].png)
+    - Grafy viyualizácie beh Euklidovho algoritmu je možné nájsť [tu](../iv122_outputs/assignment1/euclid-[modulus].png), respektíve [tu](../iv122_outputs/assignment1/euclid-[subtraction].png).
+    Grafy vizualizácie Euklidovho algoritmu farebne zobrazujú počty krokov potrebné k výpočtu najväčšieho spoločného deliteľa čísel x a y. Farebná legenda bola schválne ponechaná na obidvoch grafoch rovnaká, aby bolo jasne vidiet, že algoritmus, ktorý odčíta 2 čísla beží dlhšie než algoritmus, ktorý efektívne robí operáciu modulo.
+        + ```kotlin
+            /* 
+              funkcia, ktorá počíta najmenší spoločný deliteľ dvoch zadaných čísel pomocou operácie modulo (rem)
+              Trieda EuclidSolution je len typealias pre pár (najmenší_spoločný_deliteľ, počet_krokov)
+            */
+            fun euclidMod(x: Long, y: Long): EuclidSolution {
+                if (y == 0L) {
+                    return EuclidSolution(x, 1)
+                } else {
+                    return euclidMod(y, x.rem(y)).let { EuclidSolution(it.gcd, it.steps + 1) }
+                }
+            }
+          ```
