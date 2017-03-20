@@ -1,40 +1,68 @@
 package com.github.mseleng.iv122.assignment3
 
-import com.github.mseleng.iv122.util.*
-import java.math.BigDecimal
-import java.math.RoundingMode
+import com.github.mseleng.iv122.util.Coordinates
+import com.github.mseleng.iv122.util.Line
+import com.github.mseleng.iv122.util.Turtle
 
 /**
- * Created by mseleng on 3/7/17.
+ * Creates a "regular multistar" (a star-like shape inscribed into a [n]-edges regular polygon with the size of an edge [a]
+ *
+ * @param n the number of edges of the border polygon
+ * @param a the length of an edge of the border polygon
+ * @return the list of [Line]s representing the "regular multistar"
  */
-fun Double.toPlainString(): String = BigDecimal(this).setScale(2, RoundingMode.HALF_EVEN).toPlainString()
-fun main(args: Array<String>) {
-    val turtle = Turtle(Coordinates(300, 0))
-    turtle.right(60.0)
-    turtle.forward(100)
-    turtle.right(120.0)
-    turtle.forward(100)
-    turtle.right(120.0)
-    turtle.forward(100)
-    SVG().lines(turtle.lines).writeTo(fileWithName("outputs", 3, "turtle.svg"))
+fun multistar(n: Int, a: Int): List<Line> {
+    val perimeterAngle = 180.0 / n
+    // the radius of the circumscribed circle
+    val radius = a / (2 * Math.sin(Math.toRadians(perimeterAngle)))
+    // the length of the "inner" edge
+    val x = 2 * radius * Math.sin(Math.toRadians(n / 2 * perimeterAngle))
 
-    SVG().lines(pentagram(500)).writeTo(fileWithName("outputs", 3, "pentagram.svg"))
+    // the inner angle of a vertex
+    val vertexInnerAngle = (180 - ((n - 2) * 180.0) / n) / 2
+    val firstAngle = (180 - vertexInnerAngle) / 2
+    val otherAngle = 180 - vertexInnerAngle
+    val turtle = Turtle(Coordinates(n / 3 * a, 0))
+    turtle.right(firstAngle)
+    for (i in 1..n) {
+        turtle.forward(x)
+        turtle.right(otherAngle)
+    }
+    return turtle.lines
 }
 
-fun pentagram(length: Int): List<Line> {
-    val innerLineLength = Math.sin(Math.toRadians(52.5)).times(length).times(2)
-    val turtle = Turtle(Coordinates(500, 0))
-    turtle.right(36.0)
-    turtle.forward(length)
-    turtle.right(72.0)
-    turtle.forward(length)
-    turtle.right(72.0)
-    turtle.forward(length)
-    turtle.right(72.0)
-    turtle.forward(length)
-    turtle.right(72.0)
-    turtle.forward(length)
-    turtle.right(108.0)
-    turtle.forward(innerLineLength)
+/**
+ * Creates a regular polygon with [n] edges of the length [a]
+ *
+ * @param n the number of edges
+ * @param a the lenght of an edge
+ * @return the list of [Line]s representing the regular polygon
+ */
+fun polygon(n: Int, a: Int): List<Line> {
+    val turtle = Turtle(Coordinates(n / 3 * a, 0))
+    val innerAngleDegrees = ((n - 2) * 180.0) / n
+    val firstAngle = (180 - innerAngleDegrees) / 2
+    turtle.right(firstAngle)
+    val otherAngles = 180 - innerAngleDegrees
+    for (i in 1..n) {
+        turtle.forward(a)
+        turtle.right(otherAngles)
+    }
     return turtle.lines
+}
+
+/**
+ * Creates a polygon by "connecting the given [points]"
+ *
+ * @param points the points to connect
+ * @return the list of [Line]s reprezenting the polygon
+ */
+fun polygonFromPoints(points: List<Coordinates>): List<Line> {
+    var current = points.last()
+
+    return points.map {
+        val tmp = current
+        current = it
+        Line(tmp, current)
+    }
 }

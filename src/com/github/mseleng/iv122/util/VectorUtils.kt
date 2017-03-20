@@ -26,11 +26,11 @@ typealias Line = Pair<Coordinates, Coordinates>
 /**
  * An helper class for the work with the SVG images
  *
- * @param width the desired width of the SVG image
- * @param height the desired height of the SVG image
+ * @param width the desired width of the SVG image (default 1000)
+ * @param height the desired height of the SVG image (default 1000)
  * @constructor creates the SVG with the header
  */
-class SVG(val width: Int? = null, val height: Int? = null) {
+class SVG(val width: Int = 1000, val height: Int = 1000) {
 
     /**
      * A constructor used for square-shaped SVGs
@@ -46,7 +46,7 @@ class SVG(val width: Int? = null, val height: Int? = null) {
         builder.append(
                 "<?xml version=\"1.0\"?>" +
                 "<!DOCTYPE svg PUBLIC \"-//W3C//DTD util.SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-util.SVG-20010904/DTD/svg10.dtd\">" +
-                "<svg xmlns=\"http://www.w3.org/2000/svg\" text-rendering=\"auto\" shape-rendering=\"auto\">")
+                "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"$height\" width=\"$width\" text-rendering=\"auto\" shape-rendering=\"auto\">")
     }
 
     /**
@@ -83,6 +83,17 @@ class SVG(val width: Int? = null, val height: Int? = null) {
      */
     fun line(line: Line): SVG {
         return line(line.first.x, line.first.y, line.second.x, line.second.y)
+    }
+
+    /**
+     * Adds a line
+     *
+     * @param start the starting point of the line
+     * @param end the ending point of the line
+     * @return this
+     */
+    fun line(start: Coordinates, end: Coordinates): SVG {
+        return line(start.x, start.y, end.x, end.y)
     }
 
     /**
@@ -191,7 +202,7 @@ class SVG(val width: Int? = null, val height: Int? = null) {
      * @param points (possibly multiple) points to add
      * @return this
      */
-    fun polygon(style: Style, vararg points: Pair<Int, Int>): SVG {
+    fun polygon(style: Style, vararg points: Coordinates): SVG {
         builder.append("<polygon ${printPoints(points)} ${printStyle(style)} />")
         return this
     }
@@ -203,7 +214,7 @@ class SVG(val width: Int? = null, val height: Int? = null) {
      * @param points (possibly multiple) points to add
      * @return this
      */
-    fun polyline(style: Style, vararg points: Pair<Int, Int>): SVG {
+    fun polyline(style: Style, vararg points: Coordinates): SVG {
         builder.append("<polyline ${printPoints(points)} ${printStyle(style)} />")
         return this
     }
@@ -260,12 +271,12 @@ class SVG(val width: Int? = null, val height: Int? = null) {
         }
     }
 
-    private fun printPoints(points: Array<out Pair<Int, Int>>): String {
+    private fun printPoints(points: Array<out Coordinates>): String {
         val sb = StringBuilder()
         if (points.isNotEmpty()) {
             sb.append("points=\" ")
             for (x in points) {
-                sb.append("${x.first},${x.second} ")
+                sb.append("${x.x},${x.y} ")
             }
             sb.append("\"")
         }
