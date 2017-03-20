@@ -14,7 +14,7 @@ Pre prácu s grafmi som sa rozhodol využiť externú knižnicu `jfreechart` (a 
 Príklady v tomto cvičení boli zamerané na vyskúšanie a demonštráciu funkcií týchto "knižníc"
 
 * Na demonštráciu práce s bitmapovou grafikou bolo za úlohu vytvoriť farebný gradient. Na počítanie farieb bola použitá bilineárna interpolácia a tu je výsledok: 
-    ![Gradient](/iv122_outputs/assignment1/gradient.png)
+    ![Gradient](../iv122_outputs/assignment1/gradient.png)
 * B
 * C
 * D
