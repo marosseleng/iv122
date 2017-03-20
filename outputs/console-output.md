@@ -1,7 +1,7 @@
-## The console output
-[Home](../)
+IV122
+Output directory: iv122_outputs/
 
-```
+
 ***The first assignment***
 -> Four-way gradient...... ✓ (assignment1/gradient.png)
 -> A star...... ✓ (assignment1/star.svg)
@@ -48,13 +48,26 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141762557431749
-	Gregory-Leibnitz method: 3.1415763844328337
+	Monte Carlo method (using the library square (root) function): 3.1417213269760738
+	Gregory-Leibnitz method: 3.1415763286583296
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
 
 ***The third assignment***
+-> Polygon (7 edges)...... ✓ (assignment3/polygon7.svg)
+-> Polygon (9 edges)...... ✓ (assignment3/polygon9.svg)
+-> Polygon (17 edges)...... ✓ (assignment3/polygon17.svg)
+-> Multistar (9 vertices)...... ✓ (assignment3/multistar9.svg)
+-> Multistar (5 vertices)...... ✓ (assignment3/multistar5.svg)
+-> Pentagram (turtle)...... ✓ (assignment3/pentagram_turtle.svg)
+-> 79gram (turtle)...... ✓ (assignment3/79gram_turtle.svg)
+-> Nested square (20;[1:3];5])...... ✓ (assignment3/nestedsquare.svg)
+-> Nested square (40;[1:7];5])...... ✓ (assignment3/nestedsquare2.svg)
+-> Nested square (40;[1:10];0])...... ✓ (assignment3/nestedsquare3.svg)
+-> Nested triangle ([25;5])...... ✓ (assignment3/nestedTriangle2.svg)
+-> Nested triangle ([25;0])...... ✓ (assignment3/nestedTriangle.svg)
+-> Rounded flower..... ✓ (assignment3/flower.svg)
+-> Branch fractal...... ✓ (assignment3/branch.svg)
 Complete.
 
-```

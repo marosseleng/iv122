@@ -6,7 +6,12 @@ title: Turtle.<init> - iv122
 
 # &lt;init&gt;
 
-`Turtle(offset: `[`Coordinates`](../-coordinates/index.md)`? = null)`
+`Turtle(currentPosition: `[`Coordinates`](../-coordinates/index.md)` = Coordinates(0.0, 0.0))`
 
-Created by mseleng on 3/7/17.
+A helper class to work with the turtle graphics
 
+The initial direction of the turtle is 0.0 (the turtle is heading East)
+
+### Parameters
+
+`currentPosition` - the coordinates of the starting point

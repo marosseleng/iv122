@@ -7,3 +7,6 @@ title: Turtle.penUp - iv122
 # penUp
 
 `fun penUp(): Unit`
+
+Lifts the pen
+

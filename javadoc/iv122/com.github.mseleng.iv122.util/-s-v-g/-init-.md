@@ -14,7 +14,7 @@ A constructor used for square-shaped SVGs
 
 `size` - the size of the SVG image
 
-`SVG(width: Int? = null, height: Int? = null)`
+`SVG(width: Int = 1000, height: Int = 1000)`
 
 creates the SVG with the header
 

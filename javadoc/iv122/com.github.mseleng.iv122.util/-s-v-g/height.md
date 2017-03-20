@@ -6,4 +6,4 @@ title: SVG.height - iv122
 
 # height
 
-`val height: Int?`
+`val height: Int`

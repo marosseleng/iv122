@@ -7,3 +7,9 @@ title: Turtle.right - iv122
 # right
 
 `fun right(degrees: Double): Unit`
+
+Turns left by the given amount of [degrees](right.md#com.github.mseleng.iv122.util.Turtle$right(kotlin.Double)/degrees)
+
+### Parameters
+
+`degrees` - the amount of degrees to turn

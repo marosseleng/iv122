@@ -8,7 +8,7 @@ There is a jar archive inside the `outputs` directory of the `gh-pages` branch. 
 java -jar outputs/iv122.jar <path-to-existent-output-dir>
     
 ```
-##### [](#output)The output of the above command can be found [here](outputs/console-output.md)
+##### [](#output)The output of the above command can be found [here](docs/console-output.md)
 
 ### [](#assignments)The list of assignments:
   1. [Warm-up](docs/warm-up.md)

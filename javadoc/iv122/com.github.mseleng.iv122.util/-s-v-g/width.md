@@ -6,4 +6,4 @@ title: SVG.width - iv122
 
 # width
 
-`val width: Int?`
+`val width: Int`

@@ -8,3 +8,9 @@ title: Turtle.forward - iv122
 
 `fun forward(amount: Int): Unit`
 `fun forward(amount: Double): Unit`
+
+Goes forward in the [currentDirection](#)
+
+### Parameters
+
+`amount` - the distance to go

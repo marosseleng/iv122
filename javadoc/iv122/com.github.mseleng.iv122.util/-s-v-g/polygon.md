@@ -6,7 +6,7 @@ title: SVG.polygon - iv122
 
 # polygon
 
-`fun polygon(style: `[`Style`](../-style/index.md)`, vararg points: <ERROR CLASS><Int, Int>): `[`SVG`](index.md)
+`fun polygon(style: `[`Style`](../-style/index.md)`, vararg points: `[`Coordinates`](../-coordinates/index.md)`): `[`SVG`](index.md)
 
 Adds a polygon
 

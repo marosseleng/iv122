@@ -6,7 +6,7 @@ title: fileWithName - iv122
 
 # fileWithName
 
-`fun fileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)
+`fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)
 
 Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory
 

@@ -6,7 +6,7 @@ title: SVG.polyline - iv122
 
 # polyline
 
-`fun polyline(style: `[`Style`](../-style/index.md)`, vararg points: <ERROR CLASS><Int, Int>): `[`SVG`](index.md)
+`fun polyline(style: `[`Style`](../-style/index.md)`, vararg points: `[`Coordinates`](../-coordinates/index.md)`): `[`SVG`](index.md)
 
 Adds a polyline
 

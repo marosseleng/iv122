@@ -13,7 +13,7 @@ title: com.github.mseleng.iv122.util - iv122
 | [Direction](-direction/index.md) | `enum class Direction : Enum<`[`Direction`](-direction/index.md)`>`<br>Enum representing directions in a 2D grid |
 | [SVG](-s-v-g/index.md) | `class SVG : Any`<br>An helper class for the work with the SVG images |
 | [Style](-style/index.md) | `data class Style : Any`<br>The class representing the style of the SVG elements |
-| [Turtle](-turtle/index.md) | `class Turtle : Any`<br>Created by mseleng on 3/7/17. |
+| [Turtle](-turtle/index.md) | `class Turtle : Any`<br>A helper class to work with the turtle graphics |
 
 ### Type Aliases
 
@@ -34,7 +34,7 @@ title: com.github.mseleng.iv122.util - iv122
 | [bisection](bisection.md) | `fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double`<br>Approximates the number using bisection |
 | [bitmapImage](bitmap-image.md) | `fun bitmapImage(width: Int, height: Int, backgroundColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)` = Color.WHITE, init: (`[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`) -> Unit = {}): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>An helper function that creates an instance of [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) for further edit. |
 | [e](e.md) | `fun e(eps: Double = 0.000001): Double`<br>Approximates the Euler's number |
-| [fileWithName](file-with-name.md) | `fun fileWithName(rootDirName: String = "outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)<br>Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory |
+| [fileWithName](file-with-name.md) | `fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)<br>Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory |
 | [fraction](fraction.md) | `fun fraction(part: Int, whole: Int): Double`<br>Computes the fraction for the given part and the whole |
 | [ln](ln.md) | `fun ln(x: Double, eps: Double = 0.000001): Double`<br>Approximates the natural logarithm of the given [x](ln.md#com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/x) |
 | [nthRoot_approx_bisection](nth-root_approx_bisection.md) | `fun nthRoot_approx_bisection(num: Double, order: Long, from: Double = 0.0, to: Double = Math.floor(num.div(order)).plus(1), eps: Double = 0.0001): Double`<br>Approximates (using the bisection) the [order](nth-root_approx_bisection.md#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/order)-th root of [num](nth-root_approx_bisection.md#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/num) |

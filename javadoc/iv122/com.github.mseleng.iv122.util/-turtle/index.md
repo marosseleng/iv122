@@ -8,26 +8,29 @@ title: Turtle - iv122
 
 `class Turtle : Any`
 
-Created by mseleng on 3/7/17.
+A helper class to work with the turtle graphics
+
+The initial direction of the turtle is 0.0 (the turtle is heading East)
+
+### Parameters
+
+`currentPosition` - the coordinates of the starting point
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Turtle(offset: `[`Coordinates`](../-coordinates/index.md)`? = null)`<br>Created by mseleng on 3/7/17. |
+| [&lt;init&gt;](-init-.md) | `Turtle(currentPosition: `[`Coordinates`](../-coordinates/index.md)` = Coordinates(0.0, 0.0))`<br>A helper class to work with the turtle graphics |
 
 ### Properties
 
-| [currentDirection](current-direction.md) | `var currentDirection: Double` |
 | [currentPosition](current-position.md) | `var currentPosition: `[`Coordinates`](../-coordinates/index.md) |
-| [isPenDown](is-pen-down.md) | `var isPenDown: Boolean` |
 | [lines](lines.md) | `val lines: <ERROR CLASS>` |
-| [offset](offset.md) | `val offset: `[`Coordinates`](../-coordinates/index.md)`?` |
 
 ### Functions
 
-| [backward](backward.md) | `fun backward(amount: Int): Unit`<br>`fun backward(amount: Double): Unit` |
-| [forward](forward.md) | `fun forward(amount: Int): Unit`<br>`fun forward(amount: Double): Unit` |
-| [left](left.md) | `fun left(degrees: Double): Unit` |
-| [penDown](pen-down.md) | `fun penDown(): Unit` |
-| [penUp](pen-up.md) | `fun penUp(): Unit` |
-| [right](right.md) | `fun right(degrees: Double): Unit` |
+| [backward](backward.md) | `fun backward(amount: Int): Unit`<br>`fun backward(amount: Double): Unit`<br>Does backward but stay in the [currentDirection](#) |
+| [forward](forward.md) | `fun forward(amount: Int): Unit`<br>`fun forward(amount: Double): Unit`<br>Goes forward in the [currentDirection](#) |
+| [left](left.md) | `fun left(degrees: Double): Unit`<br>Turns left by the given amount of [degrees](left.md#com.github.mseleng.iv122.util.Turtle$left(kotlin.Double)/degrees) |
+| [penDown](pen-down.md) | `fun penDown(): Unit`<br>Puts the pen down |
+| [penUp](pen-up.md) | `fun penUp(): Unit`<br>Lifts the pen |
+| [right](right.md) | `fun right(degrees: Double): Unit`<br>Turns left by the given amount of [degrees](right.md#com.github.mseleng.iv122.util.Turtle$right(kotlin.Double)/degrees) |
 

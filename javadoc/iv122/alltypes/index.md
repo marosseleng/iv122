@@ -12,7 +12,6 @@ title: alltypes - iv122
 | [com.github.mseleng.iv122.util.Direction](../com.github.mseleng.iv122.util/-direction/index.md) | Enum representing directions in a 2D grid |
 | [kotlin.Double](../com.github.mseleng.iv122.util/kotlin.-double/index.md) (extensions in package com.github.mseleng.iv122.util) |  |
 | [kotlin.Double](../com.github.mseleng.iv122.assignment2/kotlin.-double/index.md) (extensions in package com.github.mseleng.iv122.assignment2) |  |
-| [kotlin.Double](../com.github.mseleng.iv122.assignment3/kotlin.-double/index.md) (extensions in package com.github.mseleng.iv122.assignment3) |  |
 | [com.github.mseleng.iv122.assignment1.EuclidSolution](../com.github.mseleng.iv122.assignment1/-euclid-solution/index.md) | Class representing tuple of two numbers (gcd and the number of steps needed to get it) |
 | [com.github.mseleng.iv122.assignment2.EvenOddColorGenerator](../com.github.mseleng.iv122.assignment2/-even-odd-color-generator/index.md) | A generator that supplies colors based on the parity of the numbers in the current line |
 | [com.github.mseleng.iv122.assignment2.Fraction](../com.github.mseleng.iv122.assignment2/-fraction/index.md) | A class representing rational numbers as the fraction in the format [part](../com.github.mseleng.iv122.assignment2/-fraction/part.md)/[whole](../com.github.mseleng.iv122.assignment2/-fraction/whole.md) |
@@ -23,5 +22,5 @@ title: alltypes - iv122
 | [com.github.mseleng.iv122.util.SVG](../com.github.mseleng.iv122.util/-s-v-g/index.md) | An helper class for the work with the SVG images |
 | [kotlin.String](../com.github.mseleng.iv122.assignment2/kotlin.-string/index.md) (extensions in package com.github.mseleng.iv122.assignment2) |  |
 | [com.github.mseleng.iv122.util.Style](../com.github.mseleng.iv122.util/-style/index.md) | The class representing the style of the SVG elements |
-| [com.github.mseleng.iv122.util.Turtle](../com.github.mseleng.iv122.util/-turtle/index.md) | Created by mseleng on 3/7/17. |
+| [com.github.mseleng.iv122.util.Turtle](../com.github.mseleng.iv122.util/-turtle/index.md) | A helper class to work with the turtle graphics |
 

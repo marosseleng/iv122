@@ -17,6 +17,19 @@ Adds a line
 **Return**
 this
 
+`fun line(start: `[`Coordinates`](../-coordinates/index.md)`, end: `[`Coordinates`](../-coordinates/index.md)`): `[`SVG`](index.md)
+
+Adds a line
+
+### Parameters
+
+`start` - the starting point of the line
+
+`end` - the ending point of the line
+
+**Return**
+this
+
 `fun line(x1: Int, y1: Int, x2: Int, y2: Int, style: `[`Style`](../-style/index.md)` = defaultLineStyle): `[`SVG`](index.md)
 `fun line(x1: Double, y1: Double, x2: Double, y2: Double, style: `[`Style`](../-style/index.md)` = defaultLineStyle): `[`SVG`](index.md)
 
