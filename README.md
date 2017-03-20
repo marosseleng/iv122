@@ -10,7 +10,7 @@ java -jar outputs/iv122.jar <path-to-existent-output-dir>
 ```
 ##### [](#output)The output of the above command can be found [here](docs/console-output.md)
 
-### [](#assignments)The list of assignments:
+### [](#assignments)The list of assignments (in Slovak):
   1. [Warm-up](docs/warm-up.md)
   2. [Numbers](docs/numbers.md)
   3. [Vector graphics](docs/vector-graphics.md)
