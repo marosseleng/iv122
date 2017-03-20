@@ -1,3 +1,7 @@
+## The console output
+[Home](../)
+
+```
 IV122
 Output directory: iv122_outputs/
 
@@ -48,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1417213269760738
-	Gregory-Leibnitz method: 3.1415763286583296
+	Monte Carlo method (using the library square (root) function): 3.1421786300356436
+	Gregory-Leibnitz method: 3.141609083393427
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -71,3 +75,4 @@ Complete.
 -> Branch fractal...... ✓ (assignment3/branch.svg)
 Complete.
 
+```
