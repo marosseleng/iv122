@@ -1,8 +1,8 @@
-## []()Repository with sources for the IV122 class @ FI MU Brno
+# []()My portfolio for the IV122 class @ FI MU Brno
 
 There is a jar archive inside the `outputs` directory of the `gh-pages` branch. That jar includes all the dependencies needed.
 
-### &#8678; Download the current JAR here
+## &larr; Download the current JAR here
 
 #### [](#usage)Usage: 
 ```bash
