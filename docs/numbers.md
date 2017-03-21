@@ -39,10 +39,12 @@ fun variations(numbers: List<Int>, k: Int, allowRepetition: Boolean): List<Strin
 fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variations(numbers, k, allowRepetition).map(String::sorted).toSet()
 ```
 
-* Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Výstupy z tejto podúlohy sa nachádzajú v zložke `iv122_outputs/assignment2`
+* Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Výstupy z tejto podúlohy sa nachádzajú v zložke [`iv122_outputs/assignment2`](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 
 * 
 
     
+#### Výstup z konsole po spustení jar archívu sa nachádza [tu](./console-output.md)
+#### Všetky ostatné obrázky(výstupy) k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment1)
 #### Všetky ostatné kódy k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment2)
 #### Dokumentácia ku kódu sa nachádza [tu](../javadoc/iv122/com.github.mseleng.iv122.assignment2)
