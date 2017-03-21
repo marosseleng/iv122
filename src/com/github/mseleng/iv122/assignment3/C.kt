@@ -60,7 +60,45 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     flakeRecursive(turtle, d / 3, depth - 1)
 }
 
+fun sierpinski(depth: Int): List<Line> {
+    val turtle = Turtle(Coordinates(0, 1000))
+    sierpinskiResursive(turtle, 1024.0, depth)
+    return turtle.lines
+}
+
+fun sierpinskiResursive(turtle: Turtle, length: Double, depth: Int) {
+    if (depth == 1) {
+        turtle.forward(length)
+        turtle.left(120.0)
+        turtle.forward(length)
+        turtle.left(120.0)
+        turtle.forward(length)
+        turtle.currentDirection = 0.0
+        return
+    }
+    sierpinskiResursive(turtle, length / 2, depth - 1)
+    turtle.penUp()
+    turtle.forward(length / 2)
+    turtle.penDown()
+    sierpinskiResursive(turtle, length / 2, depth - 1)
+    turtle.penUp()
+    turtle.forward(length / 2)
+    turtle.left(120.0)
+    turtle.forward(length)
+    turtle.left(120.0)
+    turtle.forward(length / 2)
+    turtle.left(120.0)
+    turtle.penDown()
+    sierpinskiResursive(turtle, length / 2, depth - 1)
+    turtle.penUp()
+    turtle.right(120.0)
+    turtle.forward(length / 2)
+    turtle.currentDirection = 0.0
+    turtle.penDown()
+}
+
 fun main(args: Array<String>) {
-    SVG(5000, 5000).lines(flake(5)).writeTo(fileWithName(assignmentNo = 3, name = "flake.svg"))
+//    SVG(5000, 5000).lines(flake(5)).writeTo(fileWithName(assignmentNo = 3, name = "flake.svg"))
+    SVG(1100, 1100).lines(sierpinski(8)).writeTo(fileWithName(assignmentNo = 3, name = "sierp.svg"))
 }
 

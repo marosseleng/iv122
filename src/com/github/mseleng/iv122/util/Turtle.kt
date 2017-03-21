@@ -9,7 +9,7 @@ package com.github.mseleng.iv122.util
  */
 class Turtle(var currentPosition: Coordinates = Coordinates(0.0, 0.0)) {
 
-    private var currentDirection: Double = 0.0
+    var currentDirection: Double = 0.0
     private var isPenDown = true
     private val currentDirectionRadians: Double
         get() = Math.toRadians(currentDirection)
