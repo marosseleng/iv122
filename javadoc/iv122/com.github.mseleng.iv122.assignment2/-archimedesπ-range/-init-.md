@@ -8,10 +8,8 @@ title: ArchimedesπRange.<init> - iv122
 
 `ArchimedesπRange(inscribed: Double, circumscribed: Double)`
 
-Class representing an interval, within which the value of π is. This is used just in the Archimedes method
+creates the range with the given values
 
-### Parameters
+**Constructor**
+creates the range with the given values
 
-`inscribed` - the perimeter of the inscribed polygon
-
-`circumscribed` - the perimeter of the circumscribed polygon

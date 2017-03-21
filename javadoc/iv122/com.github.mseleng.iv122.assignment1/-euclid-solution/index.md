@@ -22,6 +22,6 @@ Class representing tuple of two numbers (gcd and the number of steps needed to g
 
 ### Properties
 
-| [gcd](gcd.md) | `val gcd: Long` |
-| [steps](steps.md) | `val steps: Int` |
+| [gcd](gcd.md) | `val gcd: Long`<br>the resulting greatest common divisor |
+| [steps](steps.md) | `val steps: Int`<br>the number of steps needed to calculate that gcd |
 

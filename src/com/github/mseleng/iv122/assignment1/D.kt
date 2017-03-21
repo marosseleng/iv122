@@ -11,6 +11,8 @@ import java.awt.Paint
  * @param gcd the resulting greatest common divisor
  * @param steps the number of steps needed to calculate that gcd
  * @constructor creates a simple tuple/pair
+ * @property gcd the resulting greatest common divisor
+ * @property steps the number of steps needed to calculate that gcd
  */
 data class EuclidSolution(val gcd: Long, val steps: Int)
 

@@ -22,9 +22,8 @@ An helper class for the work with the SVG images
 
 ### Properties
 
-| [builder](builder.md) | `val builder: `[`StringBuilder`](http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuilder.html) |
-| [height](height.md) | `val height: Int` |
-| [width](width.md) | `val width: Int` |
+| [height](height.md) | `val height: Int`<br>the desired height of the SVG image (default 1000) |
+| [width](width.md) | `val width: Int`<br>the desired width of the SVG image (default 1000) |
 
 ### Functions
 

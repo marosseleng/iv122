@@ -7,3 +7,9 @@ title: EuclidSolution.steps - iv122
 # steps
 
 `val steps: Int`
+
+the number of steps needed to calculate that gcd
+
+### Property
+
+`steps` - the number of steps needed to calculate that gcd

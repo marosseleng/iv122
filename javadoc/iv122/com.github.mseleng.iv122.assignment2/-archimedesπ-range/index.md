@@ -18,14 +18,10 @@ Class representing an interval, within which the value of π is. This is used ju
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `ArchimedesπRange(inscribed: Double, circumscribed: Double)`<br>Class representing an interval, within which the value of π is. This is used just in the Archimedes method |
+| [&lt;init&gt;](-init-.md) | `ArchimedesπRange(inscribed: Double, circumscribed: Double)`<br>creates the range with the given values |
 
 ### Properties
 
-| [circumscribed](circumscribed.md) | `val circumscribed: Double` |
-| [inscribed](inscribed.md) | `val inscribed: Double` |
-
-### Functions
-
-| [toString](to-string.md) | `fun toString(): String` |
+| [circumscribed](circumscribed.md) | `val circumscribed: Double`<br>the perimeter of the circumscribed polygon |
+| [inscribed](inscribed.md) | `val inscribed: Double`<br>the perimeter of the inscribed polygon |
 

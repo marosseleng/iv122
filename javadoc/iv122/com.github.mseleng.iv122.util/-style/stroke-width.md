@@ -7,3 +7,9 @@ title: Style.strokeWidth - iv122
 # strokeWidth
 
 `val strokeWidth: Int?`
+
+the width of the stroke
+
+### Property
+
+`strokeWidth` - the width of the stroke

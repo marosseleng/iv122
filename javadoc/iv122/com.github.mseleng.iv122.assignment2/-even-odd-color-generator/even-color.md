@@ -7,3 +7,9 @@ title: EvenOddColorGenerator.evenColor - iv122
 # evenColor
 
 `val evenColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)
+
+a color to apply on the even numbers
+
+### Property
+
+`evenColor` - a color to apply on the even numbers

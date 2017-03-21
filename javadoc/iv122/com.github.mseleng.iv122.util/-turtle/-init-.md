@@ -8,10 +8,8 @@ title: Turtle.<init> - iv122
 
 `Turtle(currentPosition: `[`Coordinates`](../-coordinates/index.md)` = Coordinates(0.0, 0.0))`
 
-A helper class to work with the turtle graphics
+creates the turtle starting at the given coordinates and heading east
 
-The initial direction of the turtle is 0.0 (the turtle is heading East)
+**Constructor**
+creates the turtle starting at the given coordinates and heading east
 
-### Parameters
-
-`currentPosition` - the coordinates of the starting point

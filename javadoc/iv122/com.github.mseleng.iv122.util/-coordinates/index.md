@@ -22,14 +22,15 @@ Data class representing the coordinates of a single point in the 2D space
 
 ### Properties
 
-| [x](x.md) | `val x: Double` |
-| [y](y.md) | `val y: Double` |
+| [x](x.md) | `val x: Double`<br>the horizontal part |
+| [y](y.md) | `val y: Double`<br>the vertical part |
 
 ### Functions
 
 | [isOutOfRange](is-out-of-range.md) | `fun isOutOfRange(width: Int, height: Int): Boolean`<br>Says whether this coordinates are out of the given range |
-| [minus](minus.md) | `operator fun minus(other: Coordinates): Coordinates` |
-| [plus](plus.md) | `operator fun plus(other: Coordinates?): Coordinates` |
-| [times](times.md) | `operator fun times(other: Int): Coordinates`<br>`operator fun times(other: Double): Coordinates` |
 | [trimToNDecimalPoints](trim-to-n-decimal-points.md) | `fun trimToNDecimalPoints(n: Int): Coordinates`<br>Trims this decimal number, so there is no scientific exponentiation in toString() |
+
+### Extension Functions
+
+| [inOnLine](../../com.github.mseleng.iv122.assignment5/in-on-line.md) | `fun Coordinates.inOnLine(line: <ERROR CLASS><Coordinates, Coordinates>): Boolean` |
 

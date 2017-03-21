@@ -22,8 +22,8 @@ A generator that supplies colors based on current line's modulus
 
 ### Properties
 
-| [colors](colors.md) | `vararg val colors: Array<out `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`>` |
-| [mod](mod.md) | `val mod: Int` |
+| [colors](colors.md) | `vararg val colors: Array<out `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`>`<br>(possibly mutliple) [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)s |
+| [mod](mod.md) | `val mod: Int`<br>the desired modulus base |
 
 ### Functions
 

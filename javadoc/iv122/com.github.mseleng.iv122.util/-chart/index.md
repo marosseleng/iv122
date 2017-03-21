@@ -14,7 +14,7 @@ This class is used as a simple facade above the jfreechart library, providing si
 
 `chartName` - the name of the chart (required by jfreechart; this is **NOT** the name of an output file)
 
-`data` - a map of [Paint](http://docs.oracle.com/javase/6/docs/api/java/awt/Paint.html) ~ [XYSeries](#) pairs, used as the dataset for the chart
+`data` - a map of (Color-data) pairs, used as the dataset for the chart
 
 `showLegend` - true of legend of the chart should be shown, else otherwise (default false)
 

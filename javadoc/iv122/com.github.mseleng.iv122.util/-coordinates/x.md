@@ -7,3 +7,9 @@ title: Coordinates.x - iv122
 # x
 
 `val x: Double`
+
+the horizontal part
+
+### Property
+
+`x` - the horizontal part

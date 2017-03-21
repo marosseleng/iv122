@@ -7,3 +7,9 @@ title: Turtle.currentPosition - iv122
 # currentPosition
 
 `var currentPosition: `[`Coordinates`](../-coordinates/index.md)
+
+the coordinates of the starting point
+
+### Property
+
+`currentPosition` - the coordinates of the starting point

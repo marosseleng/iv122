@@ -7,3 +7,9 @@ title: SVG.width - iv122
 # width
 
 `val width: Int`
+
+the desired width of the SVG image (default 1000)
+
+### Property
+
+`width` - the desired width of the SVG image (default 1000)

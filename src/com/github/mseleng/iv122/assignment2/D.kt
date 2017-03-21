@@ -8,8 +8,14 @@ import java.util.*
  *
  * @param inscribed the perimeter of the inscribed polygon
  * @param circumscribed the perimeter of the circumscribed polygon
+ * @constructor creates the range with the given values
+ * @property inscribed the perimeter of the inscribed polygon
+ * @property circumscribed the perimeter of the circumscribed polygon
  */
 data class ArchimedesπRange(val inscribed: Double, val circumscribed: Double) {
+    /**
+     * @suppress
+     */
     override fun toString() = "$inscribed < π < $circumscribed"
 }
 

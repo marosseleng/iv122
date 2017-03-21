@@ -7,3 +7,7 @@ title: Fraction.whole - iv122
 # whole
 
 `val whole: Long`
+
+### Property
+
+`whole` - 

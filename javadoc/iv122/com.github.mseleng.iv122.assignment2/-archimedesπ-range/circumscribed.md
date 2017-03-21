@@ -7,3 +7,9 @@ title: ArchimedesπRange.circumscribed - iv122
 # circumscribed
 
 `val circumscribed: Double`
+
+the perimeter of the circumscribed polygon
+
+### Property
+
+`circumscribed` - the perimeter of the circumscribed polygon

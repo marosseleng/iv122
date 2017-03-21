@@ -7,3 +7,7 @@ title: Fraction.part - iv122
 # part
 
 `val part: Long`
+
+### Property
+
+`part` - 

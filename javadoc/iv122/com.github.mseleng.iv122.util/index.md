@@ -17,7 +17,7 @@ title: com.github.mseleng.iv122.util - iv122
 
 ### Type Aliases
 
-| [Line](-line.md) | `typealias Line = <ERROR CLASS><`[`Coordinates`](-coordinates/index.md)`, `[`Coordinates`](-coordinates/index.md)`>`<br>A typealias for the [Pair](#) of [Coordinates](-coordinates/index.md) representing the starting and the end point of a line in SVG |
+| [Line](-line.md) | `typealias Line = <ERROR CLASS><`[`Coordinates`](-coordinates/index.md)`, `[`Coordinates`](-coordinates/index.md)`>`<br>A typealias for the [kotlin.Pair](#) of [Coordinates](-coordinates/index.md) representing the starting and the end point of a line in SVG |
 
 ### Extensions for External Classes
 

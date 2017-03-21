@@ -22,6 +22,8 @@ typealias DecimalFraction = Pair<Long, Fraction>
  * @param part
  * @param whole
  * @constructor creates a rational number in the format of a fraction
+ * @property part
+ * @property whole
  */
 data class Fraction(val part: Long, val whole: Long) {
     /**

@@ -6,14 +6,22 @@ package com.github.mseleng.iv122.util
  * The initial direction of the turtle is 0.0 (the turtle is heading East)
  *
  * @param currentPosition the coordinates of the starting point
+ * @property currentPosition the coordinates of the starting point
+ * @constructor creates the turtle starting at the given coordinates and heading east
  */
 class Turtle(var currentPosition: Coordinates = Coordinates(0.0, 0.0)) {
 
+    /**
+     * @property currentDirection the direction this turtle is heading (default 0.0 -> EAST)
+     */
     var currentDirection: Double = 0.0
     private var isPenDown = true
     private val currentDirectionRadians: Double
         get() = Math.toRadians(currentDirection)
 
+    /**
+     * @property lines the list of lines drawn by this turtle
+     */
     val lines = mutableListOf<Line>()
 
     /**

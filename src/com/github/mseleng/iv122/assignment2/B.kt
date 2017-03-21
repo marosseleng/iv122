@@ -48,6 +48,8 @@ interface PascalTriangleColorGenerator {
  * @param mod the desired modulus base
  * @param colors (possibly mutliple) [Color]s
  * @constructor
+ * @property mod the desired modulus base
+ * @property colors (possibly mutliple) [Color]s
  */
 class ModuloColorGenerator(val mod: Int, vararg val colors: Color) : PascalTriangleColorGenerator {
     private var list = listOf<Int>()
@@ -77,6 +79,8 @@ class ModuloColorGenerator(val mod: Int, vararg val colors: Color) : PascalTrian
  * @param evenColor a color to apply on the even numbers
  * @param oddColor a color to apply on the odd numbers
  * @constructor
+ * @property evenColor a color to apply on the even numbers
+ * @property oddColor a color to apply on the odd numbers
  */
 class EvenOddColorGenerator(val evenColor: Color, val oddColor: Color) : PascalTriangleColorGenerator {
     private var list = listOf<Int>()

@@ -18,17 +18,18 @@ The initial direction of the turtle is 0.0 (the turtle is heading East)
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Turtle(currentPosition: `[`Coordinates`](../-coordinates/index.md)` = Coordinates(0.0, 0.0))`<br>A helper class to work with the turtle graphics |
+| [&lt;init&gt;](-init-.md) | `Turtle(currentPosition: `[`Coordinates`](../-coordinates/index.md)` = Coordinates(0.0, 0.0))`<br>creates the turtle starting at the given coordinates and heading east |
 
 ### Properties
 
-| [currentPosition](current-position.md) | `var currentPosition: `[`Coordinates`](../-coordinates/index.md) |
+| [currentDirection](current-direction.md) | `var currentDirection: Double` |
+| [currentPosition](current-position.md) | `var currentPosition: `[`Coordinates`](../-coordinates/index.md)<br>the coordinates of the starting point |
 | [lines](lines.md) | `val lines: <ERROR CLASS>` |
 
 ### Functions
 
-| [backward](backward.md) | `fun backward(amount: Int): Unit`<br>`fun backward(amount: Double): Unit`<br>Does backward but stay in the [currentDirection](#) |
-| [forward](forward.md) | `fun forward(amount: Int): Unit`<br>`fun forward(amount: Double): Unit`<br>Goes forward in the [currentDirection](#) |
+| [backward](backward.md) | `fun backward(amount: Int): Unit`<br>`fun backward(amount: Double): Unit`<br>Does backward but stay in the [currentDirection](current-direction.md) |
+| [forward](forward.md) | `fun forward(amount: Int): Unit`<br>`fun forward(amount: Double): Unit`<br>Goes forward in the [currentDirection](current-direction.md) |
 | [left](left.md) | `fun left(degrees: Double): Unit`<br>Turns left by the given amount of [degrees](left.md#com.github.mseleng.iv122.util.Turtle$left(kotlin.Double)/degrees) |
 | [penDown](pen-down.md) | `fun penDown(): Unit`<br>Puts the pen down |
 | [penUp](pen-up.md) | `fun penUp(): Unit`<br>Lifts the pen |

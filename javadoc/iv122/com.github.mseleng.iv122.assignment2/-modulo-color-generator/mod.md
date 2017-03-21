@@ -7,3 +7,9 @@ title: ModuloColorGenerator.mod - iv122
 # mod
 
 `val mod: Int`
+
+the desired modulus base
+
+### Property
+
+`mod` - the desired modulus base

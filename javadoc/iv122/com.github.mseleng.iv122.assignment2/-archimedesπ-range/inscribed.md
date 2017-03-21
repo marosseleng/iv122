@@ -7,3 +7,9 @@ title: ArchimedesπRange.inscribed - iv122
 # inscribed
 
 `val inscribed: Double`
+
+the perimeter of the inscribed polygon
+
+### Property
+
+`inscribed` - the perimeter of the inscribed polygon

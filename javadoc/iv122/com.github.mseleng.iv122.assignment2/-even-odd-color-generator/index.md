@@ -22,8 +22,8 @@ A generator that supplies colors based on the parity of the numbers in the curre
 
 ### Properties
 
-| [evenColor](even-color.md) | `val evenColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) |
-| [oddColor](odd-color.md) | `val oddColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) |
+| [evenColor](even-color.md) | `val evenColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)<br>a color to apply on the even numbers |
+| [oddColor](odd-color.md) | `val oddColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)<br>a color to apply on the odd numbers |
 
 ### Functions
 

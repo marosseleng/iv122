@@ -7,3 +7,9 @@ title: EuclidSolution.gcd - iv122
 # gcd
 
 `val gcd: Long`
+
+the resulting greatest common divisor
+
+### Property
+
+`gcd` - the resulting greatest common divisor

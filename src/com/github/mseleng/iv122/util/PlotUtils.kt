@@ -11,7 +11,7 @@ import java.io.File
  * This class is used as a simple facade above the jfreechart library, providing simple chart actions
  *
  * @param chartName the name of the chart (required by jfreechart; this is **NOT** the name of an output file)
- * @param data a map of [Paint] ~ [XYSeries] pairs, used as the dataset for the chart
+ * @param data a map of (Color-data) pairs, used as the dataset for the chart
  * @param showLegend true of legend of the chart should be shown, else otherwise (default false)
  * @constructor creates a [Chart] with the given data
  */

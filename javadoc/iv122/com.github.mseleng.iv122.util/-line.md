@@ -8,5 +8,5 @@ title: Line - iv122
 
 `typealias Line = <ERROR CLASS><`[`Coordinates`](-coordinates/index.md)`, `[`Coordinates`](-coordinates/index.md)`>`
 
-A typealias for the [Pair](#) of [Coordinates](-coordinates/index.md) representing the starting and the end point of a line in SVG
+A typealias for the [kotlin.Pair](#) of [Coordinates](-coordinates/index.md) representing the starting and the end point of a line in SVG
 

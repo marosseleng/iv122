@@ -7,3 +7,9 @@ title: SVG.height - iv122
 # height
 
 `val height: Int`
+
+the desired height of the SVG image (default 1000)
+
+### Property
+
+`height` - the desired height of the SVG image (default 1000)

@@ -7,3 +7,9 @@ title: ModuloColorGenerator.colors - iv122
 # colors
 
 `vararg val colors: Array<out `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`>`
+
+(possibly mutliple) [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)s
+
+### Property
+
+`colors` - (possibly mutliple) [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)s
