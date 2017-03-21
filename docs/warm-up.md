@@ -30,6 +30,7 @@ fun bilinearInterpolation(x: Int, y: Int, width: Int, height: Int, tl: Int, tr: 
                 linearInterpolation(x, width, bl.toDouble(), br.toDouble()))
 }
 ```
+
 * Ďalšia úloha bola vytvoriť Ulamovu špirálu, prípadne variácie an ňu. Ja som experimentoval s podmienkami, podľa ktorých boli vyfarbované jednotlivé políčka dostal som zaujímavé výsledky. Tu je Ulamova špirála, kde podmienka pre zafarbenie čísla `x` bola nasledovná: `x * e % π >= 2`:
     ![Ulam](../iv122_outputs/assignment1/ulamsSpiral-[*EmodPI>=2].png)
     Funkcia, ktorá vypočíta Ulamovu špirálu:
@@ -57,6 +58,7 @@ fun getUlamsSpiral(n: Int, condition: UlamSpiralCondition): BufferedImage {
     }
 }
 ```
+
 * Posledné dve úlohy boli vizualizovať Collatzovu postupnosť a Euklidov algoritmus pre spočítanie najmenšieho spoločného deliteľa
     - Grafy Collatzovej postupnosti je možné nájsť [tu](../iv122_outputs/assignment1/collatz.png), respektíve [tu](../iv122_outputs/assignment1/collatz-max.png)
     - Grafy vizualizácie beh Euklidovho algoritmu je možné nájsť [tu](../iv122_outputs/assignment1/euclid-[modulus].png), respektíve [tu](../iv122_outputs/assignment1/euclid-[subtraction].png).
