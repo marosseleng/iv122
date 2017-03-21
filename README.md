@@ -2,12 +2,16 @@
 
 There is a jar archive inside the `outputs` directory of the `gh-pages` branch. That jar includes all the dependencies needed.
 
+### &#8678; Download the current JAR here
+
 #### [](#usage)Usage: 
 ```bash
     
-java -jar outputs/iv122.jar <path-to-existent-output-dir>
+java -jar path-to/iv122.jar [path-to-existing-output-dir]
     
 ```
+If the `<path-to-existing-output-dir>` is not specified, the program will create a directory named 'iv122_outputs' in the current directory
+
 ##### [](#output)The output of the above command can be found [here](docs/console-output.md)
 
 ### [](#assignments)The list of assignments (in Slovak):
