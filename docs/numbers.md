@@ -41,7 +41,8 @@ fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variatio
 
 * Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Výstupy z tejto podúlohy sa nachádzajú v zložke [`iv122_outputs/assignment2`](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 
-* Ďalšou úlohou bolo napísať funkciu na približné umocňovanie. Ja som implementoval len metódu, ktorá racionálny exponent zapíše v tvare zlomku a následne odmocňuje. Funkciu n=tej odmocniny som implementoval pomocou bisekcie:
+* Ďalšou úlohou bolo napísať funkciu na približné umocňovanie. Ja som implementoval len metódu, ktorá racionálny exponent zapíše v tvare zlomku a následne odmocňuje. Funkciu n-tej odmocniny som implementoval pomocou bisekcie:
+
 ```kotlin
 fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double {
     val mid: Double = from.plus(to).div(2)
@@ -70,6 +71,7 @@ fun rationalPower_1(base: Double, exp: Double): Double {
 Tieto funckie sa nachádzajú v súbore [`NumberUtils.kt`](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/util/NumberUtils.kt), respektíve [`C.kt`](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment2/C.kt) a ich dokumentácia je [tu](../javadoc/iv122/com.github.mseleng.iv122.util), respektíve [tu](../javadoc/iv122/com.github.mseleng.iv122.assignment2)
 
 * Poslednou úlohou bolo napísať funkcie na aproximáciu čísla π; Pre mňa bola najzaujímavejšia Archimedova aproximácia a to hlavne z dôvodu, že Archimedes dokázal pomerne presne určiť hodnotu π bez použitia akýchkoľvek moderných vynálezov. Táto metóda spočíva v tom, že kružnicu najskôr opíšeme štvorcom s dĺžkou hrany 1 a vpíšeme do nej ďalší štvorec tak, že vrcholy vnútorného budú v poloviciach hrán opísaného štvorca. Takto vieme povedať, že obvod kružnice bude niekde medzi obvodom vonkajšieho a vnútorného štvorca (polygónu).
+
 ```kotlin
 fun pi_Archimedes(interval_ms: Long, sqrt: (Double) -> Double): ArchimedesπRange {
     val sqrtOfPointFive = sqrt(0.5)
