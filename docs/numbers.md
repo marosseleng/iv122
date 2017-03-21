@@ -42,8 +42,8 @@ fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variatio
 * Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Výstupy z tejto podúlohy sa nachádzajú v zložke [`iv122_outputs/assignment2`](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 
     <div align="center" style="width:80%">
-        <img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="50%"/>
-        <img src="../iv122_outputs/assignment2/pascal-mod7.png" width="50%"/>
+        <img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="45%"/>
+        <img src="../iv122_outputs/assignment2/pascal-mod7.png" width="45%"/>
     </div>
 
 * Ďalšou úlohou bolo napísať funkciu na približné umocňovanie. Ja som implementoval len metódu, ktorá racionálny exponent zapíše v tvare zlomku a následne odmocňuje. Funkciu n-tej odmocniny som implementoval pomocou bisekcie:
