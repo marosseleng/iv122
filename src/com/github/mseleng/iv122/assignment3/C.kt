@@ -29,3 +29,38 @@ private fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
     turtle.backward(a)
     turtle.penDown()
 }
+
+fun flake(depth: Int): List<Line> {
+    val turtle = Turtle(Coordinates(500, 500))
+    flakeRecursive(turtle, 100.0, depth)
+    turtle.right(120.0)
+    flakeRecursive(turtle, 100.0, depth)
+    turtle.right(120.0)
+    flakeRecursive(turtle, 100.0, depth)
+    return turtle.lines
+}
+
+fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
+    if (depth == 1) {
+        turtle.forward(d)
+        turtle.left(60.0)
+        turtle.forward(d)
+        turtle.right(120.0)
+        turtle.forward(d)
+        turtle.left(60.0)
+        turtle.forward(d)
+        return
+    }
+    flakeRecursive(turtle, d / 3, depth - 1)
+    turtle.left(60.0)
+    flakeRecursive(turtle, d / 3, depth - 1)
+    turtle.right(120.0)
+    flakeRecursive(turtle, d / 3, depth - 1)
+    turtle.left(60.0)
+    flakeRecursive(turtle, d / 3, depth - 1)
+}
+
+fun main(args: Array<String>) {
+    SVG(5000, 5000).lines(flake(5)).writeTo(fileWithName(assignmentNo = 3, name = "flake.svg"))
+}
+
