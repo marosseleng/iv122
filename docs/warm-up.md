@@ -31,7 +31,7 @@ fun bilinearInterpolation(x: Int, y: Int, width: Int, height: Int, tl: Int, tr: 
 }
 ```
 
-* Ďalšia úloha bola vytvoriť Ulamovu špirálu, prípadne variácie an ňu. Ja som experimentoval s podmienkami, podľa ktorých boli vyfarbované jednotlivé políčka dostal som zaujímavé výsledky. Tu je Ulamova špirála, kde podmienka pre zafarbenie čísla `x` bola nasledovná: `x * e % π >= 2`:
+* Ďalšia úloha bola vytvoriť Ulamovu špirálu, prípadne variácie na ňu. Ja som experimentoval s podmienkami, podľa ktorých boli vyfarbované jednotlivé políčka dostal som zaujímavé výsledky. Tu je Ulamova špirála, kde podmienka pre zafarbenie čísla `x` bola nasledovná: `x * e % π >= 2`:
     ![Ulam](../iv122_outputs/assignment1/ulamsSpiral-[*EmodPI>=2].png)
     
 ```kotlin
