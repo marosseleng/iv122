@@ -49,16 +49,11 @@ fun run(path: String) {
     println("-> √3 = 3^0.5 = ${rationalPower_1(3.0, 0.5)}; Library value = ${Math.pow(3.0, 0.5)}")
     println("-> 3^3.14 = ${rationalPower_1(3.0, 3.14)}; Library value = ${Math.pow(3.0, 3.14)}")
     println("-> 2^3 = ${rationalPower_1(2.0, 3.0)}; Library value = ${Math.pow(2.0, 3.0)}\n==========")
-//    println("*************************")
-//    println(rationalPower_2(2.0, 3.0))
-//    println(rationalPower_2(3.0, 0.5))
-//    println(rationalPower_2(3.0, 3.14))
 
     //D
     val interval = 3000L
     println("-> π approximation within $interval ms:")
     println("-> The library value of π: ${Math.PI}")
-//    println("\tMonte Carlo method (using the approximated square root): ${pi_MonteCarlo(interval, Double::square, { sqrt_approx_bisection(it) })}")
     println("\tMonte Carlo method (using the library square (root) function): ${pi_MonteCarlo(interval, { Math.pow(it, 2.0) }, Math::sqrt)}")
     println("\tGregory-Leibnitz method: ${pi_GregoryLeibniz(interval)}")
     println("\tArchimedes' method (using the approximated square root): ${pi_Archimedes(interval, { sqrt_approx_bisection(it) })}")

@@ -6,7 +6,7 @@ import com.github.mseleng.iv122.util.*
  * Creates a fractal with the shape of a branch
  *
  * @param depth the depth of a recursion
- * @return the list of SVG [Line]s representing the fractal
+ * @return the list of SVG [Line]s representing the branch
  */
 fun branch(depth: Int): List<Line> {
     val turtle = Turtle(Coordinates(300, 550))
@@ -30,6 +30,12 @@ private fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
     turtle.penDown()
 }
 
+/**
+ * Creates a Koch's flake
+ *
+ * @param depth the depth of a recursion
+ * @return the list of SVG [Line]s representing the flake
+ */
 fun flake(depth: Int): List<Line> {
     val turtle = Turtle(Coordinates(500, 500))
     flakeRecursive(turtle, 100.0, depth)
@@ -40,7 +46,7 @@ fun flake(depth: Int): List<Line> {
     return turtle.lines
 }
 
-fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
+private fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     if (depth == 1) {
         turtle.forward(d)
         turtle.left(60.0)
@@ -60,13 +66,19 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     flakeRecursive(turtle, d / 3, depth - 1)
 }
 
+/**
+ * Creates a Sierpiński's triangle
+ *
+ * @param depth the depth of a recursion
+ * @return the list of SVG [Line]s representing the triangle
+ */
 fun sierpinski(depth: Int): List<Line> {
     val turtle = Turtle(Coordinates(0, 1000))
-    sierpinskiResursive(turtle, 1024.0, depth)
+    sierpinskiRecursive(turtle, 1024.0, depth)
     return turtle.lines
 }
 
-fun sierpinskiResursive(turtle: Turtle, length: Double, depth: Int) {
+private fun sierpinskiRecursive(turtle: Turtle, length: Double, depth: Int) {
     if (depth == 1) {
         turtle.forward(length)
         turtle.left(120.0)
@@ -76,11 +88,11 @@ fun sierpinskiResursive(turtle: Turtle, length: Double, depth: Int) {
         turtle.currentDirection = 0.0
         return
     }
-    sierpinskiResursive(turtle, length / 2, depth - 1)
+    sierpinskiRecursive(turtle, length / 2, depth - 1)
     turtle.penUp()
     turtle.forward(length / 2)
     turtle.penDown()
-    sierpinskiResursive(turtle, length / 2, depth - 1)
+    sierpinskiRecursive(turtle, length / 2, depth - 1)
     turtle.penUp()
     turtle.forward(length / 2)
     turtle.left(120.0)
@@ -89,7 +101,7 @@ fun sierpinskiResursive(turtle: Turtle, length: Double, depth: Int) {
     turtle.forward(length / 2)
     turtle.left(120.0)
     turtle.penDown()
-    sierpinskiResursive(turtle, length / 2, depth - 1)
+    sierpinskiRecursive(turtle, length / 2, depth - 1)
     turtle.penUp()
     turtle.right(120.0)
     turtle.forward(length / 2)
@@ -97,8 +109,50 @@ fun sierpinskiResursive(turtle: Turtle, length: Double, depth: Int) {
     turtle.penDown()
 }
 
-fun main(args: Array<String>) {
-//    SVG(5000, 5000).lines(flake(5)).writeTo(fileWithName(assignmentNo = 3, name = "flake.svg"))
-    SVG(1100, 1100).lines(sierpinski(8)).writeTo(fileWithName(assignmentNo = 3, name = "sierp.svg"))
+/**
+ * Creates a pentagon-shaped flake
+ *
+ * @param depth the depth of a recursion
+ * @return the list of SVG [Line]s representing the flake
+ */
+fun pentagonFlake(depth: Int): List<Line> {
+    val turtle = Turtle(Coordinates(1000, 1000))
+    turtle.right(36.0)
+    pentagonFlakeRecursive(turtle, depth, 300.0)
+    return turtle.lines
 }
 
+private fun pentagonFlakeRecursive(turtle: Turtle, depth: Int, borderEdgeLength: Double, printInner: Boolean = false, eachTh: Int = 3) {
+    if (depth <= 1) {
+        5.timesRepeat {
+            turtle.forward(borderEdgeLength)
+            turtle.right(72.0)
+        }
+        return
+    }
+
+    // 2 * smallerLength + gapSize == length
+    val smallerLength = borderEdgeLength / (2 * (1 + Math.sin(Math.toRadians(18.0))))
+    val gapSize = 2 * smallerLength * Math.sin(Math.toRadians(18.0))
+    for (i in 1..5) {
+        pentagonFlakeRecursive(turtle, depth - 1, smallerLength, true)
+
+        // we need to print the "core", a "mirrored pentagon"
+        if (i == eachTh && printInner) {
+            turtle.penUp()
+            turtle.forward(smallerLength)
+            turtle.right(180.0)
+            turtle.penDown()
+            pentagonFlakeRecursive(turtle, depth - 1, smallerLength, true, 4)
+            turtle.penUp()
+            turtle.forward(smallerLength)
+            turtle.right(180.0)
+            turtle.penDown()
+        }
+
+        turtle.penUp()
+        turtle.forward(2 * smallerLength + gapSize)
+        turtle.right(72.0)
+        turtle.penDown()
+    }
+}

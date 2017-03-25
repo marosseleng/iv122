@@ -218,3 +218,16 @@ fun ln(x: Double, eps: Double = 0.000001): Double {
 
     return 2.times(result)
 }
+
+/**
+ * Syntactic sugar, which is more readable and simplifies for loops
+ *
+ * <tt>for(i in 1..5) { ... }</tt> becomes <tt>5.timesRepeat { ... }</tt>
+ *
+ * @param block block to execute in each iteration
+ */
+fun Int.timesRepeat(block: () -> Unit) {
+    for (i in 1..this) {
+        block()
+    }
+}
