@@ -3,3 +3,4 @@ title: IV122
 description: Repository with sources for the IV122 class @ FI MU Brno
 show_downloads: true
 baseurl: /iv122
+jarurl: https://github.com/mseleng/iv122/raw/gh-pages/iv122_outputs/iv122.jar
