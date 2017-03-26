@@ -3,6 +3,7 @@ package com.github.mseleng.iv122.assignment3
 import com.github.mseleng.iv122.util.Coordinates
 import com.github.mseleng.iv122.util.Line
 import com.github.mseleng.iv122.util.Turtle
+import com.github.mseleng.iv122.util.timesRepeat
 
 /**
  * Creates the regular polygon with [n] edges with the inner star
@@ -33,7 +34,7 @@ fun nestedSquare(length: Double, offset: Coordinates, depth: Int, proportion: Pa
     val turtle = Turtle(offset)
     var mutableLength = length
     val firstAngle = Math.toDegrees(Math.atan(proportion.first.toDouble() / proportion.second))
-    for (i in 1..depth) {
+    depth.timesRepeat { i ->
         val adjacentLength = proportion.second * mutableLength / denominator
         val oppositeLength = proportion.first * mutableLength / denominator
         if (skip > 0 && i % skip == 0) {
@@ -77,7 +78,7 @@ fun nestedTriangle(length: Double, offset: Coordinates, depth: Int, skip: Int): 
     turtle.right(90.0)
 
     // TODO consider using the recursion
-    for (i in 1..depth) {
+    depth.timesRepeat { i ->
         if (skip > 0 && i % skip == 0) {
             turtle.penUp()
         } else {

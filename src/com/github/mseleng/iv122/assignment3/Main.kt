@@ -19,7 +19,7 @@ fun run(path: String) {
     SVG().lines(multistar(9, 80)).writeTo(fileWithName(path, 3, "multistar9.svg"))
     print(" ✓ (assignment3/multistar9.svg)\n-> Multistar (5 vertices)......")
     SVG().lines(multistar(5, 80)).writeTo(fileWithName(path, 3, "multistar5.svg"))
-    println(" ✓ (assignment3/multistar5.svg)==========\n")
+    println(" ✓ (assignment3/multistar5.svg)\n==========\n")
 
     //B
     print("-> Pentagram (turtle)......")
@@ -61,8 +61,7 @@ fun run(path: String) {
     SVG(2000, 2000).lines(pentagonFlake(4)).writeTo(fileWithName(path, 3, "penta-flake-4.svg"))
     print(" ✓ (assignment3/penta-flake-4.svg)\n-> Pentagonal flake (depth=6)......")
     SVG(2000, 2000).lines(pentagonFlake(6)).writeTo(fileWithName(path, 3, "penta-flake-6.svg"))
-//    print(" ✓ (assignment3/penta-flake-5.svg)\n==========\n")
-    print(" ✓ (assignment3/penta-flake-5.svg)\n")
+    print(" ✓ (assignment3/penta-flake-6.svg)\n==========\n")
 
     //D
 }

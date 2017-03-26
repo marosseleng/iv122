@@ -134,7 +134,7 @@ private fun pentagonFlakeRecursive(turtle: Turtle, depth: Int, borderEdgeLength:
     // 2 * smallerLength + gapSize == length
     val smallerLength = borderEdgeLength / (2 * (1 + Math.sin(Math.toRadians(18.0))))
     val gapSize = 2 * smallerLength * Math.sin(Math.toRadians(18.0))
-    for (i in 1..5) {
+    5.timesRepeat { i ->
         pentagonFlakeRecursive(turtle, depth - 1, smallerLength, true)
 
         // we need to print the "core", a "mirrored pentagon"

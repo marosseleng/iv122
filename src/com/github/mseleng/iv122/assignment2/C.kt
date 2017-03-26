@@ -4,6 +4,7 @@ import com.github.mseleng.iv122.assignment1.gcd
 import com.github.mseleng.iv122.util.integralPow
 import com.github.mseleng.iv122.util.isWhole
 import com.github.mseleng.iv122.util.nthRoot_approx_bisection
+import com.github.mseleng.iv122.util.timesRepeat
 
 /**
  * A typealias representing the "decimal fraction", in other words numbers like 3(27/29)
@@ -67,7 +68,7 @@ fun Double.toFraction(): Fraction {
     val s = toString()
     val numerator = s.substringBefore('.').plus(s.substringAfter('.')).toLong()
     var denominator = 1L
-    for (i in 1..s.substringAfter('.').length) {
+    s.substringAfter('.').length.timesRepeat {
         denominator *= 10
     }
     val gcd = gcd(numerator, denominator)
