@@ -10,6 +10,7 @@ rm ${CONSOLE_OUTPUT} &>/dev/null
 java -jar dokka-fatjar.jar src/ -output javadoc/ -module iv122 -format jekyll
 
 #copy the artifact
+mkdir iv122_outputs
 cp out/artifacts/iv122/iv122.jar iv122_outputs/iv122.jar
 
 #run the jar and save the console output
