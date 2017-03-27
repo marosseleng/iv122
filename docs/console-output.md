@@ -1,7 +1,3 @@
-## The console output
-[Home](../)
-
-```
 IV122
 Output directory: iv122_outputs/
 
@@ -52,8 +48,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141142721095495
-	Gregory-Leibnitz method: 3.1416089108445644
+	Monte Carlo method (using the library square (root) function): 3.141512628179887
+	Gregory-Leibnitz method: 3.141576240774637
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -63,10 +59,9 @@ Complete.
 -> Polygon (9 edges)...... ✓ (assignment3/polygon9.svg)
 -> Polygon (17 edges)...... ✓ (assignment3/polygon17.svg)
 -> Multistar (9 vertices)...... ✓ (assignment3/multistar9.svg)
--> Multistar (5 vertices)...... ✓ (assignment3/multistar5.svg)==========
-
+-> Multistar (5 vertices)...... ✓ (assignment3/multistar5.svg)
+==========
 -> Pentagram (turtle)...... ✓ (assignment3/pentagram_turtle.svg)
--> 79gram (turtle)...... ✓ (assignment3/79gram_turtle.svg)
 -> Nested square (20;[1:3];5])...... ✓ (assignment3/nestedsquare.svg)
 -> Nested square (40;[1:7];5])...... ✓ (assignment3/nestedsquare2.svg)
 -> Nested square (40;[1:10];0])...... ✓ (assignment3/nestedsquare3.svg)
@@ -83,7 +78,19 @@ Complete.
 -> Sierpiński's triangle (depth=8)...... ✓ (assignment3/sierpinski-triangle-8.svg)
 -> Pentagonal flake (depth=2)...... ✓ (assignment3/penta-flake-2.svg)
 -> Pentagonal flake (depth=4)...... ✓ (assignment3/penta-flake-4.svg)
--> Pentagonal flake (depth=6)...... ✓ (assignment3/penta-flake-5.svg)
+-> Pentagonal flake (depth=6)...... ✓ (assignment3/penta-flake-6.svg)
+==========
+Complete.
+
+***The fourth assignment***
+-> Input: Image size: 1000; Radius (circle, spiral and ellipse): 450
+-> Full circle (general eq.)...... ✓ (assignment4/circle-full.png)
+-> Empty circle (general eq.)...... ✓ (assignment4/circle-empty.png)
+-> Empty circle (param.)...... ✓ (assignment4/circle-param.png)
+-> Spiral (param.)...... ✓ (assignment4/spiral.png)
+-> Equal-sized triangle...... ✓ (assignment4/triangle.png)
+-> Ellipse...... ✓ (assignment3/ellipse.svg)
+==========
 Complete.
 
 ```

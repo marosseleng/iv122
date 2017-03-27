@@ -6,4 +6,20 @@ title: triangle - iv122
 
 # triangle
 
-`fun triangle(imgSize: Int, eps: Double = 0.01): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)
+`fun triangle(imgSize: Int, topColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`, leftColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`, rightColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)
+
+Creates the triangle with all edges with the same length
+
+### Parameters
+
+`imgSize` - the size of the resulting image
+
+`topColor` - the color of the top vertex
+
+`leftColor` - the color of the left vertex
+
+`rightColor` - the color of the right vertex
+
+**Return**
+an image containing the colored triangle
+

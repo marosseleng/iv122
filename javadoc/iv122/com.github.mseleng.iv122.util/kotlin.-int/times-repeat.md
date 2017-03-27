@@ -6,7 +6,7 @@ title: timesRepeat - iv122
 
 # timesRepeat
 
-`fun Int.timesRepeat(block: () -> Unit): Unit`
+`fun Int.timesRepeat(block: (Int) -> Unit): Unit`
 
 Syntactic sugar, which is more readable and simplifies for loops
 

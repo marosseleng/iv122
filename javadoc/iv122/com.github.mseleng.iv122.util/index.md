@@ -21,9 +21,11 @@ title: com.github.mseleng.iv122.util - iv122
 
 ### Extensions for External Classes
 
+| [java.awt.Color](java.awt.-color/index.md) |  |
 | [java.awt.image.BufferedImage](java.awt.image.-buffered-image/index.md) |  |
 | [kotlin.Double](kotlin.-double/index.md) |  |
 | [kotlin.Int](kotlin.-int/index.md) |  |
+| [kotlin.Long](kotlin.-long/index.md) |  |
 
 ### Properties
 
@@ -33,6 +35,7 @@ title: com.github.mseleng.iv122.util - iv122
 
 | [bisection](bisection.md) | `fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double`<br>Approximates the number using bisection |
 | [bitmapImage](bitmap-image.md) | `fun bitmapImage(width: Int, height: Int, backgroundColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)` = Color.WHITE, init: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`.() -> Unit = {}): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>An helper function that creates an instance of [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) for further edit. |
+| [drawSurrounding](draw-surrounding.md) | `fun drawSurrounding(point: `[`Coordinates`](-coordinates/index.md)`, img: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`, color: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`): Unit`<br>Fills the surroundings (3x3 grid) of the given point in the given image |
 | [e](e.md) | `fun e(eps: Double = 0.000001): Double`<br>Approximates the Euler's number |
 | [fileWithName](file-with-name.md) | `fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)<br>Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory |
 | [fraction](fraction.md) | `fun fraction(part: Int, whole: Int): Double`<br>Computes the fraction for the given part and the whole |

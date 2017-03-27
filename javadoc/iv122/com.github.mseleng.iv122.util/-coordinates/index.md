@@ -27,6 +27,7 @@ Data class representing the coordinates of a single point in the 2D space
 
 ### Functions
 
+| [euclideanDistanceFrom](euclidean-distance-from.md) | `fun euclideanDistanceFrom(other: Coordinates): Double`<br>Computes the euclidean distance between this and [other](euclidean-distance-from.md#com.github.mseleng.iv122.util.Coordinates$euclideanDistanceFrom(com.github.mseleng.iv122.util.Coordinates)/other) |
 | [isOutOfRange](is-out-of-range.md) | `fun isOutOfRange(width: Int, height: Int): Boolean`<br>Says whether this coordinates are out of the given range |
 | [trimToNDecimalPoints](trim-to-n-decimal-points.md) | `fun trimToNDecimalPoints(n: Int): Coordinates`<br>Trims this decimal number, so there is no scientific exponentiation in toString() |
 
