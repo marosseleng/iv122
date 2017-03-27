@@ -244,3 +244,13 @@ fun Long.timesRepeat(block: (Long) -> Unit) {
         block(i)
     }
 }
+
+/**
+ * A helper function that trims this integer iff it exceeds the given [value]
+ *
+ * @param value the upper limit
+ * @return this number limited to the given [value] (if needed)
+ */
+fun Int.limitTo(value: Int): Int {
+    return if (this > value) { value } else { this }
+}

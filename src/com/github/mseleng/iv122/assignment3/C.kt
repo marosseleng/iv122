@@ -9,7 +9,7 @@ import com.github.mseleng.iv122.util.*
  * @return the list of SVG [Line]s representing the branch
  */
 fun branch(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(300, 550))
+    val turtle = Turtle(Coordinates(250, 550))
     turtle.left(90.0)
     branchRecursive(turtle, 300.0, depth)
     return turtle.lines
@@ -37,7 +37,7 @@ private fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
  * @return the list of SVG [Line]s representing the flake
  */
 fun flake(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(500, 500))
+    val turtle = Turtle(Coordinates(50, 100))
     flakeRecursive(turtle, 100.0, depth)
     turtle.right(120.0)
     flakeRecursive(turtle, 100.0, depth)
@@ -116,7 +116,7 @@ private fun sierpinskiRecursive(turtle: Turtle, length: Double, depth: Int) {
  * @return the list of SVG [Line]s representing the flake
  */
 fun pentagonFlake(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(1000, 1000))
+    val turtle = Turtle(Coordinates(300, 50))
     turtle.right(36.0)
     pentagonFlakeRecursive(turtle, depth, 300.0)
     return turtle.lines
