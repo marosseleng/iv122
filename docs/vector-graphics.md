@@ -16,7 +16,7 @@ Zvyšok úlohy pozostával z vykreslenia niekoľkých obrazcov a fraktálov. Nie
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
 
-    + Kochova vločka: 
+    + Kochova vločka (hĺbka zanorenia postupne: 1, 3, 5): 
 
 <div align="center" style="width:90%">
     <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="22%"/>
@@ -56,7 +56,7 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
 }
 ```
 
-    + Sierpińského trojuholník:
+    + Sierpińského trojuholník (hĺbka zanorenia postupne: 2, 4, 8):
 
 <div align="center" style="width:90%">
     <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="22%"/>
@@ -64,7 +64,7 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="22%"/>
 </div>
 
-    + Päťuholníková vločka:
+    + Päťuholníková vločka (hĺbka zanorenia postupne: 2, 4, 6):
 
 <div align="center" style="width:90%">
     <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="22%"/>
@@ -100,6 +100,9 @@ fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
 }
 ```
 
-    
-#### Všetky ostatné kódy k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment3)
-#### Dokumentácia ku kódu sa nachádza [tu](../javadoc/iv122/com.github.mseleng.iv122.assignment3)
+Veci, ktoré by som ešte chcel spraviť: Hilbertovu alebo Sierpinského krivku a Anklet.
+
+##### Výstup z konsole po spustení jar archívu sa nachádza [tu](./console-output.md)
+##### Všetky ostatné obrázky(výstupy) k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment3)
+##### Všetky ostatné kódy k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment3)
+##### Dokumentácia ku kódu sa nachádza [tu](../javadoc/iv122/com.github.mseleng.iv122.assignment3)

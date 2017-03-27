@@ -95,6 +95,7 @@ fun pi_Archimedes(interval_ms: Long, sqrt: (Double) -> Double): ArchimedesπRang
     return ArchimedesπRange(currentInscribed, currentCircumscribed)
 }
 ```
+
 ##### Výstup z konsole po spustení jar archívu sa nachádza [tu](./console-output.md)
 ##### Všetky ostatné obrázky(výstupy) k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 ##### Všetky ostatné kódy k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment2)
