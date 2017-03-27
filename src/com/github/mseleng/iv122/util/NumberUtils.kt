@@ -15,7 +15,7 @@ fun Int.factorial(): Int {
         return 1
     }
     var result = 1
-    for (i in 1..this) {
+    this.timesRepeat { i ->
         result *= i
     }
     return result
@@ -104,7 +104,7 @@ fun Double.integralPow(exp: Long): Double {
         }
         exp > 0 -> {
             var res = 1.toDouble()
-            for (i in 1..exp) {
+            exp.timesRepeat { i ->
                 res *= this
             }
             res
@@ -226,8 +226,31 @@ fun ln(x: Double, eps: Double = 0.000001): Double {
  *
  * @param block block to execute in each iteration
  */
-fun Int.timesRepeat(block: () -> Unit) {
+fun Int.timesRepeat(block: (Int) -> Unit) {
     for (i in 1..this) {
-        block()
+        block(i)
     }
+}
+
+/**
+ * Syntactic sugar, which is more readable and simplifies for loops
+ *
+ * <tt>for (i in 1..5) { ... }</tt> becomes <tt>5.timesRepeat { ... }</tt>
+ *
+ * @param block block to execute in each iteration
+ */
+fun Long.timesRepeat(block: (Long) -> Unit) {
+    for (i in 1..this) {
+        block(i)
+    }
+}
+
+/**
+ * A helper function that trims this integer iff it exceeds the given [value]
+ *
+ * @param value the upper limit
+ * @return this number limited to the given [value] (if needed)
+ */
+fun Int.limitTo(value: Int): Int {
+    return if (this > value) { value } else { this }
 }

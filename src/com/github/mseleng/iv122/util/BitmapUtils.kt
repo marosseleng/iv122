@@ -73,3 +73,33 @@ fun BufferedImage.writeTo(file: File): Boolean {
 fun BufferedImage.writeToFile(fileFormat: String, file: File): Boolean {
     return ImageIO.write(this, fileFormat, file)
 }
+
+/**
+ * Fills the surroundings (3x3 grid) of the given point in the given image
+ *
+ * @param point the point, whose surroundings to paint
+ * @param img the image
+ * @param color the color to use to fill the surroundings
+ */
+fun drawSurrounding(point: Coordinates, img: BufferedImage, color: Color) {
+    for (x in (point.x.toInt() - 1)..(point.x.toInt() + 1)) {
+        ((point.y.toInt() - 1)..(point.y.toInt() + 1))
+                .filterNot { Coordinates(x, it).isOutOfRange(img.width, img.height) }
+                .forEach { img.setRGB(x, it, color.rgb) }
+    }
+}
+
+/**
+ * Multiplies this color by the given [ratio].
+ *
+ * Ratio must be a number between [0.0, 1.0] inclusive
+ *
+ * @param ratio the ratio to multiply this color's parts by
+ * @return the new color
+ */
+operator fun Color.times(ratio: Double): Color {
+    val newRed = (red * ratio).toInt()
+    val newGreen = (green * ratio).toInt()
+    val newBlue = (blue * ratio).toInt()
+    return Color(newRed, newGreen, newBlue)
+}

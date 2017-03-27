@@ -1,9 +1,6 @@
 package com.github.mseleng.iv122.assignment5
 
-import com.github.mseleng.iv122.util.Coordinates
-import com.github.mseleng.iv122.util.Line
-import com.github.mseleng.iv122.util.SVG
-import com.github.mseleng.iv122.util.fileWithName
+import com.github.mseleng.iv122.util.*
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -15,7 +12,7 @@ fun generateLines(n: Int, maxX: Int, maxY: Int, length: Double): List<Line> {
     val randomY = Random()
     val lines = mutableListOf<Line>()
 
-    for (i in 1..n) {
+    n.timesRepeat {
         val start = Coordinates(randomX.nextDouble() * maxX, randomY.nextDouble() * maxY)
         var coords: Coordinates
         do {

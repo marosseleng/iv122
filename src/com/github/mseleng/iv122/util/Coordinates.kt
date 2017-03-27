@@ -39,6 +39,14 @@ data class Coordinates(val x: Double, val y: Double) {
     }
 
     /**
+     * Computes the euclidean distance between this and [other]
+     *
+     * @param other the other point
+     * @return the Euclidean distance between two points
+     */
+    fun euclideanDistanceFrom(other: Coordinates) = Math.sqrt(Math.pow(this.x - other.x, 2.0) + Math.pow(this.y - other.y, 2.0))
+
+    /**
      * @suppress
      */
     operator fun plus(other: Coordinates?) = copy(x.plus(other?.x ?: 0.0), y.plus(other?.y ?: 0.0))

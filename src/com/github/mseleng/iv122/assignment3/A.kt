@@ -3,6 +3,7 @@ package com.github.mseleng.iv122.assignment3
 import com.github.mseleng.iv122.util.Coordinates
 import com.github.mseleng.iv122.util.Line
 import com.github.mseleng.iv122.util.Turtle
+import com.github.mseleng.iv122.util.timesRepeat
 
 /**
  * Creates a "regular multistar" (a star-like shape inscribed into a [n]-edges regular polygon with the size of an edge [a]
@@ -24,7 +25,7 @@ fun multistar(n: Int, a: Int): List<Line> {
     val otherAngle = 180 - vertexInnerAngle
     val turtle = Turtle(Coordinates(n / 3 * a, 0))
     turtle.right(firstAngle)
-    for (i in 1..n) {
+    n.timesRepeat {
         turtle.forward(x)
         turtle.right(otherAngle)
     }
@@ -44,7 +45,7 @@ fun polygon(n: Int, a: Int): List<Line> {
     val firstAngle = (180 - innerAngleDegrees) / 2
     turtle.right(firstAngle)
     val otherAngles = 180 - innerAngleDegrees
-    for (i in 1..n) {
+    n.timesRepeat {
         turtle.forward(a)
         turtle.right(otherAngles)
     }
