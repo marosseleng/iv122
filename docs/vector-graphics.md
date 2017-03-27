@@ -5,13 +5,13 @@ Témou tretej úlohy bola jednoduchá vektorová grafika, hlavne práca s tzv. �
 
 V prvej časti bolo za úlohu vytvoriť jednoduchú knižnicu na prácu s "želví" grafikou. Pre tento účel som si vytvoril triedu [`Turtle`](../javadoc/iv122/com.github.mseleng.iv122.util/-turtle).
 
-Ďalšou úlohou bolo vykresliť niekoľko obrazcov za pomoci "želví" grafiky a pomocou tzv. absolútneho vykresľovania (priamo pomocou SVG).
+Zvyšok úlohy pozostával z vykreslenia niekoľkých obrazcov a fraktálov. Niektoré výstupy sú zobrazené nižšie. Výstupy, ktoré nie sú zobrazené tu je možné nájsť na [GitHube](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment3) alebo si ich vygenerovať lokálne spustením dostupného jar archívu.
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/nestedsquare2.svg" width="23%"/>
-    <img src="../iv122_outputs/assignment3/nestedsquare3.svg" width="23%"/>
-    <img src="../iv122_outputs/assignment3/nestedTriangle2.svg" width="23%"/>
-    <img src="../iv122_outputs/assignment3/flower.svg" width="23%"/>
+    <img src="../iv122_outputs/assignment3/nestedsquare2.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/nestedsquare3.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/nestedTriangle2.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/flower.svg" width="22%"/>
 </div>
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
@@ -19,9 +19,9 @@ Jednoduché fraktály vykreslené pomocou "želví" grafiky:
     + Kochova vločka: 
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="22%"/>
 </div>
 
 ```kotlin
@@ -59,17 +59,17 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     + Sierpińského trojuholník:
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="22%"/>
 </div>
 
     + Päťuholníková vločka:
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="31%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="22%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="22%"/>
 </div>
 
     + Ker:
