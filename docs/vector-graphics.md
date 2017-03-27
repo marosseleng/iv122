@@ -8,10 +8,10 @@ V prvej časti bolo za úlohu vytvoriť jednoduchú knižnicu na prácu s "želv
 Ďalšou úlohou bolo vykresliť niekoľko obrazcov za pomoci "želví" grafiky a pomocou tzv. absolútneho vykresľovania (priamo pomocou SVG).
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/nestedsquare2.svg" width="24%"/>
-    <img src="../iv122_outputs/assignment3/nestedsquare3.svg" width="24%"/>
-    <img src="../iv122_outputs/assignment3/nestedTriangle2.svg" width="24%"/>
-    <img src="../iv122_outputs/assignment3/flower.svg" width="24%"/>
+    <img src="../iv122_outputs/assignment3/nestedsquare2.svg" width="23%"/>
+    <img src="../iv122_outputs/assignment3/nestedsquare3.svg" width="23%"/>
+    <img src="../iv122_outputs/assignment3/nestedTriangle2.svg" width="23%"/>
+    <img src="../iv122_outputs/assignment3/flower.svg" width="23%"/>
 </div>
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
@@ -19,9 +19,9 @@ Jednoduché fraktály vykreslené pomocou "želví" grafiky:
     + Kochova vločka: 
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="32%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="31%"/>
 </div>
 
 ```kotlin
@@ -59,17 +59,17 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     + Sierpińského trojuholník:
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="32%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="31%"/>
 </div>
 
     + Päťuholníková vločka:
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="32%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="32%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="31%"/>
+    <img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="31%"/>
 </div>
 
     + Ker:
