@@ -49,12 +49,6 @@ fun flake(depth: Int): List<Line> {
 private fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     if (depth == 1) {
         turtle.forward(d)
-//        turtle.left(60.0)
-//        turtle.forward(d)
-//        turtle.right(120.0)
-//        turtle.forward(d)
-//        turtle.left(60.0)
-//        turtle.forward(d)
         return
     }
     flakeRecursive(turtle, d / 3, depth - 1)

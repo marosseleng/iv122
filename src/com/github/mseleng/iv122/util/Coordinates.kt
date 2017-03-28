@@ -38,6 +38,10 @@ data class Coordinates(val x: Double, val y: Double) {
         return copy(BigDecimal(x).setScale(n, RoundingMode.HALF_EVEN).toDouble(), BigDecimal(y).setScale(n, RoundingMode.HALF_EVEN).toDouble())
     }
 
+    fun vectorTo(other: Coordinates): Coordinates {
+        return Coordinates(this.x - other.x, this.y - other.y)
+    }
+
     /**
      * Computes the euclidean distance between this and [other]
      *
@@ -62,4 +66,8 @@ data class Coordinates(val x: Double, val y: Double) {
      * @suppress
      */
     operator fun times(other: Double): Coordinates = copy(x.times(other), y.times(other))
+    /**
+     * @suppress
+     */
+    operator fun div(other: Int) = copy(x / other, y / other)
 }
