@@ -21,5 +21,5 @@ echo "## The console output" >> ${CONSOLE_OUTPUT}
 echo "[Home](../)" >> ${CONSOLE_OUTPUT}
 echo >> ${CONSOLE_OUTPUT}
 echo '```' >> ${CONSOLE_OUTPUT}
-java -jar iv122_outputs/iv122.jar | tee ${CONSOLE_OUTPUT}
+java -jar iv122_outputs/iv122.jar >> ${CONSOLE_OUTPUT}
 echo '```' >> ${CONSOLE_OUTPUT}

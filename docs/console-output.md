@@ -1,3 +1,7 @@
+## The console output
+[Home](../)
+
+```
 IV122
 Output directory: iv122_outputs/
 
@@ -48,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141512628179887
-	Gregory-Leibnitz method: 3.141576240774637
+	Monte Carlo method (using the library square (root) function): 3.1418699805280683
+	Gregory-Leibnitz method: 3.141576254232618
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
