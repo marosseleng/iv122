@@ -41,11 +41,11 @@ private fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
  */
 fun flake(depth: Int): List<Line> {
     val turtle = Turtle(Coordinates(50, 100))
-    flakeRecursive(turtle, 100.0, depth)
+    flakeRecursive(turtle, 300.0, depth)
     turtle.right(120.0)
-    flakeRecursive(turtle, 100.0, depth)
+    flakeRecursive(turtle, 300.0, depth)
     turtle.right(120.0)
-    flakeRecursive(turtle, 100.0, depth)
+    flakeRecursive(turtle, 300.0, depth)
     return turtle.lines
 }
 
