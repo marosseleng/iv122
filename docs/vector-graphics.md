@@ -8,10 +8,10 @@ V prvej časti bolo za úlohu vytvoriť jednoduchú knižnicu na prácu s "želv
 Zvyšok úlohy pozostával z vykreslenia niekoľkých obrazcov a fraktálov. Niektoré výstupy sú zobrazené nižšie. Výstupy, ktoré nie sú zobrazené tu je možné nájsť na [GitHube](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment3) alebo si ich vygenerovať lokálne spustením dostupného jar archívu.
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/nestedsquare2.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/nestedsquare3.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/nestedTriangle2.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/flower.svg" width="22%"/>
+    <a href="../iv122_outputs/assignment3/nested-square-2.svg"><img src="../iv122_outputs/assignment3/nested-square-2.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/nested-square-3.svg"><img src="../iv122_outputs/assignment3/nested-square-3.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/nested-triangle-2.svg"><img src="../iv122_outputs/assignment3/nested-triangle-2.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/flower.svg"><a href="../iv122_outputs/assignment3/flower.svg"><img src="../iv122_outputs/assignment3/flower.svg" width="22%"/></a>
 </div>
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
@@ -19,9 +19,9 @@ Jednoduché fraktály vykreslené pomocou "želví" grafiky:
     + Kochova vločka (hĺbka zanorenia postupne: 1, 3, 5): 
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="22%"/>
+    <a href="../iv122_outputs/assignment3/koch-flake-1.svg"><img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/koch-flake-3.svg"><img src="../iv122_outputs/assignment3/koch-flake-3.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/koch-flake-5.svg"><img src="../iv122_outputs/assignment3/koch-flake-5.svg" width="22%"/></a>
 </div>
 
 ```kotlin
@@ -59,22 +59,22 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     + Sierpińského trojuholník (hĺbka zanorenia postupne: 2, 4, 8):
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="22%"/>
+    <a href="../iv122_outputs/assignment3/sierpinski-triangle-2.svg"><img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/sierpinski-triangle-4.svg"><img src="../iv122_outputs/assignment3/sierpinski-triangle-4.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/sierpinski-triangle-8.svg"><img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="22%"/></a>
 </div>
 
     + Päťuholníková vločka (hĺbka zanorenia postupne: 2, 4, 6):
 
 <div align="center" style="width:90%">
-    <img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="22%"/>
-    <img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="22%"/>
+    <a href="../iv122_outputs/assignment3/penta-flake-2.svg"><img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/penta-flake-4.svg"><img src="../iv122_outputs/assignment3/penta-flake-4.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/penta-flake-6.svg"><img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="22%"/></a>
 </div>
 
     + Ker:
     
-<p align="center"><img src="../iv122_outputs/assignment3/branch.svg" width="90%"/></p>
+<p align="center"><a href="../iv122_outputs/assignment3/branch.svg"><img src="../iv122_outputs/assignment3/branch.svg" width="90%"/></a></p>
 
 ```kotlin
 fun branch(depth: Int): List<Line> {

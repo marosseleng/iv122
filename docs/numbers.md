@@ -42,7 +42,7 @@ fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variatio
 * Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Všetky vygenerované výstupy z tejto podúlohy sa nachádzajú v zložke [`iv122_outputs/assignment2`](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 
     <div align="center" style="width:80%">
-        <a href="../iv122_outputs/assignment2/pascal-mod7.png"><img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="45%"/></a>
+        <a href="../iv122_outputs/assignment2/pascal-evenOdd.png"><img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="45%"/></a>
         <a href="../iv122_outputs/assignment2/pascal-mod7.png"><img src="../iv122_outputs/assignment2/pascal-mod7.png" width="45%"/></a>
     </div>
 
