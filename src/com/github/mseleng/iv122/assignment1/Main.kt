@@ -21,14 +21,14 @@ fun run(path: String) {
 
     //B
     // display all x such that (x is prime)
-    getUlamsSpiral(99999, Int::isPrime).writeTo(fileWithName(path, 1, "ulamsSpiral-[prime].png"))
-    print(" ✓ (assignment1/ulamsSpiral-[prime].png)\n-> The Ulam's spiral II.(x mod 5 > 1)......")
+    getUlamsSpiral(99999, Int::isPrime).writeTo(fileWithName(path, 1, "ulam-spiral1.png"))
+    print(" ✓ (assignment1/ulam-spiral1.png)\n-> The Ulam's spiral II.(x mod 5 > 1)......")
     // display all x such that (x mod 5 > 1)
-    getUlamsSpiral(99999, { it.rem(5) > 1 }).writeTo(fileWithName(path, 1, "ulamsSpiral-[mod5>1].png"))
-    print(" ✓ (assignment1/ulamsSpiral-[mod5>1].png)\n-> The Ulam's spiral III.(x*e mod π >= 2).......")
+    getUlamsSpiral(99999, { it.rem(5) > 1 }).writeTo(fileWithName(path, 1, "ulam-spiral2.png"))
+    print(" ✓ (assignment1/ulam-spiral2.png)\n-> The Ulam's spiral III.(x*e mod π >= 2).......")
     // display all x such that (((x * E) mod PI) >= 2)
-    getUlamsSpiral(99999, { it.times(Math.E).rem(Math.PI) >= 2 }).writeTo(fileWithName(path, 1, "ulamsSpiral-[*EmodPI>=2].png"))
-    print(" ✓ (assignment1/ulamsSpiral-[*EmodPI>=2].png)\n==========\n-> The Collatz's sequence......")
+    getUlamsSpiral(99999, { it.times(Math.E).rem(Math.PI) >= 2 }).writeTo(fileWithName(path, 1, "ulam-spiral3.png"))
+    print(" ✓ (assignment1/ulam-spiral3.png)\n==========\n-> The Collatz's sequence......")
 
     //C
     collatz(8000).writeToPNG(fileWithName(path, 1, "collatz.png"), 1000, 1000)
@@ -37,8 +37,8 @@ fun run(path: String) {
     print(" ✓ (assignment1/collatz-max.png)\n==========\n-> The Euclidean gcd algorithm (modulo variant)......")
 
     //D
-    getChartOfModulo(500, 500).writeToPNG(fileWithName(path, 1, "euclid-[modulus].png"), 2000, 2000)
-    print(" ✓ (assignment1/euclid-[modulus].png)\n-> The Euclidean gcd algorithm (subtraction variant)......")
-    getChartOfSubtraction(500, 500).writeToPNG(fileWithName(path, 1, "euclid-[subtraction].png"), 2000, 2000)
-    println(" ✓ (assignment1/euclid-[subtraction].png)")
+    getChartOfModulo(500, 500).writeToPNG(fileWithName(path, 1, "euclid-modulus.png"), 2000, 2000)
+    print(" ✓ (assignment1/euclid-modulus.png)\n-> The Euclidean gcd algorithm (subtraction variant)......")
+    getChartOfSubtraction(500, 500).writeToPNG(fileWithName(path, 1, "euclid-subtraction.png"), 2000, 2000)
+    println(" ✓ (assignment1/euclid-subtraction.png)")
 }

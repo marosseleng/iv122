@@ -4,10 +4,6 @@ import com.github.mseleng.iv122.util.*
 import java.awt.Color
 import java.awt.image.BufferedImage
 
-fun main(args: Array<String>) {
-
-}
-
 /**
  * Creates a full circle using the general equation
  *
@@ -40,6 +36,39 @@ fun circleEmpty(imgSize: Int, circleRadius: Int, eps: Double = 0.01): BufferedIm
     val centerY = centerX
     return squareBitmapImage(imgSize).colorize { x, y ->
         if (((x - centerX).square() + (y - centerY).square()).div(circleRadius.square().toDouble()) in (1 - eps)..(1 + eps)) {
+            Color.BLACK.rgb
+        } else {
+            Color.WHITE.rgb
+        }
+    }
+}
+
+private fun Int.centered(center: Int) = minus(center)
+
+/**
+ * Creates a rotated ellipse
+ *
+ * @param imgSize the size of the image
+ * @param a
+ * @param b
+ * @param rotationAngleDegrees the degree which the ellipse will be rotated in
+ * @return image containing rotated image
+ */
+fun detailedEllipse(imgSize: Int, a: Int, b: Int, rotationAngleDegrees: Double): BufferedImage {
+    val centerX = imgSize / 2
+    val centerY = centerX
+    val rads = Math.toRadians(rotationAngleDegrees)
+    val sin = Math.sin(rads)
+    val cos = Math.cos(rads)
+    val bigA = Math.pow(b * cos, 2.0) + Math.pow(a * sin, 2.0)
+    val bigB = Math.pow(b * sin, 2.0) + Math.pow(a * cos, 2.0)
+    val bigC = -2 * sin * cos * (b * b + a * a)
+    val bigD = (-a * a * b * b)
+    return squareBitmapImage(imgSize).colorize { x, y ->
+        val xSquare = x.centered(centerX) * x.centered(centerX)
+        val ySquare = y.centered(centerY) * y.centered(centerY)
+        val stmnt = (bigA * xSquare + bigB * ySquare + bigC * x.centered(centerX) * y.centered(centerY) + bigD) / (imgSize * imgSize.toDouble())
+        if (stmnt in -100..100) {
             Color.BLACK.rgb
         } else {
             Color.WHITE.rgb
@@ -136,17 +165,12 @@ fun triangle(imgSize: Int, topColor: Color, leftColor: Color, rightColor: Color)
     val top = Coordinates(centerX, centerY - height.toInt())
     val left = Coordinates(centerX - edge / 2, centerY)
     val right = Coordinates(centerX + edge / 2, centerY)
+    val rightEdge = ParametricLine(top, right)
+    val leftEdge = ParametricLine(top, left)
 
-    fun isBelowRightEdge(coordinates: Coordinates): Boolean {
-        return 0 >= ((top.x * right.y - top.y * right.x)/(top.x - right.x)) + ((right.y - top.y) / (right.x - top.x)) * coordinates.x - coordinates.y
-    }
-
-    fun isBelowLeftEdge(coordinates: Coordinates): Boolean {
-        return 0 >= ((top.x * left.y - top.y * left.x)/(top.x - left.x)) + ((left.y - top.y) / (left.x - top.x)) * coordinates.x - coordinates.y
-    }
     return squareBitmapImage(imgSize).colorize { x, y ->
         val coordinates = Coordinates(x, y)
-        if (isBelowLeftEdge(coordinates) && isBelowRightEdge(coordinates) && y <= centerY) {
+        if (coordinates.laysBelowLine(leftEdge) && coordinates.laysBelowLine(rightEdge) && y <= centerY) {
             /* computing the relative distances of this point to the vertices */
             val topRatio = 1.0 - (coordinates.euclideanDistanceFrom(top) / edge) // between 0 and 1
             val leftRatio = 1.0 - (coordinates.euclideanDistanceFrom(left) / edge) // between 0 and 1

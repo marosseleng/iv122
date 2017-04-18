@@ -38,8 +38,47 @@ data class Coordinates(val x: Double, val y: Double) {
         return copy(BigDecimal(x).setScale(n, RoundingMode.HALF_EVEN).toDouble(), BigDecimal(y).setScale(n, RoundingMode.HALF_EVEN).toDouble())
     }
 
+    fun polarAngleTo(other: Coordinates): Double {
+        val atan = Math.atan2(other.y - this.y, other.x - this.x)
+        return Math.toDegrees(if (atan < 0) { atan } else { atan })
+    }
+
     fun vectorTo(other: Coordinates): Coordinates {
         return Coordinates(this.x - other.x, this.y - other.y)
+    }
+
+    fun laysOnLine(line: ParametricLine, tolerance: Double) = line.substituteCoordinates(this) in -tolerance..tolerance
+    fun laysOnLineStrict(line: ParametricLine, tolerance: Double): Boolean {
+        if (line.substituteCoordinates(this) !in -tolerance..tolerance) {
+            return false
+        }
+        val first = line.first
+        val second = line.second
+        // hacky a bit
+        val xTmp = listOf(first.x, second.x).sorted()
+        val yTmp = listOf(first.y, second.y).sorted()
+        return x in xTmp[0]..xTmp[1] && y in yTmp[0]..yTmp[1]
+    }
+
+    fun laysAboveLine(line: ParametricLine) = line.substituteCoordinates(this) > 0.0
+    fun laysBelowLine(line: ParametricLine) = line.substituteCoordinates(this) < 0.0
+    fun laysRightToLine(line: ParametricLine): Boolean {
+        return if (line.isAscending()) {
+            laysBelowLine(line)
+        } else if (line.isDescending()) {
+            laysAboveLine(line)
+        } else {
+            false
+        }
+    }
+    fun laysLeftToTheLine(line: ParametricLine): Boolean {
+        return if (line.isAscending()) {
+            laysAboveLine(line)
+        } else if (line.isDescending()) {
+            laysBelowLine(line)
+        } else {
+            false
+        }
     }
 
     /**
@@ -54,20 +93,30 @@ data class Coordinates(val x: Double, val y: Double) {
      * @suppress
      */
     operator fun plus(other: Coordinates?) = copy(x.plus(other?.x ?: 0.0), y.plus(other?.y ?: 0.0))
+
     /**
      * @suppress
      */
     operator fun minus(other: Coordinates) = Coordinates(x.minus(other.x), y.minus(other.y))
+
     /**
      * @suppress
      */
     operator fun times(other: Int): Coordinates = copy(x.times(other), y.times(other))
+
     /**
      * @suppress
      */
     operator fun times(other: Double): Coordinates = copy(x.times(other), y.times(other))
+
     /**
      * @suppress
      */
     operator fun div(other: Int) = copy(x / other, y / other)
+
+    /**
+     * @suppress
+     */
+    override fun toString() = "[$x ; $y]"
 }
+

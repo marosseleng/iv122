@@ -32,8 +32,8 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
     init {
         builder.append(
                 "<?xml version=\"1.0\"?>" +
-                "<!DOCTYPE svg PUBLIC \"-//W3C//DTD util.SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-util.SVG-20010904/DTD/svg10.dtd\">" +
-                "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"$height\" width=\"$width\" text-rendering=\"auto\" shape-rendering=\"auto\">")
+                        "<!DOCTYPE svg PUBLIC \"-//W3C//DTD util.SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-util.SVG-20010904/DTD/svg10.dtd\">" +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"$height\" width=\"$width\" text-rendering=\"auto\" shape-rendering=\"auto\">")
     }
 
     /**
@@ -123,6 +123,16 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
             line(line)
         }
         return this
+    }
+
+    /**
+     * Adds a single point
+     *
+     * @param coordinates the coordinates of a point
+     * @return this
+     */
+    fun point(coordinates: Coordinates, stroke: Color = Color.BLACK): SVG {
+        return square(coordinates.x.toInt(), coordinates.y.toInt(), 1, Style(stroke = stroke))
     }
 
     /**

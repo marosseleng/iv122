@@ -1,6 +1,9 @@
 package com.github.mseleng.iv122.assignment3
 
-import com.github.mseleng.iv122.util.*
+import com.github.mseleng.iv122.util.Coordinates
+import com.github.mseleng.iv122.util.Line
+import com.github.mseleng.iv122.util.Turtle
+import com.github.mseleng.iv122.util.timesRepeat
 
 /**
  * Creates a fractal with the shape of a branch

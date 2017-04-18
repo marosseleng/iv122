@@ -74,6 +74,10 @@ fun BufferedImage.writeToFile(fileFormat: String, file: File): Boolean {
     return ImageIO.write(this, fileFormat, file)
 }
 
+fun readFile(name: String): BufferedImage {
+    return ImageIO.read(File(name))
+}
+
 /**
  * Fills the surroundings (3x3 grid) of the given point in the given image
  *
@@ -103,3 +107,25 @@ operator fun Color.times(ratio: Double): Color {
     val newBlue = (blue * ratio).toInt()
     return Color(newRed, newGreen, newBlue)
 }
+
+/**
+ * Returns the list of [ParametricLine]s from this list of Coordinates.
+ *
+ * Suitable for defining polygons
+ *
+ * @receiver the list of coordinates, which represent the edges of the polygon
+ * @return the list of lines describing the polygon
+ */
+fun Array<out Coordinates>.toParamLines(): List<ParametricLine> {
+    var last = last()
+    return map {
+        val line = ParametricLine(last, it)
+        last = it
+        line
+    }
+}
+
+/**
+ * Returns the inverted color
+ */
+fun Color.inverse() = Color(255 - red, 255 - green, 255 - blue)
