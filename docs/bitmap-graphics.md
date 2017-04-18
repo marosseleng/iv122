@@ -24,17 +24,13 @@ Posledná úloha bola tvorená troma skrývačkami, respektíve odkazmi skrytím
 
 - V tejto skrývačke stačilo skryť pixely, ktoré neobsahujú modrú zložku farby.
 
-<div align="center" style="width:100%">
-    <a href="../inputs/assignment4/skryvacka1.png"><img src="../inputs/assignment4/skryvacka1.png" width="40%"/></a>
-    <a href="../iv122_outputs/assignment4/skryvacka-1.png"><img src="../iv122_outputs/assignment4/skryvacka-1.png" width="40%"/></a>
-</div>
+<p align="center"><a href="../inputs/assignment4/skryvacka1.png"><img src="../inputs/assignment4/skryvacka1.png" width="100%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment4/skryvacka-1.png"><img src="../iv122_outputs/assignment4/skryvacka-1.png" width="100%"/></a></p>
 
 - V tejto skladačke bolo treba skúmať nárast jednotlivých zložiek farieb, respektíve ich zmeny a následne zvýrazniť miesta, kde bol prechod medzi farbami výraznejší.
 
-<div align="center" style="width:100%">
-    <a href="../inputs/assignment4/skryvacka2.png"><img src="../inputs/assignment4/skryvacka1.png" width="40%"/></a>
-    <a href="../iv122_outputs/assignment4/skryvacka-2.png"><img src="../iv122_outputs/assignment4/skryvacka-2.png" width="40%"/></a>
-</div>
+<p align="center"><a href="../inputs/assignment4/skryvacka2.png"><img src="../inputs/assignment4/skryvacka2.png" width="100%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment4/skryvacka-2.png"><img src="../iv122_outputs/assignment4/skryvacka-2.png" width="100%"/></a></p>
 
 - Posledná skrývačka využívala XOR mriežku, tj najskôr bolo treba vymyslieť mriežku takú, aby sa po jej aplikovaní na vstupný obrázok ukázal správny výstup. Mriežka, ktorá fungovala v tomto prípade bola šachovnicová, tj. striedali sa v nej biela a čierna farba, ako je vidieť na obrázku.
 
