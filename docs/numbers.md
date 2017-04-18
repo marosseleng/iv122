@@ -3,7 +3,7 @@
 
 Témou druhého cvičenia boli čísla, konkrétne kombinatorika a rôzne aproximácie.
 
-* Prvou úlohou bolo napísať funkcie na generovanie permutácií, variácií a kombinácií. Tieto funkcie sa dali napísať veľmi jednoducho využitím rekurzie. Na funkciu generujúcu kombinácie som využil možnosti jazyka a riešenie som troch "ohackoval". Moje riešenie kombinácií spočívalo v tom, že som si najskôr vygeneroval príslušné variácie (kombinácie sú podmnožinou príslušných variácií), následne som tieto variácie (vo forme reťazcov) abecedne zoradil (v rámci reťazcov) a takýto zoznam zoradených reťazcov som vložil do množiny. Tu som využil skutočnosti, že v množine sa nebudú vyskytovať duplicitné prvky.
+* Prvou úlohou bolo napísať funkcie na generovanie permutácií, variácií a kombinácií. Tieto funkcie sa dali napísať veľmi jednoducho využitím rekurzie. Na funkciu generujúcu kombinácie som využil možnosti jazyka a riešenie som troch "ohackoval". Moje riešenie kombinácií spočívalo v tom, že som si najskôr vygeneroval príslušné variácie (kombinácie sú podmnožinou príslušných variácií), následne som tieto variácie (vo forme reťazcov) abecedne zoradil (v rámci reťazcov) a takýto zoznam zoradených reťazcov som vložil do množiny.
 
 ```kotlin
 fun permutations(numbers: List<Int>): List<String> {
@@ -42,8 +42,8 @@ fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variatio
 * Nasledujúca úloha bola vizualizovať Pascalov trojuholník s rôznym ofarbením prvkov. Na tejto úlohe bolo asi najťažšie vymyslieť ako zobrazovať trojuholník v 2D mriežke. Všetky vygenerované výstupy z tejto podúlohy sa nachádzajú v zložke [`iv122_outputs/assignment2`](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment2)
 
     <div align="center" style="width:80%">
-        <img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="45%"/>
-        <img src="../iv122_outputs/assignment2/pascal-mod7.png" width="45%"/>
+        <a href="../iv122_outputs/assignment2/pascal-mod7.png"><img src="../iv122_outputs/assignment2/pascal-evenOdd.png" width="45%"/></a>
+        <a href="../iv122_outputs/assignment2/pascal-mod7.png"><img src="../iv122_outputs/assignment2/pascal-mod7.png" width="45%"/></a>
     </div>
 
 * Ďalšou úlohou bolo napísať funkciu na približné umocňovanie. Ja som implementoval len metódu, ktorá racionálny exponent zapíše v tvare zlomku a následne odmocňuje. Funkciu n-tej odmocniny som implementoval pomocou bisekcie:
@@ -75,7 +75,7 @@ fun rationalPower_1(base: Double, exp: Double): Double {
 ```
 Tieto funckie sa nachádzajú v súbore [`NumberUtils.kt`](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/util/NumberUtils.kt), respektíve [`C.kt`](https://github.com/mseleng/iv122/tree/gh-pages/src/com/github/mseleng/iv122/assignment2/C.kt) a ich dokumentácia je [tu](../javadoc/iv122/com.github.mseleng.iv122.util), respektíve [tu](../javadoc/iv122/com.github.mseleng.iv122.assignment2)
 
-* Poslednou úlohou bolo napísať funkcie na aproximáciu čísla π; Pre mňa bola najzaujímavejšia Archimedova aproximácia a to hlavne z dôvodu, že Archimedes dokázal pomerne presne určiť hodnotu π bez použitia akýchkoľvek moderných vynálezov. Táto metóda spočíva v tom, že kružnicu najskôr opíšeme štvorcom s dĺžkou hrany 1 a vpíšeme do nej ďalší štvorec tak, že vrcholy vnútorného budú v poloviciach hrán opísaného štvorca. Takto vieme povedať, že obvod kružnice bude niekde medzi obvodom vonkajšieho a vnútorného štvorca (polygónu).
+* Poslednou úlohou bolo napísať funkcie na aproximáciu čísla π; použil som tri rôzne metódy a každú z nich som nechal počítať 3 sekundy. Za tento čas sa aproximácia všetkých troch metód zhodovala na 2 desatinné miesta (tj. 3.14). V ďalších desatinných miestach sauž aproximácie líšili. Ako najpresnejšia sa ukázala byť Archimedova metóda s tým, že u nej bola použitá funkcia odmocniny z matematickej knižnice Javy.
 
 ```kotlin
 fun pi_Archimedes(interval_ms: Long, sqrt: (Double) -> Double): ArchimedesπRange {
