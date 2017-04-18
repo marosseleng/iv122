@@ -11,7 +11,7 @@ Zvyšok úlohy pozostával z vykreslenia niekoľkých obrazcov a fraktálov. Nie
     <a href="../iv122_outputs/assignment3/nested-square-2.svg"><img src="../iv122_outputs/assignment3/nested-square-2.svg" width="22%"/></a>
     <a href="../iv122_outputs/assignment3/nested-square-3.svg"><img src="../iv122_outputs/assignment3/nested-square-3.svg" width="22%"/></a>
     <a href="../iv122_outputs/assignment3/nested-triangle-2.svg"><img src="../iv122_outputs/assignment3/nested-triangle-2.svg" width="22%"/></a>
-    <a href="../iv122_outputs/assignment3/flower.svg"><a href="../iv122_outputs/assignment3/flower.svg"><img src="../iv122_outputs/assignment3/flower.svg" width="22%"/></a>
+    <a href="../iv122_outputs/assignment3/flower.svg"><img src="../iv122_outputs/assignment3/flower.svg" width="22%"/></a>
 </div>
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
