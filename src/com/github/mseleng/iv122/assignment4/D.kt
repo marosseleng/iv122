@@ -1,5 +1,6 @@
 package com.github.mseleng.iv122.assignment4
 
+import com.github.mseleng.iv122.util.bitmapImage
 import com.github.mseleng.iv122.util.colorize
 import com.github.mseleng.iv122.util.readFile
 import java.awt.Color
@@ -49,9 +50,9 @@ fun hideAndSeek2(): BufferedImage {
  * The word "slon" was hidden in this image. It was deciphered using the XOR operation with the matrix.
  * The matrix looks like a chessboard, so that no two pixels with the same color share an edge
  *
- * @return an image with word slon
+ * @return a Pair of images; first contains the cipher matrix and the second contains an image with word slon
  */
-fun hideAndSeek3(): BufferedImage {
+fun hideAndSeek3(): Pair<BufferedImage, BufferedImage> {
     val img = readFile("inputs/assignment4/skryvacka3.png")
     val cipherMatrix = mutableMapOf<Pair<Int, Int>, Boolean>()
     val imageMatrix = mutableMapOf<Pair<Int, Int>, Boolean>()
@@ -73,5 +74,11 @@ fun hideAndSeek3(): BufferedImage {
             Color.WHITE.rgb
         }
     }
-    return img
+    return Pair(bitmapImage(img.width, img.height).colorize { x, y ->
+        if (cipherMatrix.getOrDefault(Pair(x, y), false)) {
+            Color.BLACK.rgb
+        } else {
+            Color.WHITE.rgb
+        }
+    }, img)
 }
