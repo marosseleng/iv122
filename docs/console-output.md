@@ -11,15 +11,15 @@ Output directory: iv122_outputs/
 -> A star...... ✓ (assignment1/star.svg)
 -> An "inside-out" star...... ✓ (assignment1/weird-star.svg)
 ==========
--> The Ulam's spiral I.(prime numbers)...... ✓ (assignment1/ulamsSpiral-[prime].png)
--> The Ulam's spiral II.(x mod 5 > 1)...... ✓ (assignment1/ulamsSpiral-[mod5>1].png)
--> The Ulam's spiral III.(x*e mod π >= 2)....... ✓ (assignment1/ulamsSpiral-[*EmodPI>=2].png)
+-> The Ulam's spiral I.(prime numbers)...... ✓ (assignment1/ulam-spiral1.png)
+-> The Ulam's spiral II.(x mod 5 > 1)...... ✓ (assignment1/ulam-spiral2.png)
+-> The Ulam's spiral III.(x*e mod π >= 2)....... ✓ (assignment1/ulam-spiral3.png)
 ==========
 -> The Collatz's sequence...... ✓ (assignment1/collatz.png)
 -> The Collatz's sequence (the maximum numbers)...... ✓ (assignment1/collatz-max.png)
 ==========
--> The Euclidean gcd algorithm (modulo variant)...... ✓ (assignment1/euclid-[modulus].png)
--> The Euclidean gcd algorithm (subtraction variant)...... ✓ (assignment1/euclid-[subtraction].png)
+-> The Euclidean gcd algorithm (modulo variant)...... ✓ (assignment1/euclid-modulus.png)
+-> The Euclidean gcd algorithm (subtraction variant)...... ✓ (assignment1/euclid-subtraction.png)
 Complete.
 
 ***The second assignment***
@@ -52,26 +52,27 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1418699805280683
-	Gregory-Leibnitz method: 3.141576254232618
+	Monte Carlo method (using the library square (root) function): 3.141561069076399
+	Gregory-Leibnitz method: 3.1416090489138155
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
 
 ***The third assignment***
--> Polygon (7 edges)...... ✓ (assignment3/polygon7.svg)
--> Polygon (9 edges)...... ✓ (assignment3/polygon9.svg)
--> Polygon (17 edges)...... ✓ (assignment3/polygon17.svg)
--> Multistar (9 vertices)...... ✓ (assignment3/multistar9.svg)
--> Multistar (5 vertices)...... ✓ (assignment3/multistar5.svg)
+-> Polygon (7 edges)...... ✓ (assignment3/polygon-7.svg)
+-> Polygon (9 edges)...... ✓ (assignment3/polygon-9.svg)
+-> Polygon (17 edges)...... ✓ (assignment3/polygon-17.svg)
+-> Multistar (9 vertices)...... ✓ (assignment3/multistar-9.svg)
+-> Multistar (5 vertices)...... ✓ (assignment3/multistar-5.svg)
 ==========
--> Pentagram (turtle)...... ✓ (assignment3/pentagram_turtle.svg)
--> Nested square (20;[1:3];5])...... ✓ (assignment3/nestedsquare.svg)
--> Nested square (40;[1:7];5])...... ✓ (assignment3/nestedsquare2.svg)
--> Nested square (40;[1:10];0])...... ✓ (assignment3/nestedsquare3.svg)
--> Nested triangle ([25;5])...... ✓ (assignment3/nestedTriangle2.svg)
--> Nested triangle ([25;0])...... ✓ (assignment3/nestedTriangle.svg)
+-> Pentagram (turtle)...... ✓ (assignment3/pentagram-turtle.svg)
+-> Nested square (20;[1:3];5])...... ✓ (assignment3/nested-square.svg)
+-> Nested square (40;[1:7];5])...... ✓ (assignment3/nested-square-2.svg)
+-> Nested square (40;[1:10];0])...... ✓ (assignment3/nested-square-3.svg)
+-> Nested triangle ([25;5])...... ✓ (assignment3/nested-triangle-2.svg)
+-> Nested triangle ([25;0])...... ✓ (assignment3/nested-triangle.svg)
 -> Rounded flower..... ✓ (assignment3/flower.svg)
+-> Lined circle..... ✓ (assignment3/lined-circle.svg)
 ==========
 -> Branch fractal...... ✓ (assignment3/branch.svg)
 -> Koch's flake (depth=1)...... ✓ (assignment3/koch-flake-1.svg)
@@ -93,7 +94,39 @@ Complete.
 -> Empty circle (param.)...... ✓ (assignment4/circle-param.png)
 -> Spiral (param.)...... ✓ (assignment4/spiral.png)
 -> Equal-sized triangle...... ✓ (assignment4/triangle.png)
--> Ellipse...... ✓ (assignment3/ellipse.svg)
+-> Ellipse...... ✓ (assignment4/ellipse.svg)
+-> Sloped ellipse...... ✓ (assignment4/sloped-ellipse.svg)
+==========
+-> Filled polygon (triangle)...... ✓ (assignment4/filled-polygon-1.png)
+-> Another filled polygon...... ✓ (assignment4/filled-polygon-2.png)
+==========
+-> Hide and seek 1...... ✓ (assignment4/skryvacka-1.png)
+-> Hide and seek 2...... ✓ (assignment4/skryvacka-2.png)
+-> Hide and seek 3...... ✓ (assignment4/skryvacka-3.png)
+Complete.
+
+***The fifth assignment***
+-> Input: Image size: 500; Number of lines: 25; Line length: 220
+-> Random lines and their intersections (highlighted)...... ✓ (assignment5/lines.svg)
+-> Random lines and their intersections (not highlighted)...... ✓ (assignment5/lines-2.svg)
+==========
+Complete.
+
+***The sixth assignment***
+-> Input: Image size: 1000; Number of points to skip: 250
+-> Sierpinski triangle (Chaos game; 1:2)...... ✓ (assignment6/sierpinski-triangle.png)
+-> Sierpinski triangle 2 (Chaos game; 1:4)...... ✓ (assignment6/sierpinski-triangle-2.png)
+-> Pentagon (Chaos game; 1:3)...... ✓ (assignment6/pentagon.png)
+-> Pentagon 2 (Chaos game; 3:8)...... ✓ (assignment6/pentagon-2.png)
+-> Hexagon (Chaos game; 1:3)...... ✓ (assignment6/hexagon.png)
+-> Octagon (Chaos game; 1:3)...... ✓ (assignment6/octagon.png)
+-> Octagon 2 (Chaos game; 3:16)...... ✓ (assignment6/octagon-2.png)
+-> Octagon 3 (Chaos game; 2:7)...... ✓ (assignment6/octagon-3.png)
+==========
+Complete.
+
+***The seventh assignment***
+-> Mandelbrot set (not zoomed)...... ✓ (assignment7/mandelbrot.png)
 ==========
 Complete.
 

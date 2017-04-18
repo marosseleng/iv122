@@ -9,8 +9,11 @@ title: com.github.mseleng.iv122.util - iv122
 ### Types
 
 | [Chart](-chart/index.md) | `class Chart`<br>This class is used as a simple facade above the jfreechart library, providing simple chart actions |
+| [Complex](-complex/index.md) | `data class Complex`<br>Complex number implementation, copied from
+http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 | [Coordinates](-coordinates/index.md) | `data class Coordinates`<br>Data class representing the coordinates of a single point in the 2D space |
 | [Direction](-direction/index.md) | `enum class Direction`<br>Enum representing directions in a 2D grid |
+| [ParametricLine](-parametric-line/index.md) | `data class ParametricLine`<br>Class representing a line in Carthesian system, more specificaly its parametric representation |
 | [SVG](-s-v-g/index.md) | `class SVG`<br>An helper class for the work with the SVG images |
 | [Style](-style/index.md) | `data class Style`<br>The class representing the style of the SVG elements |
 | [Turtle](-turtle/index.md) | `class Turtle`<br>A helper class to work with the turtle graphics |
@@ -23,6 +26,7 @@ title: com.github.mseleng.iv122.util - iv122
 
 | [java.awt.Color](java.awt.-color/index.md) |  |
 | [java.awt.image.BufferedImage](java.awt.image.-buffered-image/index.md) |  |
+| [kotlin.Array](kotlin.-array/index.md) |  |
 | [kotlin.Double](kotlin.-double/index.md) |  |
 | [kotlin.Int](kotlin.-int/index.md) |  |
 | [kotlin.Long](kotlin.-long/index.md) |  |
@@ -41,6 +45,8 @@ title: com.github.mseleng.iv122.util - iv122
 | [fraction](fraction.md) | `fun fraction(part: Int, whole: Int): Double`<br>Computes the fraction for the given part and the whole |
 | [ln](ln.md) | `fun ln(x: Double, eps: Double = 0.000001): Double`<br>Approximates the natural logarithm of the given [x](ln.md#com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/x) |
 | [nthRoot_approx_bisection](nth-root_approx_bisection.md) | `fun nthRoot_approx_bisection(num: Double, order: Long, from: Double = 0.0, to: Double = Math.floor(num.div(order)).plus(1), eps: Double = 0.0001): Double`<br>Approximates (using the bisection) the [order](nth-root_approx_bisection.md#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/order)-th root of [num](nth-root_approx_bisection.md#com.github.mseleng.iv122.util$nthRoot_approx_bisection(kotlin.Double, kotlin.Long, kotlin.Double, kotlin.Double, kotlin.Double)/num) |
+| [quadraticEquation](quadratic-equation.md) | `fun quadraticEquation(a: Double, b: Double, c: Double): <ERROR CLASS><Double, Double>`<br>Computes the roots of the given quadratic equation in the form |
+| [readFile](read-file.md) | `fun readFile(name: String): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) |
 | [sqrt_approx_bisection](sqrt_approx_bisection.md) | `fun sqrt_approx_bisection(num: Double, from: Double = 0.0, to: Double = Math.floor(num.div(2.0)).plus(1), eps: Double = 0.0001): Double`<br>Approximates (using the bisection) the square root of the given number |
 | [squareBitmapImage](square-bitmap-image.md) | `fun squareBitmapImage(size: Int, init: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`.() -> Unit = {}): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>Creates an instance of [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) of the square shape |
 

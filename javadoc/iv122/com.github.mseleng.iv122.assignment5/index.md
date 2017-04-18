@@ -8,8 +8,8 @@ title: com.github.mseleng.iv122.assignment5 - iv122
 
 ### Functions
 
-| [computeAB](compute-a-b.md) | `fun computeAB(line: <ERROR CLASS><`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`, `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>): <ERROR CLASS><Double, Double>` |
-| [generateLines](generate-lines.md) | `fun generateLines(n: Int, maxX: Int, maxY: Int, length: Double): List<<ERROR CLASS><`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`, `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>>` |
-| [inOnLine](in-on-line.md) | `fun `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`.inOnLine(line: <ERROR CLASS><`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`, `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>): Boolean` |
-| [main](main.md) | `fun main(args: Array<String>): Unit` |
+| [findIntersections](find-intersections.md) | `fun findIntersections(lines: List<<ERROR CLASS><`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`, `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>>): List<`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>`<br>Returns the list of Coordinates representing the intersections of the given lines |
+| [linesAndIntersections](lines-and-intersections.md) | `fun linesAndIntersections(imgSize: Int, numOfLines: Int, lineLength: Int, highlightIntersections: Boolean = false): `[`SVG`](../com.github.mseleng.iv122.util/-s-v-g/index.md)<br>Returns the SVG containing lines and their intersections (possibly) highlighted |
+| [randomLines](random-lines.md) | `fun randomLines(n: Int, maxX: Int, maxY: Int, length: Double): List<<ERROR CLASS><`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`, `[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>>`<br>Randomly generates lines within the given space |
+| [randomPoints](random-points.md) | `fun randomPoints(n: Int, maxX: Int, maxY: Int): List<`[`Coordinates`](../com.github.mseleng.iv122.util/-coordinates/index.md)`>`<br>Returns the list of random points in the given space |
 
