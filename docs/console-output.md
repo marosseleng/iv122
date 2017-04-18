@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1417848822629426
-	Gregory-Leibnitz method: 3.14160917841832
+	Monte Carlo method (using the library square (root) function): 3.141344547756975
+	Gregory-Leibnitz method: 3.141575799278439
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -102,7 +102,7 @@ Complete.
 ==========
 -> Hide and seek 1...... ✓ (assignment4/skryvacka-1.png)
 -> Hide and seek 2...... ✓ (assignment4/skryvacka-2.png)
--> Hide and seek 3...... ✓ (assignment4/skryvacka-3.png)
+-> Hide and seek 3...... ✓ (assignment4/skryvacka-3.png, assignment4/skryvacka-3-mriezka.png)
 Complete.
 
 ***The fifth assignment***
