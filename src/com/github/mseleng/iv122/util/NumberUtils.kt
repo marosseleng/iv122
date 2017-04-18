@@ -252,5 +252,36 @@ fun Long.timesRepeat(block: (Long) -> Unit) {
  * @return this number limited to the given [value] (if needed)
  */
 fun Int.limitTo(value: Int): Int {
-    return if (this > value) { value } else { this }
+    return if (this > value) {
+        value
+    } else {
+        this
+    }
+}
+
+/**
+ * Computes the roots of the given quadratic equation in the form
+ *
+ * ax^2 + bx + c = 0
+ *
+ * @param a a coefficient at the quadratic part
+ * @param b a coefficient at the linear part
+ * @param c the absolute coefficient
+ * @return a pair of [Double.NEGATIVE_INFINITY] iff the discriminant is less than 0;
+ * a pair of same values iff the discriminant is zero; the roots of the equation otherwise
+ */
+fun quadraticEquation(a: Double, b: Double, c: Double): Pair<Double, Double> {
+    val d = b.square() - 4 * a * c
+    if (d < 0.0) {
+        return Pair(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY)
+    } else if (d == 0.0) {
+        // 1 solution
+        val sol = -b / (2 * a)
+        return Pair(sol, sol)
+    } else {
+        // d > 0 => 2 solutions
+        val x1 = (-b + Math.sqrt(d)) / 2 * a
+        val x2 = (-b - Math.sqrt(d)) / 2 * a
+        return Pair(x1, x2)
+    }
 }

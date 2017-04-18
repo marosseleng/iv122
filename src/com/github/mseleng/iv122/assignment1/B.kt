@@ -22,7 +22,11 @@ fun getUlamsSpiral(n: Int, condition: UlamSpiralCondition): BufferedImage {
         var lastCoordinates: Coordinates? = null
         var lastDirection: Direction? = null
         for (i in 1..n) {
-            val rgb = if (condition(i)) { Color.BLACK.rgb } else { Color.WHITE.rgb }
+            val rgb = if (condition(i)) {
+                Color.BLACK.rgb
+            } else {
+                Color.WHITE.rgb
+            }
             val (coordinates, direction) = getNextMove(center, lastCoordinates, lastDirection)
             lastCoordinates = coordinates
             lastDirection = direction
@@ -99,7 +103,8 @@ fun getNextDirection(a: Int, lastDirection: Direction?): Direction {
                 Direction.NORTH
             } else {
                 Direction.EAST
-            }}
+            }
+        }
         else -> {
             if (a == 0) {
                 lastDirection.counterClockwiseNext()
@@ -118,8 +123,8 @@ fun getNextDirection(a: Int, lastDirection: Direction?): Direction {
  * @return the coordinates for the next number
  */
 fun getNextCoordinates(direction: Direction, lastCoordinates: Coordinates) = when (direction) {
-        Direction.EAST -> lastCoordinates.copy(x = lastCoordinates.x + 1)
-        Direction.NORTH -> lastCoordinates.copy(y = lastCoordinates.y - 1)
-        Direction.WEST -> lastCoordinates.copy(x = lastCoordinates.x - 1)
-        Direction.SOUTH -> lastCoordinates.copy(y = lastCoordinates.y + 1)
+    Direction.EAST -> lastCoordinates.copy(x = lastCoordinates.x + 1)
+    Direction.NORTH -> lastCoordinates.copy(y = lastCoordinates.y - 1)
+    Direction.WEST -> lastCoordinates.copy(x = lastCoordinates.x - 1)
+    Direction.SOUTH -> lastCoordinates.copy(y = lastCoordinates.y + 1)
 }

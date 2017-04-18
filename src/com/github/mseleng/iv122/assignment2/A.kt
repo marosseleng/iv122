@@ -33,7 +33,11 @@ fun variations(numbers: List<Int>, k: Int, allowRepetition: Boolean): List<Strin
         return emptyList()
     }
     for (number in numbers) {
-        val subList = if (allowRepetition) { numbers } else { numbers.minus(number) }
+        val subList = if (allowRepetition) {
+            numbers
+        } else {
+            numbers.minus(number)
+        }
         val midResult = variations(subList, k - 1, allowRepetition).filter { it.length < k }
         if (midResult.isEmpty()) {
             result.add("$number")
@@ -52,7 +56,7 @@ fun variations(numbers: List<Int>, k: Int, allowRepetition: Boolean): List<Strin
  * @param allowRepetition pass true for the combinations with the repetition
  * @return the list of [k]-combinations
  */
-fun combinations(numbers:List<Int>, k: Int, allowRepetition: Boolean) = variations(numbers, k, allowRepetition).map(String::sorted).toSet()
+fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean) = variations(numbers, k, allowRepetition).map(String::sorted).toSet()
 
 /**
  * An extension function that sorts the letters inside of this

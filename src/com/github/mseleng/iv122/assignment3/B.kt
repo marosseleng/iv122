@@ -1,9 +1,6 @@
 package com.github.mseleng.iv122.assignment3
 
-import com.github.mseleng.iv122.util.Coordinates
-import com.github.mseleng.iv122.util.Line
-import com.github.mseleng.iv122.util.Turtle
-import com.github.mseleng.iv122.util.timesRepeat
+import com.github.mseleng.iv122.util.*
 
 /**
  * Creates the regular polygon with [n] edges with the inner star
@@ -138,4 +135,37 @@ private fun dodekagon(a: Int, offset: Coordinates): List<Coordinates> {
         counter = counter.inc()
     }
     return retList
+}
+
+/**
+ * Creates a circle that is filled with horizontal and vertical lines
+ *
+ * @param imgSize the size of the output image
+ * @param lineSeparation the gap between the lines
+ * @return a list of SVG lines representing the image
+ */
+fun linedCircle(imgSize: Int, lineSeparation: Int): List<Line> {
+    val center = imgSize / 2.0
+    val radius = 0.95 * center
+    val result = mutableListOf<Line>()
+
+    for (xy in 0 until imgSize step lineSeparation) {
+        val a = 1.0
+        val b = -2 * center
+
+        // horizontal lines
+        val cX = center.square() - radius.square() + (xy - center).square()
+        val (x1, x2) = quadraticEquation(a, b, cX)
+        result.add(Line(Coordinates(x1, xy.toDouble()), Coordinates(x2, xy.toDouble())))
+
+        // vertical lines
+        val cY = center.square() - radius.square() + (xy - center).square()
+        val (y1, y2) = quadraticEquation(a, b, cY)
+        result.add(Line(Coordinates(xy.toDouble(), y1), Coordinates(xy.toDouble(), y2)))
+    }
+
+    return result.filter { line ->
+        line.first.x != Double.NEGATIVE_INFINITY && line.first.y != Double.NEGATIVE_INFINITY
+                && line.second.x != Double.NEGATIVE_INFINITY && line.second.y != Double.NEGATIVE_INFINITY
+    }
 }
