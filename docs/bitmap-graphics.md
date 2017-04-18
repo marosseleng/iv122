@@ -34,6 +34,9 @@ Posledná úloha bola tvorená troma skrývačkami, respektíve odkazmi skrytím
 
 - Posledná skrývačka využívala XOR mriežku, tj najskôr bolo treba vymyslieť mriežku takú, aby sa po jej aplikovaní na vstupný obrázok ukázal správny výstup. Mriežka, ktorá fungovala v tomto prípade bola šachovnicová, tj. striedali sa v nej biela a čierna farba, ako je vidieť na obrázku.
 
+<p align="center"><a href="../inputs/assignment4/skryvacka3.png"><img src="../inputs/assignment4/skryvacka3.png" width="100%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment4/skryvacka-3-mriezka.png"><img src="../iv122_outputs/assignment4/skryvacka-3-mriezka.png" width="100%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment4/skryvacka-3.png"><img src="../iv122_outputs/assignment4/skryvacka-3.png" width="100%"/></a></p>
     
 ##### Výstup z konsole po spustení jar archívu sa nachádza [tu](./console-output.md)
 ##### Všetky ostatné obrázky(výstupy) k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment4)
