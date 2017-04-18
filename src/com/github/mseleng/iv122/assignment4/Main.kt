@@ -53,6 +53,8 @@ fun run(path: String) {
     print(" ✓ (assignment4/skryvacka-1.png)\n-> Hide and seek 2......")
     hideAndSeek2().writeTo(fileWithName(path, 4, "skryvacka-2.png"))
     print(" ✓ (assignment4/skryvacka-2.png)\n-> Hide and seek 3......")
-    hideAndSeek3().writeTo(fileWithName(path, 4, "skryvacka-3.png"))
-    println(" ✓ (assignment4/skryvacka-3.png)")
+    val (cipher, solution) = hideAndSeek3()
+    cipher.writeTo(fileWithName(path, 4, "skryvacka-3-mriezka.png"))
+    solution.writeTo(fileWithName(path, 4, "skryvacka-3.png"))
+    println(" ✓ (assignment4/skryvacka-3.png, assignment4/skryvacka-3-mriezka.png)")
 }
