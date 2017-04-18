@@ -16,7 +16,7 @@ Zvyšok úlohy pozostával z vykreslenia niekoľkých obrazcov a fraktálov. Nie
 
 Jednoduché fraktály vykreslené pomocou "želví" grafiky:
 
-    + Kochova vločka (hĺbka zanorenia postupne: 1, 3, 5): 
+  - Kochova vločka (hĺbka zanorenia postupne: 1, 3, 5): 
 
 <div align="center" style="width:90%">
     <a href="../iv122_outputs/assignment3/koch-flake-1.svg"><img src="../iv122_outputs/assignment3/koch-flake-1.svg" width="22%"/></a>
@@ -56,7 +56,7 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
 }
 ```
 
-    + Sierpińského trojuholník (hĺbka zanorenia postupne: 2, 4, 8):
+  - Sierpińského trojuholník (hĺbka zanorenia postupne: 2, 4, 8):
 
 <div align="center" style="width:90%">
     <a href="../iv122_outputs/assignment3/sierpinski-triangle-2.svg"><img src="../iv122_outputs/assignment3/sierpinski-triangle-2.svg" width="22%"/></a>
@@ -64,7 +64,7 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     <a href="../iv122_outputs/assignment3/sierpinski-triangle-8.svg"><img src="../iv122_outputs/assignment3/sierpinski-triangle-8.svg" width="22%"/></a>
 </div>
 
-    + Päťuholníková vločka (hĺbka zanorenia postupne: 2, 4, 6):
+  - Päťuholníková vločka (hĺbka zanorenia postupne: 2, 4, 6):
 
 <div align="center" style="width:90%">
     <a href="../iv122_outputs/assignment3/penta-flake-2.svg"><img src="../iv122_outputs/assignment3/penta-flake-2.svg" width="22%"/></a>
@@ -72,7 +72,7 @@ fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
     <a href="../iv122_outputs/assignment3/penta-flake-6.svg"><img src="../iv122_outputs/assignment3/penta-flake-6.svg" width="22%"/></a>
 </div>
 
-    + Ker:
+  - Ker:
     
 <p align="center"><a href="../iv122_outputs/assignment3/branch.svg"><img src="../iv122_outputs/assignment3/branch.svg" width="90%"/></a></p>
 
