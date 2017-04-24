@@ -12,7 +12,7 @@ import com.github.mseleng.iv122.util.timesRepeat
  * @return the list of SVG [Line]s representing the branch
  */
 fun branch(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(250, 550))
+    val turtle = Turtle(Turtle.State(position = Coordinates(250, 550)))
     turtle.left(90.0)
     branchRecursive(turtle, 300.0, depth)
     return turtle.lines
@@ -40,7 +40,7 @@ private fun branchRecursive(turtle: Turtle, a: Double, depth: Int) {
  * @return the list of SVG [Line]s representing the flake
  */
 fun flake(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(50, 100))
+    val turtle = Turtle(Turtle.State(position = Coordinates(50, 100)))
     flakeRecursive(turtle, 300.0, depth)
     turtle.right(120.0)
     flakeRecursive(turtle, 300.0, depth)
@@ -70,7 +70,7 @@ private fun flakeRecursive(turtle: Turtle, d: Double, depth: Int) {
  * @return the list of SVG [Line]s representing the triangle
  */
 fun sierpinski(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(0, 1000))
+    val turtle = Turtle(Turtle.State(position = Coordinates(0, 1000)))
     sierpinskiRecursive(turtle, 1024.0, depth)
     return turtle.lines
 }
@@ -82,7 +82,7 @@ private fun sierpinskiRecursive(turtle: Turtle, length: Double, depth: Int) {
         turtle.forward(length)
         turtle.left(120.0)
         turtle.forward(length)
-        turtle.currentDirection = 0.0
+        turtle.left(120.0)
         return
     }
     sierpinskiRecursive(turtle, length / 2, depth - 1)
@@ -102,7 +102,7 @@ private fun sierpinskiRecursive(turtle: Turtle, length: Double, depth: Int) {
     turtle.penUp()
     turtle.right(120.0)
     turtle.forward(length / 2)
-    turtle.currentDirection = 0.0
+    turtle.left(120.0)
     turtle.penDown()
 }
 
@@ -113,7 +113,7 @@ private fun sierpinskiRecursive(turtle: Turtle, length: Double, depth: Int) {
  * @return the list of SVG [Line]s representing the flake
  */
 fun pentagonFlake(depth: Int): List<Line> {
-    val turtle = Turtle(Coordinates(300, 50))
+    val turtle = Turtle(Turtle.State(position = Coordinates(300, 50)))
     turtle.right(36.0)
     pentagonFlakeRecursive(turtle, depth, 300.0)
     return turtle.lines

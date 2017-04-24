@@ -23,7 +23,7 @@ fun multistar(n: Int, a: Int): List<Line> {
     val vertexInnerAngle = (180 - ((n - 2) * 180.0) / n) / 2
     val firstAngle = (180 - vertexInnerAngle) / 2
     val otherAngle = 180 - vertexInnerAngle
-    val turtle = Turtle(Coordinates(n / 3 * a, 0))
+    val turtle = Turtle(Turtle.State(position = Coordinates(n / 3 * a, 0)))
     turtle.right(firstAngle)
     n.timesRepeat {
         turtle.forward(x)
@@ -40,7 +40,7 @@ fun multistar(n: Int, a: Int): List<Line> {
  * @return the list of [Line]s representing the regular polygon
  */
 fun polygon(n: Int, a: Int): List<Line> {
-    val turtle = Turtle(Coordinates(n / 3 * a, 0))
+    val turtle = Turtle(Turtle.State(position = Coordinates(n / 3 * a, 0)))
     val innerAngleDegrees = ((n - 2) * 180.0) / n
     val firstAngle = (180 - innerAngleDegrees) / 2
     turtle.right(firstAngle)
