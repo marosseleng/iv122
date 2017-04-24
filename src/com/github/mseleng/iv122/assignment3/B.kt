@@ -28,7 +28,7 @@ fun anygram_turtle(n: Int, length: Int): List<Line> {
  */
 fun nestedSquare(length: Double, offset: Coordinates, depth: Int, proportion: Pair<Int, Int>, skip: Int): List<Line> {
     val denominator = proportion.first + proportion.second
-    val turtle = Turtle(offset)
+    val turtle = Turtle(Turtle.State(position = offset))
     var mutableLength = length
     val firstAngle = Math.toDegrees(Math.atan(proportion.first.toDouble() / proportion.second))
     depth.timesRepeat { i ->
@@ -71,7 +71,7 @@ fun nestedTriangle(length: Double, offset: Coordinates, depth: Int, skip: Int): 
     // the gap between the vertices of the two adjacent triangles
     val gap = twoThirdsOfHeight / (depth - 1)
 
-    val turtle = Turtle(offset)
+    val turtle = Turtle(Turtle.State(position = offset))
     turtle.right(90.0)
 
     // TODO consider using the recursion
