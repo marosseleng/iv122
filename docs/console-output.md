@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141344547756975
-	Gregory-Leibnitz method: 3.141575799278439
+	Monte Carlo method (using the library square (root) function): 3.142015500694009
+	Gregory-Leibnitz method: 3.141576263371446
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -123,6 +123,25 @@ Complete.
 -> Octagon 2 (Chaos game; 3:16)...... ✓ (assignment6/octagon-2.png)
 -> Octagon 3 (Chaos game; 2:7)...... ✓ (assignment6/octagon-3.png)
 ==========
+-> Koch's flake (L-system)...... ✓ (assignment6/koch-l-system.svg)
+-> Sierpinski triangle (L-system)...... ✓ (assignment6/sierpinski-l-system.svg)
+-> Tree (L-system)...... ✓ (assignment6/tree-l-system.svg)
+-> Hilbert's curve (L-system)...... ✓ (assignment6/hilbert-l-system.svg)
+-> Hilbert's curve (L-system; left 89°, right 91°)...... ✓ (assignment6/hilbert-l-system-89-91.svg)
+-> Plant 1 (L-system, ABOP, edge-rewriting)...... ✓ (assignment6/plant-1.svg)
+-> Plant 2 (L-system, ABOP, node-rewriting)...... ✓ (assignment6/plant-2.svg)
+-> Plant 3 (L-system, ABOP, node-rewriting)...... ✓ (assignment6/plant-3.svg)
+-> Plant 4 (L-system, ABOP modification (curved main axis))...... ✓ (assignment6/plant-4.svg)
+-> Koch's island (L-system)...... ✓ (assignment6/koch-island-l-system.svg)
+-> Koch's island (L-system; left 90.2°, right 89.7°)...... ✓ (assignment6/koch-island-l-system897-902.svg)
+-> Dragon's curve (L-system)...... ✓ (assignment6/dragon-curve-l-system.svg)
+-> Plant 5 (L-system)...... ✓ (assignment6/plant-5.svg)
+==========
+-> Feigenbaum's diagram (r∈[0.0;1.0], x∈[0.0;1.0])...... ✓ (assignment6/feigenbaum-0_00|1_00-0_00|1_00.png)
+-> Feigenbaum's diagram (r∈[0.0;1.0], x∈[0.5;1.0])...... ✓ (assignment6/feigenbaum-0_00|1_00-0_50|1_00.png)
+-> Feigenbaum's diagram (r∈[0.85;0.9], x∈[0.8;0.9])...... ✓ (assignment6/feigenbaum-0_85|0_90-0_80|0_90.png)
+-> Feigenbaum's diagram (r∈[0.85;1.0], x∈[0.0;1.0])...... ✓ (assignment6/feigenbaum-0_85|1_00-0_00|1_00.png)
+-> Feigenbaum's diagram (r∈[0.85;1.0], x∈[0.75;1.0])...... ✓ (assignment6/feigenbaum-0_85|1_00-0_75|1_00.png)
 Complete.
 
 ***The seventh assignment***

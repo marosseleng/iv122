@@ -9,7 +9,7 @@ title: Turtle.backward - iv122
 `fun backward(amount: Int): Unit`
 `fun backward(amount: Double): Unit`
 
-Does backward but stay in the [currentDirection](current-direction.md)
+Does backward but stay in the [currentDirection](#)
 
 ### Parameters
 

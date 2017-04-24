@@ -1,6 +1,6 @@
 # []()My portfolio for the IV122 class @ FI MU Brno
 
-There is a jar archive inside the `outputs` directory of the `gh-pages` branch. That jar includes all the dependencies needed.
+There is a jar archive inside the `iv122_outputs` directory of the `gh-pages` branch. That jar includes all the dependencies needed.
 
 ## &larr; Download the current JAR here
 
@@ -19,5 +19,7 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   2. [Numbers](docs/numbers.md)
   3. [Vector graphics](docs/vector-graphics.md)
   4. [Bitmap graphics](docs/bitmap-graphics.md)
+  5. TBD
+  6. [Fractals (chaos)](docs/fractals-chaos.md)
   
 ##### [](#reference)The class (and functions) reference can be found [here](javadoc/iv122/index.md)
