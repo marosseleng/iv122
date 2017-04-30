@@ -42,7 +42,7 @@ fun run(path: String) {
     print(" ✓ (assignment7/Misiurewicz%03d[1-50].png)\n==========\n")
 
     print("-> Julia set (c = (-0.8 + 0.156i), r∈[-2.0;1.0], i∈[-1.0;1.0])......")
-    julia(4500, 3000, Pair(-2.0, 1.0), Pair(-1.0, 1.0), lightBlueBrown, innerForLightBlueBrown, Complex(-0.8, 0.156))
+    julia(4500, 2000, Pair(-2.0, 2.0), Pair(-1.0, 1.0), lightBlueBrown, innerForLightBlueBrown, Complex(-0.8, 0.156))
             .writeTo(fileWithName(path, 7, "julia.png"))
     print(" ✓ (assignment7/julia.png)\n==========\n")
 
