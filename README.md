@@ -21,5 +21,6 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   4. [Bitmap graphics](docs/bitmap-graphics.md)
   5. TBD
   6. [Fractals (chaos)](docs/fractals-chaos.md)
+  7. [Fractals (complex numbers)](docs/fractals-complex.md)
   
 ##### [](#reference)The class (and functions) reference can be found [here](javadoc/iv122/index.md)
