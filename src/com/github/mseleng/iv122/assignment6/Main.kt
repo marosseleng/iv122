@@ -4,6 +4,9 @@ import com.github.mseleng.iv122.util.SVG
 import com.github.mseleng.iv122.util.fileWithName
 import com.github.mseleng.iv122.util.writeTo
 
+/**
+ * @suppress
+ */
 fun run(path: String) {
 
     //A

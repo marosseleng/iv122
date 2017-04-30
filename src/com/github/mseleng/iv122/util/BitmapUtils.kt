@@ -64,7 +64,7 @@ fun BufferedImage.writeTo(file: File): Boolean {
 }
 
 /**
- * An fileFormat function that writes this [BufferedImage] instance to a specified [File] in the specified format
+ * A fileFormat function that writes this [BufferedImage] instance to a specified [File] in the specified format
  *
  * @param fileFormat the target file's format
  * @param file the target file
@@ -74,6 +74,12 @@ fun BufferedImage.writeToFile(fileFormat: String, file: File): Boolean {
     return ImageIO.write(this, fileFormat, file)
 }
 
+/**
+ * Reads the specified image file
+ *
+ * @param name the name (or path) of the file
+ * @return an image read
+ */
 fun readFile(name: String): BufferedImage {
     return ImageIO.read(File(name))
 }

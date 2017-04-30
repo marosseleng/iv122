@@ -1,9 +1,5 @@
 package com.github.mseleng.iv122.assignment4
 
-import com.github.mseleng.iv122.util.*
-import java.awt.Color
-import java.awt.image.BufferedImage
-
 //fun main(args: Array<String>) {
 //    chessBoard(1000, 50, 72, 237, 430).writeTo(fileWithName(assignmentNo = 4, name = "chessboard.png"))
 //}
