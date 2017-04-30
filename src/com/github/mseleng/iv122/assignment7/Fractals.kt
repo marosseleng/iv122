@@ -1,26 +1,73 @@
 package com.github.mseleng.iv122.assignment7
 
-import com.github.mseleng.iv122.util.*
+import com.github.mseleng.iv122.util.Complex
+import com.github.mseleng.iv122.util.bitmapImage
+import com.github.mseleng.iv122.util.timesRepeat
+import com.github.mseleng.iv122.util.writeTo
 import java.awt.Color
 import java.awt.image.BufferedImage
+import java.io.File
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import kotlin.system.measureTimeMillis
 
-fun main(args: Array<String>) {
-    //Color.decode("0x00897b"), Color.decode("0x3e2723")
-    mandelbrot(1500, 1000, Pair(-2.0, 1.0), Pair(-1.0, 1.0), limePurple, innerForLinePurple).writeTo(fileWithName(assignmentNo = 7, name = "mandelexperiment.png"))
-//    newton(1000, 1000, Pair(-1.5, 1.5), Pair(-1.5, 1.5), limePurple.reversed()).writeTo(fileWithName(assignmentNo = 7, name = "newton-experiment.png"))
+/**
+ * Generates the Newton fractal for the given equation and respective solutions within the given ranges
+ *
+ * @param function Newton's method of approximating numbers (containing only f(z)/f'(z) part)
+ * @param solutions the solutions of the [function]
+ */
+fun newton(
+        width: Int, height: Int,
+        realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
+        function: (Complex) -> Complex,
+        solutions: List<Complex>,
+        colors: List<Color>,
+        autoBalance: Boolean = true, numOfThreads: Int = 1): BufferedImage {
+    return fractal(width, height, realRange, imaginaryRange, colors, Pair(Color.BLACK, Color.BLACK), autoBalance, numOfThreads, { false }) { z ->
+        var current = z
+        for (i in 1..20) {
+            current -= function(current)
+        }
+        val someInt = solutions.indexOf(solutions.minBy { (current - it).abs() })
+        Pair(current, someInt)
+    }
 }
 
+/**
+ * Generates (and writes) the series of zoomed Mandelbrot fractals within the given ranges
+ *
+ * Always starts displaying the whole Mandelbrot's set
+ *
+ * @param center a point to be in the center while zooming
+ * @param zoomFactor the amount to divide the current interval
+ * @param iterations the number of images to generate/write
+ * @param targetFile a function that generates the output file (is dependent on the image number)
+ */
+fun zoomedMandelbrot(imgSize: Int = 1200, center: Complex, zoomFactor: Double = 5.0, iterations: Int = 20, outerColors: List<Color>, targetFile: (Int) -> File) {
+    val innerColors = Pair(Color.BLACK, Color.BLACK)
+    var realRange = Pair(-2.0, 1.0)
+    var imaginaryRange = Pair(-1.5, 1.5)
+    iterations.timesRepeat {
+        mandelbrot(imgSize, imgSize, realRange, imaginaryRange, outerColors, innerColors).writeTo(targetFile(it))
+        val realDst = (realRange.second - realRange.first) / zoomFactor
+        realRange = Pair(center.re - realDst / 2, center.re + realDst / 2)
+        val imagDst = (imaginaryRange.second - imaginaryRange.first) / zoomFactor
+        imaginaryRange = Pair(center.im - imagDst / 2, center.im + imagDst / 2)
+    }
+}
+
+/**
+ * Generates the Mandelbrot set/fractal within the given ranges
+ */
 fun mandelbrot(
         width: Int, height: Int,
         realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
         outerColors: List<Color>,
         innerColors: Pair<Color, Color>,
         autoBalance: Boolean = true, numOfThreads: Int = 1): BufferedImage {
-    return mandelbrotJulia(width, height, realRange, imaginaryRange, outerColors, innerColors, autoBalance, numOfThreads) { c ->
+    return fractal(width, height, realRange, imaginaryRange, outerColors, innerColors, autoBalance, numOfThreads) { c ->
         var current = Complex(0, 0)
         var someInt = 0
         for (i in 1..30) {
@@ -37,27 +84,9 @@ fun mandelbrot(
     }
 }
 
-fun newton(
-        width: Int, height: Int,
-        realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
-        outerColors: List<Color>,
-        innerColors: Pair<Color, Color>,
-        autoBalance: Boolean = true, numOfThreads: Int = 1): BufferedImage {
-    val solutions = listOf(Complex(1, 0), Complex(-0.5, Math.sqrt(3.0) / 2), Complex(-0.5, -Math.sqrt(3.0) / 2))
-    return mandelbrotJulia(width, height, realRange, imaginaryRange, outerColors, innerColors, autoBalance, numOfThreads) { z ->
-        var current = z
-        var someInt = 0
-        for (i in 1..30) {
-            current = (current * current * current) - Complex(0.01, 0.01)
-            if (someInt == 0 && current.abs() > 2) {
-                someInt = i
-            }
-        }
-        Pair(current, someInt)
-    }
-}
-
-
+/**
+ * Generates the Julia set/fractal within the given ranges
+ */
 fun julia(
         width: Int, height: Int,
         realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
@@ -65,7 +94,7 @@ fun julia(
         innerColors: Pair<Color, Color>,
         c: Complex,
         autoBalance: Boolean = true, numOfThreads: Int = 1): BufferedImage {
-    return mandelbrotJulia(width, height, realRange, imaginaryRange, outerColors, innerColors, autoBalance, numOfThreads) { z ->
+    return fractal(width, height, realRange, imaginaryRange, outerColors, innerColors, autoBalance, numOfThreads) { z ->
         var current = z
         var someInt = 0
         for (i in 1..30) {
@@ -84,13 +113,16 @@ fun julia(
 
 /**
  * This serves as a load balancer, eg. if we don't want parallelism, we will not create ExecutorService.
+ *
+ * @param colorByComplexResult function returning boolean according to which we say whether we want to distance-paint the image (default is used for mandelbrot/julia sets)
  */
-fun mandelbrotJulia(
+fun fractal(
         width: Int, height: Int,
         realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
         outerColors: List<Color>,
         innerColors: Pair<Color, Color>,
         autoBalance: Boolean = true, numOfThreads: Int = 1,
+        colorByComplexResult: (Complex) -> Boolean = { c -> c.re != Double.NaN && c.im != Double.NaN && c.abs() < 2.0 },
         iterate: (Complex) -> Pair<Complex, Int>): BufferedImage {
 
     // this is the minimum (number of threads) we may use (this make the computation as parallel as possible)
@@ -108,9 +140,9 @@ fun mandelbrotJulia(
         numOfThreads
     }
     return if (numOfThreads == 1) {
-        singleThreadFractal(width, height, realRange, imaginaryRange, outerColors, innerColors, iterate)
+        singleThreadFractal(width, height, realRange, imaginaryRange, outerColors, innerColors, iterate, colorByComplexResult)
     } else {
-        multiThreadFractal(width, height, realRange, imaginaryRange, outerColors, innerColors, iterate, actualThreads)
+        multiThreadFractal(width, height, realRange, imaginaryRange, outerColors, innerColors, iterate, colorByComplexResult, actualThreads)
     }
 }
 
@@ -134,12 +166,16 @@ private fun testMultithreadedPerformance() {
     }
 }
 
+/**
+ * Performs the generation on the single thread
+ */
 private fun singleThreadFractal(
         width: Int, height: Int,
         realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
         outerColors: List<Color>,
         innerColors: Pair<Color, Color>,
-        iterate: (Complex) -> Pair<Complex, Int>): BufferedImage {
+        iterate: (Complex) -> Pair<Complex, Int>,
+        colorByComplexResult: (Complex) -> Boolean): BufferedImage {
 
     val img = bitmapImage(width, height)
     val xStep = (realRange.second - realRange.first) / (width - 1)
@@ -154,17 +190,22 @@ private fun singleThreadFractal(
             img,
             { outerColors[it % colorsCount].rgb },
             innerColors,
-            iterate).call()
+            iterate,
+            colorByComplexResult).call()
 
     return img
 }
 
+/**
+ * Performs the generation on the given number of threads
+ */
 private fun multiThreadFractal(
         width: Int, height: Int,
         realRange: Pair<Double, Double>, imaginaryRange: Pair<Double, Double>,
         outerColors: List<Color>,
         innerColors: Pair<Color, Color>,
         iterate: (Complex) -> Pair<Complex, Int>,
+        colorByComplexResult: (Complex) -> Boolean,
         numOfThreads: Int): BufferedImage {
     val img = bitmapImage(width, height)
     val xStep = (realRange.second - realRange.first) / (width - 1)
@@ -189,7 +230,8 @@ private fun multiThreadFractal(
                 img,
                 { outerColors[it % colorsCount].rgb },
                 innerColors,
-                iterate)
+                iterate,
+                colorByComplexResult)
         tasks.add(task)
         left -= portion
         start = end + 1
@@ -204,7 +246,8 @@ private fun multiThreadFractal(
                 img,
                 { outerColors[it % colorsCount].rgb },
                 innerColors,
-                iterate))
+                iterate,
+                colorByComplexResult))
     }
 
     pool.invokeAll(tasks)
@@ -224,7 +267,8 @@ private fun getTask(
         img: BufferedImage,
         getOuterColor: (Int) -> Int,
         innerColors: Pair<Color, Color>,
-        iterate: (Complex) -> Pair<Complex, Int>): Callable<Unit> {
+        iterate: (Complex) -> Pair<Complex, Int>,
+        colorByComplexResult: (Complex) -> Boolean): Callable<Unit> {
 
     return Callable {
         for (x in from..to) {
@@ -234,7 +278,7 @@ private fun getTask(
                 val imaginary = computeImaginary(newY)
 
                 val (complex, steps) = iterate(Complex(real, imaginary))
-                if (complex.re != Double.NaN && complex.im != Double.NaN && complex.abs() < 2.0) {
+                if (colorByComplexResult(complex)) {
                     val firstColorRatio = steps / 100.0
                     val secondColorRatio = 1.00 - firstColorRatio
                     val newColor = Color(

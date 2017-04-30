@@ -1,7 +1,5 @@
 package com.github.mseleng.iv122.assignment5
 
-import com.github.mseleng.iv122.util.*
-
 /*
 fun main(args: Array<String>) {
     convexCover(70, 6).writeTo(fileWithName(assignmentNo = 5, name = "points.svg"))
