@@ -98,7 +98,7 @@ Konštanta `750_000`, ktorá sa v programe používa bola určená ako najoptim�
   - `singleThreadFractal()` je funkcia, ktorá neobsahuje vytváranie Thread pool-u (pre jedno vlákno nie je nutné, funkcia použije hlavné vlákno) a s tým spojenú pamäťovú náročnosť``
   - `multiThreadFractal()` obsahuje už samotnú paralelnú implementáciu, tj. stará sa o vytvorenie daného počtu vlákien a o generovanie samotné
   
-Nižšie uvádzam tabuľku s prehľadom, koľko času trvalo generovanie toho istého obrázka na jednom vlákne a potom na dvoch, štyroch a ôsmych:
+Nižšie uvádzam tabuľku s prehľadom, koľko času (ms) trvalo generovanie toho istého obrázka na jednom vlákne a potom na dvoch, štyroch a ôsmych:
 
 | threads\size | 300x200 | 900x600 | 1500x1000 | 3k x 2k | 6k x 4k |
 |--------------|---------|---------|-----------|---------|---------|
@@ -113,7 +113,10 @@ Z tabuľky je vidieť, že pri použití štyroch vláken namiesto jedného sa p
 
 Konfigurácia, na ktorej program bežal má dvojjadrový procesor, ktorý podporuje Hyper-threading, kde každé fyzické jadro zvládne naraz spracovávať dve vlákna. Tomuto odpovedajú aj dosiahnuté výsledky. Používanie väčšieho počtu vláken už neprinášalo dobré výsledky, pretože sa zvyšoval čas potrebný na samotné spravovanie vláken.
 
-#### Toto použitie paralelizmu umožnilo "stiahnuť" čas potrebný na vygenerovanie obrázkov v zložke `iv122_outputs/assignment7` (okrem gif-ov) takmer o tretinu, z 50 minút na 35.
+##### Toto použitie paralelizmu umožnilo "stiahnuť" čas potrebný na vygenerovanie obrázkov v zložke `iv122_outputs/assignment7` (okrem gif-ov) takmer o tretinu, z 50 minút na 35.
+
+#### Niekoľko vygenerovaných obrázkov:
+Na ofarbovanie obrázkov som použil techniku založenú na počte iterácií potrebných k "úniku", tj. kedy veľkosť iterovaného komplexného čísla prestrelí 2. 
 
 + Juliova množina:
 <p align="center"><a href="../iv122_outputs/assignment7/julia.png"><img src="../iv122_outputs/assignment7/julia.png" width="90%"/></a></p>
@@ -122,7 +125,7 @@ Konfigurácia, na ktorej program bežal má dvojjadrový procesor, ktorý podpor
 <p align="center"><a href="../iv122_outputs/assignment7/newton-six.png"><img src="../iv122_outputs/assignment7/newton-six.png" width="90%"/></a></p>
 
 + Mandelbrotova množina:
-<p align="center"><a href="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=0_00|1_00=.png"><img src="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=0_00|1_00=.png" width="90%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=-1_00|1_00=.png"><img src="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=-1_00|1_00=.png" width="90%"/></a></p>
 
 + Demonštrácia "zoomovania" Mandelbrotovej množiny (GIF bol vytvorený programom `convert`, ktorý je súčasťou natívnej knižnice [ImageMagick](https://www.imagemagick.org/)):
 <p align="center"><a href="../iv122_outputs/assignment7/gifs/top.gif"><img src="../iv122_outputs/assignment7/gifs/top.gif" width="90%"/></a></p>
