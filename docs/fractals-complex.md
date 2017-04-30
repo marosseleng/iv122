@@ -100,12 +100,12 @@ Konštanta `750_000`, ktorá sa v programe používa bola určená ako najoptim�
   
 Nižšie uvádzam tabuľku s prehľadom, koľko času trvalo generovanie toho istého obrázka na jednom vlákne a potom na dvoch, štyroch a ôsmych:
 
-| threads\size | 300x200 | 900x600 | 1500x1000 | 3000x2000 | 6000x4000 |
-|--------------|---------|---------|-----------|-----------|-----------|
-| **1**        | 861     | 4195    | 11268     | 44522     | 177340    |
-| **2**        | 582     | 2556    | 7499      | 29184     | 114729    |
-| **4**        | 406     | 2299    | 6240      | 24854     | 99169     |
-| **8**        | 328     | 1824    | 4841      | 18905     | 77086     |
+| threads\size | 300x200 | 900x600 | 1500x1000 | 3k x 2k | 6k x 4k |
+|--------------|---------|---------|-----------|---------|---------|
+| **1**        | 861     | 4195    | 11268     | 44522   | 177340  |
+| **2**        | 582     | 2556    | 7499      | 29184   | 114729  |
+| **4**        | 406     | 2299    | 6240      | 24854   | 99169   |
+| **8**        | 328     | 1824    | 4841      | 18905   | 77086   |
 
 Čas uvedený v tabuľke nezahŕňa ukladanie obrázku na disk.
 
@@ -113,11 +113,21 @@ Z tabuľky je vidieť, že pri použití štyroch vláken namiesto jedného sa p
 
 Konfigurácia, na ktorej program bežal má dvojjadrový procesor, ktorý podporuje Hyper-threading, kde každé fyzické jadro zvládne naraz spracovávať dve vlákna. Tomuto odpovedajú aj dosiahnuté výsledky. Používanie väčšieho počtu vláken už neprinášalo dobré výsledky, pretože sa zvyšoval čas potrebný na samotné spravovanie vláken.
 
-###### Toto použitie paralelizmu umožnilo "stiahnuť" čas potrebný na vygenerovanie obrázkov v zložke `iv122_outputs/assignment7` (okrem gif-ov) takmer o tretinu, z 50 minút na 35.
+#### Toto použitie paralelizmu umožnilo "stiahnuť" čas potrebný na vygenerovanie obrázkov v zložke `iv122_outputs/assignment7` (okrem gif-ov) takmer o tretinu, z 50 minút na 35.
 
++ Juliova množina:
+<p align="center"><a href="../iv122_outputs/assignment7/julia.png"><img src="../iv122_outputs/assignment7/julia.png" width="90%"/></a></p>
 
++ Newtonova množina:
+<p align="center"><a href="../iv122_outputs/assignment7/newton-six.png"><img src="../iv122_outputs/assignment7/newton-six.png" width="90%"/></a></p>
 
-povedat, ze na pouzitie autobalancovania skratilo cas generovania tych obrazkov, co mam ulozene (okrem gifov) skoro o tretinu. 50 -> 35
++ Mandelbrotova množina:
+<p align="center"><a href="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=0_00|1_00=.png"><img src="../iv122_outputs/assignment7/mandelbrot=-2_00|1_00=0_00|1_00=.png" width="90%"/></a></p>
+
++ Demonštrácia "zoomovania" Mandelbrotovej množiny (GIF bol vytvorený programom `convert`, ktorý je súčasťou natívnej knižnice [ImageMagick](https://www.imagemagick.org/)):
+<p align="center"><a href="../iv122_outputs/assignment7/gifs/top.gif"><img src="../iv122_outputs/assignment7/gifs/top.gif" width="90%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment7/gifs/Misiurewicz.gif"><img src="../iv122_outputs/assignment7/gifs/Misiurewicz.gif" width="90%"/></a></p>
+<p align="center"><a href="../iv122_outputs/assignment7/gifs/stem.gif"><img src="../iv122_outputs/assignment7/gifs/stem.gif" width="90%"/></a></p>
 
 ##### Výstup z konsole po spustení jar archívu sa nachádza [tu](./console-output.md)
 ##### Všetky ostatné obrázky(výstupy) k tejto úlohe sa nachádzajú na [Github-e](https://github.com/mseleng/iv122/tree/gh-pages/iv122_outputs/assignment7)
