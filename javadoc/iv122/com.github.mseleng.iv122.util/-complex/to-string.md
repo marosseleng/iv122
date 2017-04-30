@@ -7,3 +7,6 @@ title: Complex.toString - iv122
 # toString
 
 `fun toString(): String`
+
+return a string representation of the invoking Complex object
+

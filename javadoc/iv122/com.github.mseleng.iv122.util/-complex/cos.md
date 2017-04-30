@@ -7,3 +7,6 @@ title: Complex.cos - iv122
 # cos
 
 `fun cos(): `[`Complex`](index.md)
+
+return a new Complex object whose value is the complex cosine of this
+

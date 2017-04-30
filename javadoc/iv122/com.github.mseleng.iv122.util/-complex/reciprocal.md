@@ -7,3 +7,6 @@ title: Complex.reciprocal - iv122
 # reciprocal
 
 `fun reciprocal(): `[`Complex`](index.md)
+
+return a new Complex object whose value is the reciprocal of this
+

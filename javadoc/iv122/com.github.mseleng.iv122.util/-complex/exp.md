@@ -7,3 +7,6 @@ title: Complex.exp - iv122
 # exp
 
 `fun exp(): `[`Complex`](index.md)
+
+return a new Complex object whose value is the complex exponential of this
+

@@ -6,4 +6,9 @@ title: Complex.times - iv122
 
 # times
 
+`operator fun times(b: Int): `[`Complex`](index.md)
+`operator fun times(b: Double): `[`Complex`](index.md)
 `operator fun times(b: `[`Complex`](index.md)`): `[`Complex`](index.md)
+
+return a new Complex object whose value is (this * b)
+

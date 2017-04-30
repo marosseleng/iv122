@@ -7,3 +7,6 @@ title: Complex.abs - iv122
 # abs
 
 `fun abs(): Double`
+
+return abs/modulus/magnitude
+

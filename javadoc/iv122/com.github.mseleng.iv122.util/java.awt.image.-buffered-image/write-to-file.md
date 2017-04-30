@@ -8,7 +8,7 @@ title: writeToFile - iv122
 
 `fun `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`.writeToFile(fileFormat: String, file: `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`): Boolean`
 
-An fileFormat function that writes this [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) instance to a specified [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) in the specified format
+A fileFormat function that writes this [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) instance to a specified [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) in the specified format
 
 ### Parameters
 

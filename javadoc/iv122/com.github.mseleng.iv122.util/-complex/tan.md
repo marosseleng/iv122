@@ -7,3 +7,6 @@ title: Complex.tan - iv122
 # tan
 
 `fun tan(): `[`Complex`](index.md)
+
+return a new Complex object whose value is the complex tangent of this
+

@@ -6,4 +6,9 @@ title: Complex.div - iv122
 
 # div
 
+`operator fun div(b: Int): `[`Complex`](index.md)
+`operator fun div(b: Double): `[`Complex`](index.md)
 `operator fun div(b: `[`Complex`](index.md)`): `[`Complex`](index.md)
+
+return a / b
+

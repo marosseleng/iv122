@@ -6,10 +6,10 @@ title: Complex.<init> - iv122
 
 # &lt;init&gt;
 
-`Complex(re: Int, im: Int)`
-
 `Complex(re: Double, im: Double)`
 
-Complex number implementation, copied from
-http://introcs.cs.princeton.edu/java/32class/Complex.java.html
+constructs the complex number
+
+**Constructor**
+constructs the complex number
 

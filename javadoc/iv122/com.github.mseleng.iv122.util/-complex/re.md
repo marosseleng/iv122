@@ -7,3 +7,9 @@ title: Complex.re - iv122
 # re
 
 `val re: Double`
+
+the real part
+
+### Property
+
+`re` - the real part

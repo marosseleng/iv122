@@ -7,3 +7,6 @@ title: Complex.scale - iv122
 # scale
 
 `fun scale(alpha: Double): `[`Complex`](index.md)
+
+return a new object whose value is (this * alpha)
+

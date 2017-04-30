@@ -7,3 +7,9 @@ title: Complex.im - iv122
 # im
 
 `val im: Double`
+
+the imaginary part
+
+### Property
+
+`im` - the imaginary part

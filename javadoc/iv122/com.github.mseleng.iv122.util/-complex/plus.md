@@ -6,4 +6,9 @@ title: Complex.plus - iv122
 
 # plus
 
+`operator fun plus(b: Int): `[`Complex`](index.md)
+`operator fun plus(b: Double): `[`Complex`](index.md)
 `operator fun plus(b: `[`Complex`](index.md)`): `[`Complex`](index.md)
+
+return a new Complex object whose value is (this + b)
+

@@ -7,3 +7,13 @@ title: readFile - iv122
 # readFile
 
 `fun readFile(name: String): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)
+
+Reads the specified image file
+
+### Parameters
+
+`name` - the name (or path) of the file
+
+**Return**
+an image read
+

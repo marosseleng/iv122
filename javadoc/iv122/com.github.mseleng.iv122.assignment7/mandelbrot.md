@@ -6,4 +6,7 @@ title: mandelbrot - iv122
 
 # mandelbrot
 
-`fun mandelbrot(): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)
+`fun mandelbrot(width: Int, height: Int, realRange: <ERROR CLASS><Double, Double>, imaginaryRange: <ERROR CLASS><Double, Double>, outerColors: List<`[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`>, innerColors: <ERROR CLASS><`[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`, `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`>, autoBalance: Boolean = true, numOfThreads: Int = 1): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)
+
+Generates the Mandelbrot set/fractal within the given ranges
+

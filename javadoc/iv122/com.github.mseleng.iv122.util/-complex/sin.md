@@ -7,3 +7,6 @@ title: Complex.sin - iv122
 # sin
 
 `fun sin(): `[`Complex`](index.md)
+
+return a new Complex object whose value is the complex sine of this
+

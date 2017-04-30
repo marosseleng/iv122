@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.142015500694009
-	Gregory-Leibnitz method: 3.141576263371446
+	Monte Carlo method (using the library square (root) function): 3.141919722921115
+	Gregory-Leibnitz method: 3.1415762240560356
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -145,8 +145,24 @@ Complete.
 Complete.
 
 ***The seventh assignment***
--> Mandelbrot set (not zoomed)...... ✓ (assignment7/mandelbrot.png)
+-> Mandelbrot set (not zoomed)...... ✓ (assignment7/mandelbrot=-2_00|1_00=-1_00|1_00=.png)
+-> Mandelbrot set (r∈[-1.5;-1.2], i∈[-0.1;0.1])...... ✓ (assignment7/mandelbrot=-1_50|-1_20=-0_10|0_10=.png)
+-> Mandelbrot set (r∈[-1.456;-1.336], i∈[-0.06;0.06])...... ✓ (assignment7/mandelbrot=-1_456|-1_336=-0_06|0_06=.png)
+-> Mandelbrot set (r∈[-2.0;1.0], i∈[0.0;1.0])...... ✓ (assignment7/mandelbrot=-2_00|1_00=0_00|1_00=.png)
+-> Mandelbrot set (r∈[-0.5;-0.4], i∈[0.55;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_40=0_55|0_65=.png)
+-> Mandelbrot set (r∈[-0.5;-0.45], i∈[0.6;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_45=0_60|0_65=.png)
+-> Mandelbrot set (r∈[-0.5;-0.475], i∈[0.625;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_475=0_625|0_65=.png)
+-> Mandelbrot set (zoom to (0+i))...... ✓ (assignment7/top%03d[1-120].png)
+-> Mandelbrot set (zoom to (-1.75))...... ✓ (assignment7/mini%03d[1-25].png)
+-> Mandelbrot set (zoom to (-1.25))...... ✓ (assignment7/stem%03d[1-15].png)
+-> Mandelbrot set (zoom to (-0.1528 + 1.0397i))...... ✓ (assignment7/Feigenbaum%03d[1-30].png)
+-> Mandelbrot set (zoom to (-0.1011 + 0.9563i))...... ✓ (assignment7/Misiurewicz%03d[1-50].png)
 ==========
+-> Julia set (c = (-0.8 + 0.156i), r∈[-2.0;1.0], i∈[-1.0;1.0])...... ✓ (assignment7/julia.png)
+==========
+-> Newton's fractal (z^3-1)...... ✓ (assignment7/newton-classic.png)
+-> Newton's fractal (z^3 - 2z + 2)...... ✓ (assignment7/newton-other.png)
+-> Newton's fractal (z^5 - 3iz + 5)...... ✓ (assignment7/newton-six.png)
 Complete.
 
 ```
