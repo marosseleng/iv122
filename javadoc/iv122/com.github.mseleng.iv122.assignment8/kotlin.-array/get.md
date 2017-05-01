@@ -7,3 +7,6 @@ title: get - iv122
 # get
 
 `operator fun `[`Transformation`](../-transformation.md)`.get(x: Int, y: Int): Double`
+
+Returns the item from matrix at position (x, y) where x is column
+

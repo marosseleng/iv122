@@ -7,3 +7,6 @@ title: mirrorX - iv122
 # mirrorX
 
 `fun mirrorX(): `[`Transformation`](-transformation.md)
+
+Returns the matrix representing the mirroring by the x-axis
+

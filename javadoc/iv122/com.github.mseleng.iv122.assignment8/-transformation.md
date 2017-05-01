@@ -7,3 +7,6 @@ title: Transformation - iv122
 # Transformation
 
 `typealias Transformation = Array<<ERROR CLASS><Double, Double, Double>>`
+
+Represents the transformation matrix
+

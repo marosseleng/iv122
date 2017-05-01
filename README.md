@@ -19,8 +19,11 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   2. [Numbers](docs/numbers.md)
   3. [Vector graphics](docs/vector-graphics.md)
   4. [Bitmap graphics](docs/bitmap-graphics.md)
-  5. TBD
+  5. [Geometric algorithms](docs/geometric-algorithms.md)
   6. [Fractals (chaos)](docs/fractals-chaos.md)
   7. [Fractals (complex numbers)](docs/fractals-complex.md)
+  8. [Linear algebra and 2D transformations](docs/linear-algebra.md)
+  9. ===
+  10. [Probability](docs/probability.md)
   
 ##### [](#reference)The class (and functions) reference can be found [here](javadoc/iv122/index.md)

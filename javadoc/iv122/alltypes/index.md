@@ -31,6 +31,7 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 | [com.github.mseleng.iv122.util.Line](../com.github.mseleng.iv122.util/-line.md) | A typealias for the [kotlin.Pair](#) of [Coordinates](../com.github.mseleng.iv122.util/-coordinates/index.md) representing the starting and the end point of a line in SVG |
 | [kotlin.collections.List](../com.github.mseleng.iv122.assignment8/kotlin.collections.-list/index.md) (extensions in package com.github.mseleng.iv122.assignment8) |  |
 | [kotlin.Long](../com.github.mseleng.iv122.util/kotlin.-long/index.md) (extensions in package com.github.mseleng.iv122.util) |  |
+| [com.github.mseleng.iv122.assignment8.MRCM](../com.github.mseleng.iv122.assignment8/-m-r-c-m/index.md) | Class representing MRCM |
 | [com.github.mseleng.iv122.assignment2.ModuloColorGenerator](../com.github.mseleng.iv122.assignment2/-modulo-color-generator/index.md) | A generator that supplies colors based on current line's modulus |
 | [com.github.mseleng.iv122.util.ParametricLine](../com.github.mseleng.iv122.util/-parametric-line/index.md) | Class representing a line in Carthesian system, more specificaly its parametric representation |
 | [com.github.mseleng.iv122.assignment2.PascalTriangleColorGenerator](../com.github.mseleng.iv122.assignment2/-pascal-triangle-color-generator/index.md) | An interface providing simple method for the Pascal's triangle color retrieval |
@@ -41,7 +42,9 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 | [com.github.mseleng.iv122.util.StandStill](../com.github.mseleng.iv122.util/-stand-still/index.md) | A subclass of [TurtleDirections](../com.github.mseleng.iv122.util/-turtle-directions/index.md) representing the default fallback (the turtle does nothing) |
 | [kotlin.String](../com.github.mseleng.iv122.assignment2/kotlin.-string/index.md) (extensions in package com.github.mseleng.iv122.assignment2) |  |
 | [com.github.mseleng.iv122.util.Style](../com.github.mseleng.iv122.util/-style/index.md) | The class representing the style of the SVG elements |
-| [com.github.mseleng.iv122.assignment8.Transformation](../com.github.mseleng.iv122.assignment8/-transformation.md) |  |
+| [com.github.mseleng.iv122.assignment8.Transformation](../com.github.mseleng.iv122.assignment8/-transformation.md) | Represents the transformation matrix |
 | [com.github.mseleng.iv122.util.Turtle](../com.github.mseleng.iv122.util/-turtle/index.md) | A helper class to work with the turtle graphics |
 | [com.github.mseleng.iv122.util.TurtleDirections](../com.github.mseleng.iv122.util/-turtle-directions/index.md) | Sealed class representing the possible turtle directions |
+| [com.github.mseleng.iv122.assignment8.Wrapper](../com.github.mseleng.iv122.assignment8/-wrapper/index.md) | Represents a pattern within the MRCM iteration |
+| [com.github.mseleng.iv122.assignment8.WrapperApplication](../com.github.mseleng.iv122.assignment8/-wrapper-application.md) | An alias for the iterative function on Wrappers |
 

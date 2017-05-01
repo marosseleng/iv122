@@ -7,3 +7,6 @@ title: times - iv122
 # times
 
 `operator fun <ERROR CLASS><Double, Double, Double>.times(other: <ERROR CLASS><Double, Double, Double>): Double`
+
+Multiplies (and sums) two rows of the matrix
+

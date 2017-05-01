@@ -7,3 +7,6 @@ title: scaling - iv122
 # scaling
 
 `fun scaling(newWidth: Double, newHeight: Double): `[`Transformation`](-transformation.md)
+
+Returns the matrix representing the scaling
+

@@ -36,6 +36,7 @@ Data class representing the coordinates of a single point in the 2D space
 | [laysOnLineStrict](lays-on-line-strict.md) | `fun laysOnLineStrict(line: `[`ParametricLine`](../-parametric-line/index.md)`, tolerance: Double): Boolean` |
 | [laysRightToLine](lays-right-to-line.md) | `fun laysRightToLine(line: `[`ParametricLine`](../-parametric-line/index.md)`): Boolean` |
 | [polarAngleTo](polar-angle-to.md) | `fun polarAngleTo(other: Coordinates): Double` |
+| [toTriple](to-triple.md) | `fun toTriple(): <ERROR CLASS>`<br>Returns the coordinates represented as the triple (for homogeneous transformations) |
 | [trimToNDecimalPoints](trim-to-n-decimal-points.md) | `fun trimToNDecimalPoints(n: Int): Coordinates`<br>Trims this decimal number, so there is no scientific exponentiation in toString() |
 | [vectorTo](vector-to.md) | `fun vectorTo(other: Coordinates): Coordinates` |
 

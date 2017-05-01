@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141919722921115
-	Gregory-Leibnitz method: 3.1415762240560356
+	Monte Carlo method (using the library square (root) function): 3.1417206432407845
+	Gregory-Leibnitz method: 3.141609058596569
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -163,6 +163,20 @@ Complete.
 -> Newton's fractal (z^3-1)...... ✓ (assignment7/newton-classic.png)
 -> Newton's fractal (z^3 - 2z + 2)...... ✓ (assignment7/newton-other.png)
 -> Newton's fractal (z^5 - 3iz + 5)...... ✓ (assignment7/newton-six.png)
+Complete.
+
+***The eight assignment***
+-> Squares...... ✓ (assignment8/squares.svg)
+-> Spiral...... ✓ (assignment8/spiral.svg)
+-> Another spiral...... ✓ (assignment8/spiral-2.svg)
+==========
+-> Twin christmas tree...... ✓ (assignment8/christmas-tree.svg)
+-> Dragon...... ✓ (assignment8/dragon.svg)
+-> Sierpinski triangle...... ✓ (assignment8/sierpinski.svg)
+-> Sierpinski triangle 2...... ✓ (assignment8/sierpinski-2.svg)
+-> Sierpinski triangle 3...... ✓ (assignment8/sierpinski-3.svg)
+-> Sierpinski triangle 4...... ✓ (assignment8/sierpinski-4.svg)
+-> Sierpinski triangle 5...... ✓ (assignment8/sierpinski-5.svg)
 Complete.
 
 ```

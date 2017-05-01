@@ -7,3 +7,6 @@ title: getColumn - iv122
 # getColumn
 
 `fun `[`Transformation`](../-transformation.md)`.getColumn(n: Int): <ERROR CLASS><Double, Double, Double>`
+
+Returns the [n](get-column.md#com.github.mseleng.iv122.assignment8$getColumn(kotlin.Array((((kotlin.Double, , )))), kotlin.Int)/n)-th column of this matrix
+
