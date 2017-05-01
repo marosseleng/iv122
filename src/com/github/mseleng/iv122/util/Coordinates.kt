@@ -115,6 +115,11 @@ data class Coordinates(val x: Double, val y: Double) {
     operator fun div(other: Int) = copy(x / other, y / other)
 
     /**
+     * Returns the coordinates represented as the triple (for homogeneous transformations)
+     */
+    fun toTriple() = Triple(x, y, 1.0)
+
+    /**
      * @suppress
      */
     override fun toString() = "[$x ; $y]"

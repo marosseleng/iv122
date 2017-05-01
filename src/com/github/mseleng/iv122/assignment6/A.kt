@@ -22,7 +22,7 @@ fun chaosGame(n: Int, ratio: Double, skip: Int, imgSize: Int, iterations: Int = 
     val img = squareBitmapImage(imgSize)
     val radius = imgSize / 2 - 50
     val rand = Random()
-    val vertices = generateRegularNPolygon(n, radius, Coordinates(imgSize / 2, imgSize / 2))
+    val vertices = generateRegularNPolygon(n, radius.toDouble(), Coordinates(imgSize / 2, imgSize / 2))
     var randPoint = Coordinates(rand.nextInt(imgSize), rand.nextInt(imgSize))
     vertices.forEach {
         drawSurrounding(it, img, Color.BLACK)
@@ -40,7 +40,7 @@ fun chaosGame(n: Int, ratio: Double, skip: Int, imgSize: Int, iterations: Int = 
 /**
  * Creates the [n] sided regular polygon within the circle with the given [center] and [radius]
  */
-fun generateRegularNPolygon(n: Int, radius: Int, center: Coordinates): List<Coordinates> {
+fun generateRegularNPolygon(n: Int, radius: Double, center: Coordinates): List<Coordinates> {
     val degrees = 360.0 / n
     val result = mutableListOf<Coordinates>()
     n.timesRepeat { i ->
