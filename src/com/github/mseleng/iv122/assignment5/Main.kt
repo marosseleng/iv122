@@ -1,5 +1,7 @@
 package com.github.mseleng.iv122.assignment5
 
+import com.github.mseleng.iv122.util.Line
+import com.github.mseleng.iv122.util.SVG
 import com.github.mseleng.iv122.util.fileWithName
 
 /**
@@ -21,4 +23,15 @@ fun run(path: String) {
     //B
 
     //C
+    print("-> Input: Image size: $imgSize; Number of points: $numOfLines;")
+    val (inputPoints, hullPoints) = convexHull(imgSize, numOfLines)
+    val svg = SVG(imgSize)
+    val hullLines = hullPoints.mapIndexed { index, coordinates -> Line(coordinates, hullPoints[(index + 1) % hullPoints.count()]) }
+    inputPoints.forEach { svg.point(it) }
+    svg.lines(hullLines).writeTo(fileWithName(path, 5, "hull.svg"))
+    print(" ✓ (assignment5/hull.svg)\n")
+}
+
+fun main(args: Array<String>) {
+    run("iv122_outputs")
 }
