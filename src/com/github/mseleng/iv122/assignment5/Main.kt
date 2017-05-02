@@ -31,7 +31,3 @@ fun run(path: String) {
     svg.lines(hullLines).writeTo(fileWithName(path, 5, "hull.svg"))
     print(" ✓ (assignment5/hull.svg)\n")
 }
-
-fun main(args: Array<String>) {
-    run("iv122_outputs")
-}
