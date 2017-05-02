@@ -26,4 +26,20 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   9. ===
   10. [Probability](docs/probability.md)
   
+  
+#### What is not implemented?
+  + 3.D some own fractals created using the Turtle graphics
+  + 4.C optical effects: I started implementing the chessboard-like effect, but after some time I dropped it. I got the main idea of switching the colors whenever some intersection occurs, but I din not finish it.
+  + 5: Convex hull and the triangulation
+  + 8: Bernsley fern and snowflake (reasons writter in assigment's own page)
+
+
+#### What am I proud for?
+  + The jar file available for download, that allows anyone to generate the images themselves (this was not a part of the assignment)
+  + The [`Turtle`](https://github.com/mseleng/iv122/blob/master/src/com/github/mseleng/iv122/util/Turtle.kt) class that simply integrates also the L-systems
+  + [`L-system`](https://github.com/mseleng/iv122/blob/master/src/com/github/mseleng/iv122/util/LSystem.kt) implementation and experiments (change the angles)
+  + Complex-numbers-based fractals (simplicity of the interface for the creating fractals, parallel implementation, coloring, self-similarity demonstrating GIFs)
+  + Implementation of the linear transformations
+  
+  
 ##### [](#reference)The class (and functions) reference can be found [here](javadoc/iv122/index.md)
