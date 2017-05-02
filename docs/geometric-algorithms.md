@@ -7,7 +7,7 @@ Toto cvičenie pokrývalo základné geometrické algoritmy:
 
 <div align="center" style="width:90%">
     <a href="../iv122_outputs/assignment5/lines.svg"><img src="../iv122_outputs/assignment5/lines.svg" width="33%"/></a>
-    <a href="../iv122_outputs/assignment5/lines-2.svg"><img src="../iv122_outputs/assignment5/lines-2" width="33%"/></a>
+    <a href="../iv122_outputs/assignment5/lines-2.svg"><img src="../iv122_outputs/assignment5/lines-2.svg" width="33%"/></a>
 </div>
 
 + Nájdenie "peknej" triangulácie:
