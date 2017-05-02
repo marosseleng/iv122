@@ -5,17 +5,17 @@ Toto cvičenie pokrývalo základné geometrické algoritmy:
 
 + Nájdenie priesečníkov úsečiek:
 
-<p align="center"><a href="../iv122_outputs/assignment5/hull.svg"><img src="../iv122_outputs/assignment5/hull.svg" width="90%"/></a></p>
+<div align="center" style="width:90%">
+    <a href="../iv122_outputs/assignment5/lines.svg"><img src="../iv122_outputs/assignment5/lines.svg" width="33%"/></a>
+    <a href="../iv122_outputs/assignment5/lines-2.svg"><img src="../iv122_outputs/assignment5/lines-2" width="33%"/></a>
+</div>
 
 + Nájdenie "peknej" triangulácie:
   - Nie je implementvané
 
 + Nájdenie konvexného obalu bodov:
 
-<div align="center" style="width:90%">
-    <a href="../iv122_outputs/assignment5/lines.svg"><img src="../iv122_outputs/assignment5/lines.svg" width="35%"/></a>
-    <a href="../iv122_outputs/assignment5/lines-2.svg"><img src="../iv122_outputs/assignment5/lines-2" width="35%"/></a>
-</div>
+<p align="center"><a href="../iv122_outputs/assignment5/hull.svg"><img src="../iv122_outputs/assignment5/hull.svg" width="90%"/></a></p>
 
 Jednotlivé úlohy na seba navzájom naväzovali, pričom v každej úlohe boli potrebné funkcie na generovanie `n` náhodných bodov:
 
