@@ -2,7 +2,7 @@ package com.github.mseleng.iv122.assignment4
 
 import com.github.mseleng.iv122.util.bitmapImage
 import com.github.mseleng.iv122.util.colorize
-import com.github.mseleng.iv122.util.readFile
+import com.github.mseleng.iv122.util.readImageFile
 import java.awt.Color
 import java.awt.image.BufferedImage
 
@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage
  * @return an image with the word OREL
  */
 fun hideAndSeek1(): BufferedImage {
-    val img = readFile("inputs/assignment4/skryvacka1.png")
+    val img = readImageFile("inputs/assignment4/skryvacka1.png")
     for (x in 0 until img.width) {
         for (y in 0 until img.height) {
             val color = Color(img.getRGB(x, y))
@@ -30,7 +30,7 @@ fun hideAndSeek1(): BufferedImage {
  * @return an image containing the highlighted word KOZA
  */
 fun hideAndSeek2(): BufferedImage {
-    val img = readFile("inputs/assignment4/skryvacka2.png")
+    val img = readImageFile("inputs/assignment4/skryvacka2.png")
     for (x in 0 until img.width) {
         var previousColor = Color(img.getRGB(x, 0))
         for (y in 0 until img.height) {
@@ -53,7 +53,7 @@ fun hideAndSeek2(): BufferedImage {
  * @return a Pair of images; first contains the cipher matrix and the second contains an image with word slon
  */
 fun hideAndSeek3(): Pair<BufferedImage, BufferedImage> {
-    val img = readFile("inputs/assignment4/skryvacka3.png")
+    val img = readImageFile("inputs/assignment4/skryvacka3.png")
     val cipherMatrix = mutableMapOf<Pair<Int, Int>, Boolean>()
     val imageMatrix = mutableMapOf<Pair<Int, Int>, Boolean>()
     // firstly we extract color information from the input img; BLACK is true

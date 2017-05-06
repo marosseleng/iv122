@@ -2,6 +2,9 @@ package com.github.mseleng.iv122.util
 
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartUtilities
+import org.jfree.chart.renderer.xy.XYItemRenderer
+import org.jfree.data.function.LineFunction2D
+import org.jfree.data.statistics.Regression
 import org.jfree.data.xy.XYSeries
 import org.jfree.data.xy.XYSeriesCollection
 import java.awt.Paint
@@ -12,10 +15,11 @@ import java.io.File
  *
  * @param chartName the name of the chart (required by jfreechart; this is **NOT** the name of an output file)
  * @param data a map of (Color-data) pairs, used as the dataset for the chart
+ * @param renderers an optional list of renderers to apply
  * @param showLegend true of legend of the chart should be shown, else otherwise (default false)
  * @constructor creates a [Chart] with the given data
  */
-class Chart(chartName: String, data: Map<Paint, XYSeries>, showLegend: Boolean = false) {
+class Chart(chartName: String, data: Map<Paint, XYSeries>, renderers: List<XYItemRenderer?> = emptyList(), showLegend: Boolean = false) {
     private val dataSet = XYSeriesCollection()
     private val chart = ChartFactory.createScatterPlot(chartName, "x", "y", dataSet)
 
@@ -26,6 +30,10 @@ class Chart(chartName: String, data: Map<Paint, XYSeries>, showLegend: Boolean =
         var i = 0
         for ((x, y) in data) {
             dataSet.addSeries(y)
+            val renderer = renderers.getOrNull(i)
+            if (renderer != null) {
+                chart.xyPlot.setRenderer(i, renderer)
+            }
             chart.xyPlot.renderer.setSeriesPaint(i, x)
             i = i.inc()
         }

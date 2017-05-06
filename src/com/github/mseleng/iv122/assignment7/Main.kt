@@ -30,16 +30,16 @@ fun run(path: String) {
     mandelbrot(3500, 3500, Pair(-0.5, -0.475), Pair(0.625, 0.65), indigoGray, innerForIndigoGray)
             .writeTo(fileWithName(path, 7, "mandelbrot=-0_50|-0_475=0_625|0_65=.png"))
     print(" ✓ (assignment7/mandelbrot=-0_50|-0_475=0_625|0_65=.png)\n-> Mandelbrot set (zoom to (0+i))......")
-    zoomedMandelbrot(700, Complex(0.0, 1.0), 1.25, 120, indigoGray) { i -> fileWithName(path, 7, "top${String.format("%03d", i)}.png") }
-    print(" ✓ (assignment7/top%03d[1-120].png)\n-> Mandelbrot set (zoom to (-1.75))......")
-    zoomedMandelbrot(700, Complex(-1.75, 0.0), 1.15, 25, indigoGray) { i -> fileWithName(path, 7, "mini${String.format("%03d", i)}.png") }
-    print(" ✓ (assignment7/mini%03d[1-25].png)\n-> Mandelbrot set (zoom to (-1.25))......")
-    zoomedMandelbrot(700, Complex(-1.25, 0.0), 1.15, 15, limePurple.reversed()) { i -> fileWithName(path, 7, "stem${String.format("%03d", i)}.png") }
-    print(" ✓ (assignment7/stem%03d[1-15].png)\n-> Mandelbrot set (zoom to (-0.1528 + 1.0397i))......")
-    zoomedMandelbrot(700, Complex(-0.1528, 1.0397), 1.15, 30, lightBlueBrown) { i -> fileWithName(path, 7, "Feigenbaum${String.format("%03d", i)}.png") }
-    print(" ✓ (assignment7/Feigenbaum%03d[1-30].png)\n-> Mandelbrot set (zoom to (-0.1011 + 0.9563i))......")
-    zoomedMandelbrot(700, Complex(-0.1011, 0.9563), 1.2, 50, indigoGray) { i -> fileWithName(path, 7, "Misiurewicz${String.format("%03d", i)}.png") }
-    print(" ✓ (assignment7/Misiurewicz%03d[1-50].png)\n==========\n")
+    zoomedMandelbrot(700, Complex(0.0, 1.0), 1.25, 120, indigoGray) { i -> fileWithName(path, 7, String.format("top%03d.png", i)) }
+    print(" ✓ (assignment7/top%03d.png[1-120])\n-> Mandelbrot set (zoom to (-1.75))......")
+    zoomedMandelbrot(700, Complex(-1.75, 0.0), 1.15, 25, indigoGray) { i -> fileWithName(path, 7, String.format("mini%03d.png", i)) }
+    print(" ✓ (assignment7/mini%03d.png[1-25])\n-> Mandelbrot set (zoom to (-1.25))......")
+    zoomedMandelbrot(700, Complex(-1.25, 0.0), 1.15, 15, limePurple.reversed()) { i -> fileWithName(path, 7, String.format("stem%03d.png", i)) }
+    print(" ✓ (assignment7/stem%03d.png[1-15])\n-> Mandelbrot set (zoom to (-0.1528 + 1.0397i))......")
+    zoomedMandelbrot(700, Complex(-0.1528, 1.0397), 1.15, 30, lightBlueBrown) { i -> fileWithName(path, 7, String.format("Feigenbaum%03d.png", i)) }
+    print(" ✓ (assignment7/Feigenbaum%03d.png[1-30])\n-> Mandelbrot set (zoom to (-0.1011 + 0.9563i))......")
+    zoomedMandelbrot(700, Complex(-0.1011, 0.9563), 1.2, 50, indigoGray) { i -> fileWithName(path, 7, String.format("Misiurewicz%03d.png", i)) }
+    print(" ✓ (assignment7/Misiurewicz%03d.png[1-50])\n==========\n")
 
     print("-> Julia set (c = (-0.8 + 0.156i), r∈[-2.0;1.0], i∈[-1.0;1.0])......")
     julia(4500, 2000, Pair(-2.0, 2.0), Pair(-1.0, 1.0), lightBlueBrown, innerForLightBlueBrown, Complex(-0.8, 0.156))

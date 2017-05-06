@@ -45,10 +45,10 @@ val newtonColors = listOf(
         Color.decode("0xffc107"), //AMBER
         Color.decode("0xc6ff00"), //LIME
         Color.decode("0x607d8b"), //BLUEGREY
-        Color.decode("0xf44336"), //RED
+        Color.decode("0x4caf50"), //GREEN
         Color.decode("0xffff00"), //YELLOW
+        Color.decode("0xf44336"), //RED
         Color.decode("0xe91e63"), //PINK
         Color.decode("0x2196f3"), //BLUE
         Color.decode("0x009688"), //TEAL
-        Color.decode("0x4caf50"), //GREEN
         Color.decode("0xff9800")) //ORANGE
