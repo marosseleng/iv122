@@ -25,6 +25,7 @@ Each point p of this line l must suit the equation y = a*x + b
 
 ### Functions
 
+| [getValue](get-value.md) | `fun getValue(x: Double): Double` |
 | [intersectionWith](intersection-with.md) | `fun intersectionWith(other: ParametricLine): `[`Coordinates`](../-coordinates/index.md)`?`<br>Finds and returns (if exists) the intersection between this and other line |
 | [isAscending](is-ascending.md) | `fun isAscending(): Boolean` |
 | [isDescending](is-descending.md) | `fun isDescending(): Boolean` |

@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1417206432407845
-	Gregory-Leibnitz method: 3.141609058596569
+	Monte Carlo method (using the library square (root) function): 3.141618428638786
+	Gregory-Leibnitz method: 3.1415761878056645
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -110,6 +110,7 @@ Complete.
 -> Random lines and their intersections (highlighted)...... ✓ (assignment5/lines.svg)
 -> Random lines and their intersections (not highlighted)...... ✓ (assignment5/lines-2.svg)
 ==========
+-> Input: Image size: 500; Number of points: 25; ✓ (assignment5/hull.svg)
 Complete.
 
 ***The sixth assignment***
@@ -152,11 +153,11 @@ Complete.
 -> Mandelbrot set (r∈[-0.5;-0.4], i∈[0.55;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_40=0_55|0_65=.png)
 -> Mandelbrot set (r∈[-0.5;-0.45], i∈[0.6;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_45=0_60|0_65=.png)
 -> Mandelbrot set (r∈[-0.5;-0.475], i∈[0.625;0.65])...... ✓ (assignment7/mandelbrot=-0_50|-0_475=0_625|0_65=.png)
--> Mandelbrot set (zoom to (0+i))...... ✓ (assignment7/top%03d[1-120].png)
--> Mandelbrot set (zoom to (-1.75))...... ✓ (assignment7/mini%03d[1-25].png)
--> Mandelbrot set (zoom to (-1.25))...... ✓ (assignment7/stem%03d[1-15].png)
--> Mandelbrot set (zoom to (-0.1528 + 1.0397i))...... ✓ (assignment7/Feigenbaum%03d[1-30].png)
--> Mandelbrot set (zoom to (-0.1011 + 0.9563i))...... ✓ (assignment7/Misiurewicz%03d[1-50].png)
+-> Mandelbrot set (zoom to (0+i))...... ✓ (assignment7/top%03d.png[1-120])
+-> Mandelbrot set (zoom to (-1.75))...... ✓ (assignment7/mini%03d.png[1-25])
+-> Mandelbrot set (zoom to (-1.25))...... ✓ (assignment7/stem%03d.png[1-15])
+-> Mandelbrot set (zoom to (-0.1528 + 1.0397i))...... ✓ (assignment7/Feigenbaum%03d.png[1-30])
+-> Mandelbrot set (zoom to (-0.1011 + 0.9563i))...... ✓ (assignment7/Misiurewicz%03d.png[1-50])
 ==========
 -> Julia set (c = (-0.8 + 0.156i), r∈[-2.0;1.0], i∈[-1.0;1.0])...... ✓ (assignment7/julia.png)
 ==========
@@ -177,6 +178,21 @@ Complete.
 -> Sierpinski triangle 3...... ✓ (assignment8/sierpinski-3.svg)
 -> Sierpinski triangle 4...... ✓ (assignment8/sierpinski-4.svg)
 -> Sierpinski triangle 5...... ✓ (assignment8/sierpinski-5.svg)
+Complete.
+
+***The tenth assignment***
+Complete.
+
+***The eleventh assignment***
+-> Input: Image size: 1000
+-> Linear regression (analytical solution; data from file linreg.txt)...... ✓ (assignment11/linreg-analytic-1-file.png)
+-> Linear regression (gradient descent; data from file linreg.txt; learning rate 0.001)...... ✓ (assignment11/linreg-gd-file%02d.png[1-50])
+-> Linear regression (analytical solution; y=2.4x-1)...... ✓ (assignment11/linreg-analytic-synthetic.png)
+-> Linear regression (gradient descent; synthetic data; y=2.4x-1; deviation 4.5; learning rate 0.000001)...... ✓ (assignment11/linreg-gd-synthetic-2-%02d.png)
+-> Linear regression (gradient descent; synthetic data; y=2.4x-1; deviation 4.5; learning rate 0.0001)...... ✓ (assignment11/linreg-gd-synthetic-2-bad-%02d.png)
+==========
+-> Clustering (data from faithful.txt; 2 clusters)...... ✓ (assignment11/clusters-file%02d.png)
+-> Clustering (synthetic data; 6 clusters)...... ✓ (assignment11/clusters-synthetic%02d.png)
 Complete.
 
 ```

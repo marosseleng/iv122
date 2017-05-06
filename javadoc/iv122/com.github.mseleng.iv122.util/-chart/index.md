@@ -16,11 +16,13 @@ This class is used as a simple facade above the jfreechart library, providing si
 
 `data` - a map of (Color-data) pairs, used as the dataset for the chart
 
+`renderers` - an optional list of renderers to apply
+
 `showLegend` - true of legend of the chart should be shown, else otherwise (default false)
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Chart(chartName: String, data: Map<`[`Paint`](http://docs.oracle.com/javase/6/docs/api/java/awt/Paint.html)`, <ERROR CLASS>>, showLegend: Boolean = false)`<br>creates a Chart with the given data |
+| [&lt;init&gt;](-init-.md) | `Chart(chartName: String, data: Map<`[`Paint`](http://docs.oracle.com/javase/6/docs/api/java/awt/Paint.html)`, <ERROR CLASS>>, renderers: List<<ERROR CLASS>?> = emptyList(), showLegend: Boolean = false)`<br>creates a Chart with the given data |
 
 ### Functions
 

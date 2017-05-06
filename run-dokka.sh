@@ -4,6 +4,7 @@ CONSOLE_OUTPUT=docs/console-output.md
 PROGRAM_OUTPUT=iv122_outputs
 JAVADOC_DIR=javadoc
 ASSIGNMENT7_DIR=${PROGRAM_OUTPUT}/assignment7
+ASSIGNMENT11_DIR=${PROGRAM_OUTPUT}/assignment11
 
 #remove everything
 rm -rf ${JAVADOC_DIR} ${PROGRAM_OUTPUT} ${CONSOLE_OUTPUT} &> /dev/null
@@ -40,3 +41,18 @@ rm mini*
 rm stem*
 rm top*
 rm Misiurewicz*
+
+cd ../..
+cd ${ASSIGNMENT11_DIR}
+#using `convert` from ImageMagick library
+convert 'linreg-gd-file%02d.png[1-50]' gd-file.gif
+convert 'linreg-gd-synthetic-2-%02d.png[1-70]' gd-synthetic.gif
+convert 'linreg-gd-synthetic-2-bad-%02d.png[1-70]' gd-synthetic-bad.gif
+convert 'clusters-file%02d.png[0-10]' clusters-file.gif
+convert 'clusters-synthetic%02d.png[0-30]' clusters-synthetic.gif
+
+mkdir gifs
+mv *.gif gifs/
+
+rm linreg-gd*
+rm clusters*

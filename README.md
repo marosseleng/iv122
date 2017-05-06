@@ -25,13 +25,14 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   8. [Linear algebra and 2D transformations](docs/linear-algebra.md)
   9. ===
   10. [Probability](docs/probability.md)
+  11. [Linear regression and clustering](docs/linreg-clustering.md)
   
   
 #### What is not implemented?
   + 3.D some own fractals created using the Turtle graphics
   + 4.C optical effects: I started implementing the chessboard-like effect, but after some time I dropped it. I got the main idea of switching the colors whenever some intersection occurs, but I din not finish it.
   + 5: Convex hull and the triangulation
-  + 8: Bernsley fern and snowflake (reasons writter in assigment's own page)
+  + 8: Bernsley fern and snowflake (reasons written in assigment's own page)
 
 
 #### What am I proud for?
