@@ -80,7 +80,7 @@ fun BufferedImage.writeToFile(fileFormat: String, file: File): Boolean {
  * @param name the name (or path) of the file
  * @return an image read
  */
-fun readFile(name: String): BufferedImage {
+fun readImageFile(name: String): BufferedImage {
     return ImageIO.read(File(name))
 }
 

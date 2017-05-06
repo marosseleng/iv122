@@ -54,7 +54,7 @@ fun getChartOfModulo(maxX: Int, maxY: Int): Chart {
         }
     }
     return Chart("The number of steps needed to compute GCD of two numbers using the Euclid's modulus algorithm.",
-            result.mapKeys { it.key.getPaint() }, true)
+            result.mapKeys { it.key.getPaint() }, showLegend = true)
 }
 
 /**
@@ -99,7 +99,7 @@ fun getChartOfSubtraction(maxX: Int, maxY: Int): Chart {
         }
     }
     return Chart("The number of steps needed to compute GCD of two numbers using the Euclid's subtraction algorithm.",
-            result.mapKeys { it.key.getPaint() }, true)
+            result.mapKeys { it.key.getPaint() }, showLegend = true)
 }
 
 /**
