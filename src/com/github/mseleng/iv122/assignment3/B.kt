@@ -74,7 +74,6 @@ fun nestedTriangle(length: Double, offset: Coordinates, depth: Int, skip: Int): 
     val turtle = Turtle(Turtle.State(position = offset))
     turtle.right(90.0)
 
-    // TODO consider using the recursion
     depth.timesRepeat { i ->
         if (skip > 0 && i % skip == 0) {
             turtle.penUp()

@@ -3,8 +3,6 @@ package com.github.mseleng.iv122.util
 import org.jfree.chart.ChartFactory
 import org.jfree.chart.ChartUtilities
 import org.jfree.chart.renderer.xy.XYItemRenderer
-import org.jfree.data.function.LineFunction2D
-import org.jfree.data.statistics.Regression
 import org.jfree.data.xy.XYSeries
 import org.jfree.data.xy.XYSeriesCollection
 import java.awt.Paint
