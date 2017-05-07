@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.141618428638786
-	Gregory-Leibnitz method: 3.1415761878056645
+	Monte Carlo method (using the library square (root) function): 3.141889212075417
+	Gregory-Leibnitz method: 3.1415759657852167
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -181,6 +181,37 @@ Complete.
 Complete.
 
 ***The tenth assignment***
+-> Monty hall problem (100000 iterations):
+	Choice =     STAY:	0.3334	Expected: ⅓
+	Choice =   CHANGE:	0.6696	Expected: ⅔
+	Choice = WHATEVER:	0.4994	Expected: ½
+==========
+-> (Non)random numbers
+	1	 Repeating permutations of (1,2,3,4,5,6)
+	2	 Probably some not honest cube (edge with 5 is probably heavier, which causes three times more fives than twos)
+	3	 I was not able to find any regularity. The distribution of numbers looks fine, although there is the same amount of 6s and 3s (850x 6; 821x 5; 824x 4; 850x 3; 836x 2; 819x 1)
+	4	 I was not able to find any regularity. The distribution of numbers looks fine as well (823x 6; 819x 5; 850x 4; 829x 3; 827x 2; 852x 1)
+	5	 I was not able to find any regularity. The distribution looks good also (859x 6; 842x5; 843x 4; 812x 3; 836x 2; 808x 1)
+	6	 There is a sequence of numbers repeating (contains 106 digits; found just by CTRL+F in text editor; unable to find just by looking at it)
+	7	 There is a long sequence of numbers repeating also (contains 2392 digits; found just by CTRL+F in text editor; unable to find just by looking at it)
+==========
+-> Central limit theorem (tossing just the cube A in each iteration; 100 tosses, 10000 iterations)...... ✓ (assignment10/clt1.png)
+-> Central limit theorem (choosing the random cube before each toss; 100 tosses, 10000 iterations)...... ✓ (assignment10/clt2.png)
+-> Central limit theorem (picking the random cube before each iteration; 100 tosses, 10000 iterations)...... ✓ (assignment10/clt3.png)
+==========
+-> Bayes theorem and simulations:
+	N=100; X=3; 1 million iterations for experiment:
+		experiment: 0.004594
+		bayes:      0.3142857142857142
+	N=10; X=5; 1 million iterations for experiment:
+		experiment: 1.06E-4
+		bayes:      0.0011560693641618494
+	N=10; X=3; 1 million iterations for experiment:
+		experiment: 0.004171
+		bayes:      0.03999999999999999
+	N=10; X=1; 1 million iterations for experiment:
+		experiment: 0.149742
+		bayes:      0.6
 Complete.
 
 ***The eleventh assignment***
