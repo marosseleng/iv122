@@ -16,13 +16,16 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 | [Custom](-custom/index.md) | `class Custom : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the custom defined movement of the turtle |
 | [Direction](-direction/index.md) | `enum class Direction`<br>Enum representing directions in a 2D grid |
 | [Forward](-forward/index.md) | `class Forward : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the forward move |
+| [Graph](-graph/index.md) | `data class Graph<T>` |
 | [LSystem](-l-system/index.md) | `class LSystem`<br>Class representing the L-system |
 | [Left](-left/index.md) | `class Left : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the left rotation |
+| [Node](-node/index.md) | `class Node<T>` |
 | [ParametricLine](-parametric-line/index.md) | `data class ParametricLine`<br>Class representing a line in Carthesian system, more specificaly its parametric representation |
 | [Pop](-pop/index.md) | `class Pop : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the pop from the stack |
 | [Push](-push/index.md) | `class Push : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the push to the stack |
 | [Right](-right/index.md) | `class Right : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the right rotation |
 | [SVG](-s-v-g/index.md) | `class SVG`<br>An helper class for the work with the SVG images |
+| [SearchState](-search-state/index.md) | `enum class SearchState` |
 | [StandStill](-stand-still/index.md) | `class StandStill : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the default fallback (the turtle does nothing) |
 | [Style](-style/index.md) | `data class Style`<br>The class representing the style of the SVG elements |
 | [Turtle](-turtle/index.md) | `class Turtle`<br>A helper class to work with the turtle graphics |
@@ -49,8 +52,10 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 
 ### Functions
 
+| [bfs](bfs.md) | `fun <T> bfs(graph: `[`Graph`](-graph/index.md)`<T>, startingNode: `[`Node`](-node/index.md)`<T>): Unit` |
 | [bisection](bisection.md) | `fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double`<br>Approximates the number using bisection |
 | [bitmapImage](bitmap-image.md) | `fun bitmapImage(width: Int, height: Int, backgroundColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)` = Color.WHITE, init: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`.() -> Unit = {}): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>An helper function that creates an instance of [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) for further edit. |
+| [constructBFSPathToStart](construct-b-f-s-path-to-start.md) | `fun <T> constructBFSPathToStart(target: `[`Node`](-node/index.md)`<T>): List<`[`Node`](-node/index.md)`<T>>` |
 | [drawSurrounding](draw-surrounding.md) | `fun drawSurrounding(point: `[`Coordinates`](-coordinates/index.md)`, img: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`, color: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`): Unit`<br>Fills the surroundings (3x3 grid) of the given point in the given image |
 | [e](e.md) | `fun e(eps: Double = 0.000001): Double`<br>Approximates the Euler's number |
 | [fileWithName](file-with-name.md) | `fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)<br>Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory |

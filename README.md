@@ -26,6 +26,7 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   9. ===
   10. [Probability](docs/probability.md)
   11. [Linear regression and clustering](docs/linreg-clustering.md)
+  12. [Mazes I](docs/mazes-I.md)
   
   
 #### What is not implemented?
@@ -35,7 +36,7 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   + 8: Bernsley fern and snowflake (reasons written in assigment's own page)
 
 
-#### What am I proud for?
+#### What am I proud of?
   + The jar file available for download, that allows anyone to generate the images themselves (this was not a part of the assignment)
   + The [`Turtle`](https://github.com/mseleng/iv122/blob/master/src/com/github/mseleng/iv122/util/Turtle.kt) class that simply integrates also the L-systems
   + [`L-system`](https://github.com/mseleng/iv122/blob/master/src/com/github/mseleng/iv122/util/LSystem.kt) implementation and experiments (change the angles)
