@@ -212,6 +212,13 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
      * @return this
      */
     fun polyline(style: Style, vararg points: Coordinates): SVG {
+        return polyline(style, points.toList())
+    }
+
+    /**
+     * @suppress
+     */
+    fun polyline(style: Style, points: List<Coordinates>): SVG {
         builder.append("<polyline ${printPoints(points)} ${printStyle(style)} />")
         return this
     }
@@ -269,6 +276,10 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
     }
 
     private fun printPoints(points: Array<out Coordinates>): String {
+        return printPoints(points.toList())
+    }
+
+    private fun printPoints(points: List<Coordinates>): String {
         val sb = StringBuilder()
         if (points.isNotEmpty()) {
             sb.append("points=\" ")
