@@ -10,7 +10,7 @@ import com.github.mseleng.iv122.util.timesRepeat
  *
  * @param n the number of edges of the border polygon
  * @param a the length of an edge of the border polygon
- * @return the list of [Line]s representing the "regular multistar"
+ * @return the list of Lines representing the "regular multistar"
  */
 fun multistar(n: Int, a: Int): List<Line> {
     val perimeterAngle = 180.0 / n
@@ -37,7 +37,7 @@ fun multistar(n: Int, a: Int): List<Line> {
  *
  * @param n the number of edges
  * @param a the lenght of an edge
- * @return the list of [Line]s representing the regular polygon
+ * @return the list of Lines representing the regular polygon
  */
 fun polygon(n: Int, a: Int): List<Line> {
     val turtle = Turtle(Turtle.State(position = Coordinates(n / 3 * a, 0)))
@@ -56,7 +56,7 @@ fun polygon(n: Int, a: Int): List<Line> {
  * Creates a polygon by "connecting the given [points]"
  *
  * @param points the points to connect
- * @return the list of [Line]s reprezenting the polygon
+ * @return the list of Lines reprezenting the polygon
  */
 fun polygonFromPoints(points: List<Coordinates>): List<Line> {
     var current = points.last()

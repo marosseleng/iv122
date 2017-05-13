@@ -32,7 +32,7 @@ data class Fraction(val part: Long, val whole: Long) {
      *
      * If the number is less than one, this method returns something like this 0([part]/[whole])
      *
-     * @return the [DecimalFraction] representing this rational number
+     * @return the DecimalFraction representing this rational number
      */
     fun toDecimalFraction(): DecimalFraction {
         if (part < whole) {
