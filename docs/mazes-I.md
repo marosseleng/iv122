@@ -1,4 +1,4 @@
-## Lineárna regresia a zhluky
+## Riešenie bludísk
 [Home](../)
 
 Implementácia číselného bludiska bola jednoduchá:

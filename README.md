@@ -26,13 +26,14 @@ If the `<path-to-existing-output-dir>` is not specified, the program will create
   9. ===
   10. [Probability](docs/probability.md)
   11. [Linear regression and clustering](docs/linreg-clustering.md)
-  12. [Mazes I](docs/mazes-I.md)
+  12. [Mazes solving](docs/mazes-I.md)
+  13. [Mazes generation](docs/mazes-II.md)
   
   
 #### What is not implemented?
   + 3.D some own fractals created using the Turtle graphics
   + 4.C optical effects: I started implementing the chessboard-like effect, but after some time I dropped it. I got the main idea of switching the colors whenever some intersection occurs, but I din not finish it.
-  + 5: Convex hull and the triangulation
+  + 5: Triangulation
   + 8: Bernsley fern and snowflake (reasons written in assigment's own page)
 
 
