@@ -102,7 +102,7 @@ fun drawSurrounding(point: Coordinates, img: BufferedImage, color: Color) {
 /**
  * Multiplies this color by the given [ratio].
  *
- * Ratio must be a number between [0.0, 1.0] inclusive
+ * Ratio must be a number between (0.0, 1.0) inclusive
  *
  * @param ratio the ratio to multiply this color's parts by
  * @return the new color

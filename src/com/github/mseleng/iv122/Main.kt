@@ -29,5 +29,7 @@ fun main(args: Array<String>) {
     com.github.mseleng.iv122.assignment11.run(path)
     println("Complete.\n\n***The twelfth assignment***")
     com.github.mseleng.iv122.assignment12.run(path)
+    println("Complete.\n\n***The thirteenth assignment***")
+    com.github.mseleng.iv122.assignment13.run(path)
     println("Complete.\n")
 }

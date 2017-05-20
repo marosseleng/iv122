@@ -56,7 +56,7 @@ fun variations(numbers: List<Int>, k: Int, allowRepetition: Boolean): List<Strin
  * @param allowRepetition pass true for the combinations with the repetition
  * @return the list of [k]-combinations
  */
-fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean) = variations(numbers, k, allowRepetition).map(String::sorted).toSet()
+fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean): Set<String> = variations(numbers, k, allowRepetition).map(String::sorted).toSet()
 
 /**
  * An extension function that sorts the letters inside of this

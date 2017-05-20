@@ -57,11 +57,10 @@ data class ParametricLine(val first: Coordinates, val second: Coordinates) {
         }
     }
 
-    fun getValue(x: Double) = a * x + b
-
-    fun isAscending() = a > 0
-    fun isDescending() = b < 0
-    fun isHorizontal() = a == 0.0
+    /**
+     * Returns the y, by substituting [x]
+     */
+    fun getValue(x: Double): Double = a * x + b
 
     /**
      * @suppress

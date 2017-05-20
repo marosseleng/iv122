@@ -173,7 +173,7 @@ fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, vali
 /**
  * Approximates the Euler's number
  *
- * e = SUM(n in [0,inf]) (1/n!)
+ * e = SUM(n in <0,inf>) (1/n!)
  *
  * @param eps the desired accuracy (default = 0.000001)
  * @return the approximated value of e
@@ -196,7 +196,7 @@ fun e(eps: Double = 0.000001): Double {
 /**
  * Approximates the natural logarithm of the given [x]
  *
- * ln(x) = 2 * SUM(n in [0,inf]) ((1/(2n+1)) * (((x-1)/(x+1))^(2n+1)))
+ * ln(x) = 2 * SUM(n in <0,inf>) ((1/(2n+1)) * (((x-1)/(x+1))^(2n+1)))
  * WIKI: https://en.wikipedia.org/wiki/Logarithm#Calculation
  *
  * @param x the number, whose logarithm we are approximating
@@ -267,7 +267,7 @@ fun Int.limitTo(value: Int): Int {
  * @param a a coefficient at the quadratic part
  * @param b a coefficient at the linear part
  * @param c the absolute coefficient
- * @return a pair of [Double.NEGATIVE_INFINITY] iff the discriminant is less than 0;
+ * @return a pair of Double.NEGATIVE_INFINITY iff the discriminant is less than 0;
  * a pair of same values iff the discriminant is zero; the roots of the equation otherwise
  */
 fun quadraticEquation(a: Double, b: Double, c: Double): Pair<Double, Double> {

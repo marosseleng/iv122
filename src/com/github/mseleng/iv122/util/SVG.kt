@@ -4,7 +4,7 @@ import java.awt.Color
 import java.io.File
 
 /**
- * A typealias for the [kotlin.Pair] of [Coordinates] representing the starting and the end point of a line in SVG
+ * A typealias for the kotlin.Pair of Coordinates representing the starting and the end point of a line in SVG
  */
 typealias Line = Pair<Coordinates, Coordinates>
 
@@ -41,7 +41,7 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
      *
      * @param y the y coordinate of the line's points
      * @param width the desired width of the line
-     * @param style the desired style of the line (default: [defaultLineStyle])
+     * @param style the desired style of the line (default: defaultLineStyle)
      * @return this
      */
     fun horizontalLine(y: Int, width: Int, style: Style = defaultLineStyle): SVG {
@@ -54,7 +54,7 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
      *
      * @param x the x coordinate of the line's points
      * @param height the desired height of the line
-     * @param style the desired style of the line (default: [defaultLineStyle])
+     * @param style the desired style of the line (default: defaultLineStyle)
      * @return this
      */
     fun verticalLine(x: Int, height: Int, style: Style = defaultLineStyle): SVG {
@@ -65,7 +65,7 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
     /**
      * Adds a line
      *
-     * @param line a [Line] to add
+     * @param line a Line to add
      * @return this
      */
     fun line(line: Line): SVG {
@@ -90,7 +90,7 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
      * @param y1 the y-coordinate of the starting point
      * @param x2 the x-coordinate of the end point
      * @param y2 the y-coordinate of the end point
-     * @param style the desired style of the line (default: [defaultLineStyle])
+     * @param style the desired style of the line (default: defaultLineStyle)
      * @return this
      */
     fun line(x1: Int, y1: Int, x2: Int, y2: Int, style: Style = defaultLineStyle): SVG {
@@ -104,7 +104,7 @@ class SVG(val width: Int = 1000, val height: Int = 1000) {
      * @param y1 the y-coordinate of the starting point
      * @param x2 the x-coordinate of the end point
      * @param y2 the y-coordinate of the end point
-     * @param style the desired style of the line (default: [defaultLineStyle])
+     * @param style the desired style of the line (default: defaultLineStyle)
      * @return this
      */
     fun line(x1: Double, y1: Double, x2: Double, y2: Double, style: Style = defaultLineStyle): SVG {

@@ -7,7 +7,7 @@ import java.util.*
  *
  * The initial direction of the turtle is 0.0 (the turtle is heading East)
  *
- * @constructor creates the turtle starting at [0;0]
+ * @constructor creates the turtle starting at (0;0)
  */
 class Turtle() {
 
@@ -29,6 +29,9 @@ class Turtle() {
     private val currentDirectionRadians: Double
         get() = Math.toRadians(currentDirection)
 
+    /**
+     * @property currentState represents the current state of this Trutle
+     */
     var currentState: State
         get() = State(currentPosition, currentDirection, isPenDown)
         private set(value) {
@@ -109,7 +112,7 @@ class Turtle() {
     }
 
     /**
-     * Goes forward in the [currentDirection]
+     * Goes forward
      *
      * @param amount the distance to go
      */
@@ -134,7 +137,7 @@ class Turtle() {
     }
 
     /**
-     * Does backward but stay in the [currentDirection]
+     * Does backward
      *
      * @param amount the distance to go
      */

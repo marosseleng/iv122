@@ -8,11 +8,11 @@ import java.awt.image.BufferedImage
  * Prints the "4-way" gradient (using 4 colors in the edges of a 2D square grid)
  *
  * @param size the size of a grid
- * @param topLeft the [Color] in the top-left corner
- * @param topRight the [Color] in the top-right corner
- * @param bottomLeft the [Color] in the bottom-left corner
- * @param bottomRight the [Color] in the bottom-right corner
- * @return an instance of [BufferedImage] containing the output gradient
+ * @param topLeft the Color in the top-left corner
+ * @param topRight the Color in the top-right corner
+ * @param bottomLeft the Color in the bottom-left corner
+ * @param bottomRight the Color in the bottom-right corner
+ * @return an instance of BufferedImage containing the output gradient
  */
 fun getFourWayGradient(size: Int, topLeft: Color, topRight: Color, bottomLeft: Color, bottomRight: Color): BufferedImage {
     return squareBitmapImage(size)
@@ -67,7 +67,7 @@ fun gradientColorForCoordinates(x: Int, y: Int, width: Int, height: Int, topLeft
  *
  *  bl       x      br
  *
- * This function uses the [linearInterpolation] function three times:
+ * This function uses the linearInterpolation function three times:
  *   1. computes the value q by interpolating the values [tl] and [tr]
  *   2. computes the value r by interpolating the values [bl] and [br]
  *   3. computes the result value p by interpolating the values q and r
@@ -115,7 +115,7 @@ fun linearInterpolation(x: Int, width: Int, firstValue: Double, secondValue: Dou
  *
  * @param steps the number of lines of the half of the horizontal/vertical center line (the size of the result file is (2*[steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: [defaultLineStyle]
+ * @param lineStyle the style of the line. Default: defaultLineStyle
  */
 fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultLineStyle): SVG {
     val size = steps.times(2).times(stepWidth)
@@ -140,7 +140,7 @@ fun getStar(steps: Int, stepWidth: Int, lineStyle: Style = defaultLineStyle): SV
  *
  * @param steps the number of lines per frame edge (how many starting points are on the edge) (the size of the result file is ([steps]*[stepWidth])
  * @param stepWidth the size of the gap between each step (how far from each other the points are)
- * @param lineStyle the style of the line. Default: [defaultLineStyle]
+ * @param lineStyle the style of the line. Default: defaultLineStyle
  * @return an SVG containing the output
  */
 fun getInsideOutStarSVG(steps: Int, stepWidth: Int, lineStyle: Style = defaultLineStyle): SVG {

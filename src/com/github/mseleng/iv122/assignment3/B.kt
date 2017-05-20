@@ -7,7 +7,7 @@ import com.github.mseleng.iv122.util.*
  *
  * @param n the number of edges
  * @param length the length of polygon's edges
- * @return the list of [Line]s representing the polygon with its inner star
+ * @return the list of Lines representing the polygon with its inner star
  */
 fun anygram_turtle(n: Int, length: Int): List<Line> {
     val result = mutableListOf<Line>()
@@ -24,7 +24,7 @@ fun anygram_turtle(n: Int, length: Int): List<Line> {
  * @param depth the maximum number of squares
  * @param proportion the proportion which to divide the square's edges in (1:4, 2:9, etc.)
  * @param skip which lines to skip (skip == 5 means that every fifth line will not be printed; skip == 0 means every line will be printed)
- * @return the list of SVG [Line]s
+ * @return the list of SVG Lines
  */
 fun nestedSquare(length: Double, offset: Coordinates, depth: Int, proportion: Pair<Int, Int>, skip: Int): List<Line> {
     val denominator = proportion.first + proportion.second
@@ -57,7 +57,7 @@ fun nestedSquare(length: Double, offset: Coordinates, depth: Int, proportion: Pa
  * @param offset the coordinates of the top vertex of the triangle
  * @param depth the number of nested triangles
  * @param skip which lines to skip (skip == 5 means that every fifth line will not be printed; skip == 0 means every line will be printed)
- * @return the list of SVG [Line]s
+ * @return the list of SVG Lines
  */
 fun nestedTriangle(length: Double, offset: Coordinates, depth: Int, skip: Int): List<Line> {
     // base turning point (180 - 60)
@@ -98,7 +98,7 @@ fun nestedTriangle(length: Double, offset: Coordinates, depth: Int, skip: Int): 
  * Creates the "flower" of 12 dodekagons
  * @param length the length of the polygon's edge
  * @param offset the coordinates of the top-left vertex
- * @return the list of SVG [Line]s
+ * @return the list of SVG Lines
  */
 fun flower(length: Int, offset: Coordinates): List<Line> {
     // firstly, we compute the first dodekagon whose vertices would serve as the offsets for other 11
