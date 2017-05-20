@@ -7,3 +7,6 @@ title: Coordinates.laysOnLine - iv122
 # laysOnLine
 
 `fun laysOnLine(line: `[`ParametricLine`](../-parametric-line/index.md)`, tolerance: Double): Boolean`
+
+Returns true if this lays on the parametric line
+

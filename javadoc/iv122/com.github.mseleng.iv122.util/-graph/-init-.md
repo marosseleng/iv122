@@ -7,3 +7,6 @@ title: Graph.<init> - iv122
 # &lt;init&gt;
 
 `Graph(nodes: List<`[`Node`](../-node/index.md)`<T>> = mutableListOf())`
+
+Representing the graph
+

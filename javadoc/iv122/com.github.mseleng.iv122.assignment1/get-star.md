@@ -16,4 +16,4 @@ Prints the "tangent" star. The result image can be seen in the file 'outputs/sta
 
 `stepWidth` - the size of the gap between each step (how far from each other the points are)
 
-`lineStyle` - the style of the line. Default: [defaultLineStyle](../com.github.mseleng.iv122.util/default-line-style.md)
+`lineStyle` - the style of the line. Default: defaultLineStyle

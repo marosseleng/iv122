@@ -22,8 +22,8 @@ a constructor to use with L-Systems
 
 `Turtle()`
 
-creates the turtle starting at [0;0](#)
+creates the turtle starting at (0;0)
 
 **Constructor**
-creates the turtle starting at [0;0](#)
+creates the turtle starting at (0;0)
 

@@ -7,3 +7,9 @@ title: Graph.nodes - iv122
 # nodes
 
 `val nodes: List<`[`Node`](../-node/index.md)`<T>>`
+
+the list of nodes defining this graph
+
+### Property
+
+`nodes` - the list of nodes defining this graph

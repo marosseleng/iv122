@@ -52,8 +52,8 @@ Complete.
 ==========
 -> π approximation within 3000 ms:
 -> The library value of π: 3.141592653589793
-	Monte Carlo method (using the library square (root) function): 3.1418641497600266
-	Gregory-Leibnitz method: 3.141609304438129
+	Monte Carlo method (using the library square (root) function): 3.1413895519596395
+	Gregory-Leibnitz method: 3.1416090494514464
 	Archimedes' method (using the approximated square root): 3.1414670028686524 < π < 3.1414670028686524
 	Archimedes' method (using the library square root function): 3.1415926535897927 < π < 3.1415926535897927
 Complete.
@@ -182,9 +182,9 @@ Complete.
 
 ***The tenth assignment***
 -> Monty hall problem (100000 iterations):
-	Choice =     STAY:	0.3338	Expected: ⅓
-	Choice =   CHANGE:	0.6664	Expected: ⅔
-	Choice = WHATEVER:	0.4996	Expected: ½
+	Choice =     STAY:	0.3334	Expected: ⅓
+	Choice =   CHANGE:	0.6673	Expected: ⅔
+	Choice = WHATEVER:	0.4993	Expected: ½
 ==========
 -> (Non)random numbers
 	1	 Repeating permutations of (1,2,3,4,5,6)
@@ -201,16 +201,16 @@ Complete.
 ==========
 -> Bayes theorem and simulations:
 	N=100; X=3; 1 million iterations for experiment:
-		experiment: 0.004665
+		experiment: 0.004399
 		bayes:      0.3142857142857142
 	N=10; X=5; 1 million iterations for experiment:
-		experiment: 1.12E-4
+		experiment: 1.34E-4
 		bayes:      0.0011560693641618494
 	N=10; X=3; 1 million iterations for experiment:
-		experiment: 0.004242
+		experiment: 0.004181
 		bayes:      0.03999999999999999
 	N=10; X=1; 1 million iterations for experiment:
-		experiment: 0.149749
+		experiment: 0.149669
 		bayes:      0.6
 Complete.
 
@@ -231,6 +231,13 @@ Complete.
 	[0.0 ; 0.0] ~~> [0.0 ; 2.0] ~~> [3.0 ; 2.0] ~~> [3.0 ; 1.0] ~~> [1.0 ; 1.0] ~~> [4.0 ; 1.0] ~~> [4.0 ; 4.0]
 ==========
 -> Lamp maze(input from inputs/assignment12/lampMaze.txt; fieldSize == 100)...... ✓ (assignment12/lamps.svg)
+Complete.
+
+***The thirteenth assignment***
+-> Squared maze (30x30)...... ✓ (assignment13/square-1.svg)
+==========
+-> Triangular maze (40x40)...... ✓ (assignment13/triangle-1.svg)
+-> Iterations of the Kurskal's algorithm (20x20) ✓ (assignment13/kruskal-iter-%03d.svg[0-399])
 Complete.
 
 ```

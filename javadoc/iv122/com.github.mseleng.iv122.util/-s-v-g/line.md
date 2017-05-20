@@ -12,7 +12,7 @@ Adds a line
 
 ### Parameters
 
-`line` - a [Line](../-line.md) to add
+`line` - a Line to add
 
 **Return**
 this
@@ -45,7 +45,7 @@ Adds a line
 
 `y2` - the y-coordinate of the end point
 
-`style` - the desired style of the line (default: [defaultLineStyle](../default-line-style.md))
+`style` - the desired style of the line (default: defaultLineStyle)
 
 **Return**
 this

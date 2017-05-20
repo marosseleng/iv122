@@ -17,5 +17,5 @@ Creates a regular polygon with [n](polygon.md#com.github.mseleng.iv122.assignmen
 `a` - the lenght of an edge
 
 **Return**
-the list of [Line](../com.github.mseleng.iv122.util/-line.md)s representing the regular polygon
+the list of Lines representing the regular polygon
 

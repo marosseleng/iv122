@@ -7,3 +7,6 @@ title: SearchState.DISCOVERED - iv122
 # DISCOVERED
 
 `DISCOVERED`
+
+Node has already been discovered (is in the queue or the stack)
+

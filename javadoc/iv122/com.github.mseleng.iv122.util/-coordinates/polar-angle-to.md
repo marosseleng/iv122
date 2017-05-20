@@ -7,3 +7,6 @@ title: Coordinates.polarAngleTo - iv122
 # polarAngleTo
 
 `fun polarAngleTo(other: `[`Coordinates`](index.md)`): Double`
+
+Returns the polar angle between this and other
+

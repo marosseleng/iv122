@@ -7,3 +7,9 @@ title: Node.coordinates - iv122
 # coordinates
 
 `var coordinates: `[`Coordinates`](../-coordinates/index.md)
+
+the coordinates of this node
+
+### Property
+
+`coordinates` - the coordinates of this node

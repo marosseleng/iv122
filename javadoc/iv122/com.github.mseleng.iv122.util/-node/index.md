@@ -8,23 +8,22 @@ title: Node - iv122
 
 `class Node<T>`
 
+Generic class representing the node in the graph, which is identified by its coordinates and value
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Node(value: T, coordinates: `[`Coordinates`](../-coordinates/index.md)`)` |
+| [&lt;init&gt;](-init-.md) | `Node(value: T, coordinates: `[`Coordinates`](../-coordinates/index.md)`)`<br>creates the node with the specified [value](-init-.md#com.github.mseleng.iv122.util.Node$<init>(com.github.mseleng.iv122.util.Node.T, com.github.mseleng.iv122.util.Coordinates)/value) and [coordinates](-init-.md#com.github.mseleng.iv122.util.Node$<init>(com.github.mseleng.iv122.util.Node.T, com.github.mseleng.iv122.util.Coordinates)/coordinates) |
 
 ### Properties
 
-| [coordinates](coordinates.md) | `var coordinates: `[`Coordinates`](../-coordinates/index.md) |
+| [coordinates](coordinates.md) | `var coordinates: `[`Coordinates`](../-coordinates/index.md)<br>the coordinates of this node |
 | [distanceFromStart](distance-from-start.md) | `var distanceFromStart: Int` |
 | [neighbors](neighbors.md) | `var neighbors: Set<Node<T>>` |
 | [predecessor](predecessor.md) | `var predecessor: Node<T>?` |
 | [searchState](search-state.md) | `var searchState: `[`SearchState`](../-search-state/index.md) |
-| [value](value.md) | `val value: T` |
+| [value](value.md) | `val value: T`<br>the value associated with this node |
 
 ### Functions
 
-| [equals](equals.md) | `fun equals(other: Any?): Boolean` |
-| [hashCode](hash-code.md) | `fun hashCode(): Int` |
-| [initSSSP](init-s-s-s-p.md) | `fun initSSSP(): Unit` |
-| [toString](to-string.md) | `fun toString(): String` |
+| [initSSSP](init-s-s-s-p.md) | `fun initSSSP(): Unit`<br>Initializes this node for the Single-source-shortest-path algorithms |
 

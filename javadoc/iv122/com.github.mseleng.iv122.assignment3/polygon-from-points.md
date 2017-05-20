@@ -15,5 +15,5 @@ Creates a polygon by "connecting the given [points](polygon-from-points.md#com.g
 `points` - the points to connect
 
 **Return**
-the list of [Line](../com.github.mseleng.iv122.util/-line.md)s reprezenting the polygon
+the list of Lines reprezenting the polygon
 

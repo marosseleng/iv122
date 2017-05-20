@@ -13,5 +13,5 @@ Returns this rational number represented as a decimal fraction (when possible)
 If the number is less than one, this method returns something like this 0([part](part.md)/[whole](whole.md))
 
 **Return**
-the [DecimalFraction](../-decimal-fraction.md) representing this rational number
+the DecimalFraction representing this rational number
 

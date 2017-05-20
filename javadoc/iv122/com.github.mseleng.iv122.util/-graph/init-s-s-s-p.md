@@ -7,3 +7,6 @@ title: Graph.initSSSP - iv122
 # initSSSP
 
 `fun initSSSP(): Unit`
+
+Initializes the SSSP algorithm on this graph
+

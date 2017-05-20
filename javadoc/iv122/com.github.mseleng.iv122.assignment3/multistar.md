@@ -17,5 +17,5 @@ Creates a "regular multistar" (a star-like shape inscribed into a [n](multistar.
 `a` - the length of an edge of the border polygon
 
 **Return**
-the list of [Line](../com.github.mseleng.iv122.util/-line.md)s representing the "regular multistar"
+the list of Lines representing the "regular multistar"
 

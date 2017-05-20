@@ -25,11 +25,8 @@ Each point p of this line l must suit the equation y = a*x + b
 
 ### Functions
 
-| [getValue](get-value.md) | `fun getValue(x: Double): Double` |
+| [getValue](get-value.md) | `fun getValue(x: Double): Double`<br>Returns the y, by substituting [x](get-value.md#com.github.mseleng.iv122.util.ParametricLine$getValue(kotlin.Double)/x) |
 | [intersectionWith](intersection-with.md) | `fun intersectionWith(other: ParametricLine): `[`Coordinates`](../-coordinates/index.md)`?`<br>Finds and returns (if exists) the intersection between this and other line |
-| [isAscending](is-ascending.md) | `fun isAscending(): Boolean` |
-| [isDescending](is-descending.md) | `fun isDescending(): Boolean` |
-| [isHorizontal](is-horizontal.md) | `fun isHorizontal(): Boolean` |
 | [substituteCoordinates](substitute-coordinates.md) | `fun substituteCoordinates(point: `[`Coordinates`](../-coordinates/index.md)`): Double`<br>Substitutes the coordinates in the equation a*x + b - y.
 Returns the result, which is usable for determining the position of the given point relative to the line |
 

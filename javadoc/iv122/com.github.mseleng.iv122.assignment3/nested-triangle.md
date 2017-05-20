@@ -21,5 +21,5 @@ Creates the triangle with nested ones
 `skip` - which lines to skip (skip == 5 means that every fifth line will not be printed; skip == 0 means every line will be printed)
 
 **Return**
-the list of SVG [Line](../com.github.mseleng.iv122.util/-line.md)s
+the list of SVG Lines
 

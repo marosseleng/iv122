@@ -16,7 +16,7 @@ Returns the "inside-out" star. The result image can be seen in the file 'outputs
 
 `stepWidth` - the size of the gap between each step (how far from each other the points are)
 
-`lineStyle` - the style of the line. Default: [defaultLineStyle](../com.github.mseleng.iv122.util/default-line-style.md)
+`lineStyle` - the style of the line. Default: defaultLineStyle
 
 **Return**
 an SVG containing the output

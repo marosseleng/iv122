@@ -10,7 +10,7 @@ title: times - iv122
 
 Multiplies this color by the given [ratio](times.md#com.github.mseleng.iv122.util$times(java.awt.Color, kotlin.Double)/ratio).
 
-Ratio must be a number between [0.0,1.0](#) inclusive
+Ratio must be a number between (0.0, 1.0) inclusive
 
 ### Parameters
 

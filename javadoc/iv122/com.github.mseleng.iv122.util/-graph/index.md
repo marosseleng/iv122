@@ -8,16 +8,17 @@ title: Graph - iv122
 
 `data class Graph<T>`
 
+Representing the graph
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `Graph(nodes: List<`[`Node`](../-node/index.md)`<T>> = mutableListOf())` |
+| [&lt;init&gt;](-init-.md) | `Graph(nodes: List<`[`Node`](../-node/index.md)`<T>> = mutableListOf())`<br>Representing the graph |
 
 ### Properties
 
-| [nodes](nodes.md) | `val nodes: List<`[`Node`](../-node/index.md)`<T>>` |
+| [nodes](nodes.md) | `val nodes: List<`[`Node`](../-node/index.md)`<T>>`<br>the list of nodes defining this graph |
 
 ### Functions
 
-| [initSSSP](init-s-s-s-p.md) | `fun initSSSP(): Unit` |
-| [toString](to-string.md) | `fun toString(): String` |
+| [initSSSP](init-s-s-s-p.md) | `fun initSSSP(): Unit`<br>Initializes the SSSP algorithm on this graph |
 

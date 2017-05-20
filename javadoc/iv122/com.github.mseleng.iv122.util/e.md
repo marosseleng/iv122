@@ -10,7 +10,7 @@ title: e - iv122
 
 Approximates the Euler's number
 
-e = SUM(n in [0,inf](#)) (1/n!)
+e = SUM(n in &lt;0,inf&gt;) (1/n!)
 
 ### Parameters
 

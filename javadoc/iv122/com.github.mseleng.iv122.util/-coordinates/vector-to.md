@@ -7,3 +7,6 @@ title: Coordinates.vectorTo - iv122
 # vectorTo
 
 `fun vectorTo(other: `[`Coordinates`](index.md)`): `[`Coordinates`](index.md)
+
+Returns the (0;0) based vector from this to other
+

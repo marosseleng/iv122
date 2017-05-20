@@ -7,6 +7,13 @@ title: Turtle.backward - iv122
 # backward
 
 `fun backward(amount: Int): Unit`
+
+Does backward
+
+### Parameters
+
+`amount` - the distance to go
+
 `fun backward(amount: Double): Unit`
 
 Does backward but stay in the [currentDirection](#)

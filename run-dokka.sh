@@ -5,6 +5,7 @@ PROGRAM_OUTPUT=iv122_outputs
 JAVADOC_DIR=javadoc
 ASSIGNMENT7_DIR=${PROGRAM_OUTPUT}/assignment7
 ASSIGNMENT11_DIR=${PROGRAM_OUTPUT}/assignment11
+ASSIGNMENT13_DIR=${PROGRAM_OUTPUT}/assignment13
 
 #remove everything
 rm -rf ${JAVADOC_DIR} ${PROGRAM_OUTPUT} ${CONSOLE_OUTPUT} &> /dev/null
@@ -56,3 +57,13 @@ mv *.gif gifs/
 
 rm linreg-gd*
 rm clusters*
+
+cd ../..
+cd ${ASSIGNMENT13_DIR}
+#using `convert` from ImageMagick library
+convert 'kruskal-iter-%03d.svg[0-500]' kruskal.gif
+
+mkdir gifs
+mv *.gif gifs/
+
+rm kruskal-iter*

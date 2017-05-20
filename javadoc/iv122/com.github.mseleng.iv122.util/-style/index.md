@@ -12,11 +12,11 @@ The class representing the style of the SVG elements
 
 ### Parameters
 
-`stroke` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the stroke
+`stroke` - the Color of the stroke
 
 `strokeWidth` - the width of the stroke
 
-`fill` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the fill
+`fill` - the Color of the fill
 
 ### Constructors
 
@@ -24,7 +24,7 @@ The class representing the style of the SVG elements
 
 ### Properties
 
-| [fill](fill.md) | `val fill: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`<br>the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the fill |
-| [stroke](stroke.md) | `val stroke: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`<br>the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the stroke |
+| [fill](fill.md) | `val fill: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`<br>the Color of the fill |
+| [stroke](stroke.md) | `val stroke: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`<br>the Color of the stroke |
 | [strokeWidth](stroke-width.md) | `val strokeWidth: Int?`<br>the width of the stroke |
 

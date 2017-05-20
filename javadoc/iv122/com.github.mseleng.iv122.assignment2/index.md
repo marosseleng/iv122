@@ -25,7 +25,7 @@ title: com.github.mseleng.iv122.assignment2 - iv122
 
 ### Functions
 
-| [combinations](combinations.md) | `fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean): <ERROR CLASS>`<br>Returns the list of [k](combinations.md#com.github.mseleng.iv122.assignment2$combinations(kotlin.collections.List((kotlin.Int)), kotlin.Int, kotlin.Boolean)/k)-combinations of the given numbers |
+| [combinations](combinations.md) | `fun combinations(numbers: List<Int>, k: Int, allowRepetition: Boolean): Set<String>`<br>Returns the list of [k](combinations.md#com.github.mseleng.iv122.assignment2$combinations(kotlin.collections.List((kotlin.Int)), kotlin.Int, kotlin.Boolean)/k)-combinations of the given numbers |
 | [pascal](pascal.md) | `fun pascal(n: Int, generator: `[`PascalTriangleColorGenerator`](-pascal-triangle-color-generator/index.md)`): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>Creates a Pascal's triangle that visualizes the numbers from the given generator |
 | [permutations](permutations.md) | `fun permutations(numbers: List<Int>): List<String>`<br>Returns the list of permutations of the given numbers |
 | [pi_Archimedes](pi_-archimedes.md) | `fun pi_Archimedes(interval_ms: Long, sqrt: (Double) -> Double): `[`ArchimedesπRange`](-archimedesπ-range/index.md)<br>Approximates the value of π using the [Archimedes'](https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Polygon_approximation_to_a_circle) method |

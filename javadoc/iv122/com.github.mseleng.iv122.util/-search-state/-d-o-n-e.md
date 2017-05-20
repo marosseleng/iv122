@@ -7,3 +7,6 @@ title: SearchState.DONE - iv122
 # DONE
 
 `DONE`
+
+Node is fully searched
+

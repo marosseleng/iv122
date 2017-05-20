@@ -16,16 +16,16 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 | [Custom](-custom/index.md) | `class Custom : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the custom defined movement of the turtle |
 | [Direction](-direction/index.md) | `enum class Direction`<br>Enum representing directions in a 2D grid |
 | [Forward](-forward/index.md) | `class Forward : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the forward move |
-| [Graph](-graph/index.md) | `data class Graph<T>` |
+| [Graph](-graph/index.md) | `data class Graph<T>`<br>Representing the graph |
 | [LSystem](-l-system/index.md) | `class LSystem`<br>Class representing the L-system |
 | [Left](-left/index.md) | `class Left : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the left rotation |
-| [Node](-node/index.md) | `class Node<T>` |
+| [Node](-node/index.md) | `class Node<T>`<br>Generic class representing the node in the graph, which is identified by its coordinates and value |
 | [ParametricLine](-parametric-line/index.md) | `data class ParametricLine`<br>Class representing a line in Carthesian system, more specificaly its parametric representation |
 | [Pop](-pop/index.md) | `class Pop : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the pop from the stack |
 | [Push](-push/index.md) | `class Push : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the push to the stack |
 | [Right](-right/index.md) | `class Right : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the right rotation |
 | [SVG](-s-v-g/index.md) | `class SVG`<br>An helper class for the work with the SVG images |
-| [SearchState](-search-state/index.md) | `enum class SearchState` |
+| [SearchState](-search-state/index.md) | `enum class SearchState`<br>The state of the node when searching through the graph |
 | [StandStill](-stand-still/index.md) | `class StandStill : `[`TurtleDirections`](-turtle-directions/index.md)<br>A subclass of [TurtleDirections](-turtle-directions/index.md) representing the default fallback (the turtle does nothing) |
 | [Style](-style/index.md) | `data class Style`<br>The class representing the style of the SVG elements |
 | [Turtle](-turtle/index.md) | `class Turtle`<br>A helper class to work with the turtle graphics |
@@ -35,7 +35,7 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 
 | [LSystemGrammarRules](-l-system-grammar-rules.md) | `typealias LSystemGrammarRules = Map<Char, String>`<br>The typealias for the grammar rules within the L-System |
 | [LSystemTurtleRules](-l-system-turtle-rules.md) | `typealias LSystemTurtleRules = Map<Char, `[`TurtleDirections`](-turtle-directions/index.md)`>`<br>The typealias for the turtle rules within the L-System |
-| [Line](-line.md) | `typealias Line = <ERROR CLASS><`[`Coordinates`](-coordinates/index.md)`, `[`Coordinates`](-coordinates/index.md)`>`<br>A typealias for the [kotlin.Pair](#) of [Coordinates](-coordinates/index.md) representing the starting and the end point of a line in SVG |
+| [Line](-line.md) | `typealias Line = <ERROR CLASS><`[`Coordinates`](-coordinates/index.md)`, `[`Coordinates`](-coordinates/index.md)`>`<br>A typealias for the kotlin.Pair of Coordinates representing the starting and the end point of a line in SVG |
 
 ### Extensions for External Classes
 
@@ -52,10 +52,10 @@ http://introcs.cs.princeton.edu/java/32class/Complex.java.html |
 
 ### Functions
 
-| [bfs](bfs.md) | `fun <T> bfs(graph: `[`Graph`](-graph/index.md)`<T>, startingNode: `[`Node`](-node/index.md)`<T>): Unit` |
+| [bfs](bfs.md) | `fun <T> bfs(graph: `[`Graph`](-graph/index.md)`<T>, startingNode: `[`Node`](-node/index.md)`<T>): Unit`<br>Performs the Breadth-first search on the given [graph](bfs.md#com.github.mseleng.iv122.util$bfs(com.github.mseleng.iv122.util.Graph((com.github.mseleng.iv122.util.bfs.T)), com.github.mseleng.iv122.util.Node((com.github.mseleng.iv122.util.bfs.T)))/graph). Starting at the [startingNode](bfs.md#com.github.mseleng.iv122.util$bfs(com.github.mseleng.iv122.util.Graph((com.github.mseleng.iv122.util.bfs.T)), com.github.mseleng.iv122.util.Node((com.github.mseleng.iv122.util.bfs.T)))/startingNode) |
 | [bisection](bisection.md) | `fun bisection(num: Double, from: Double, to: Double, eps: Double = 0.00001, validate: (Double) -> Double): Double`<br>Approximates the number using bisection |
 | [bitmapImage](bitmap-image.md) | `fun bitmapImage(width: Int, height: Int, backgroundColor: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)` = Color.WHITE, init: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`.() -> Unit = {}): `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)<br>An helper function that creates an instance of [BufferedImage](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html) for further edit. |
-| [constructBFSPathToStart](construct-b-f-s-path-to-start.md) | `fun <T> constructBFSPathToStart(target: `[`Node`](-node/index.md)`<T>): List<`[`Node`](-node/index.md)`<T>>` |
+| [constructBFSPathToStart](construct-b-f-s-path-to-start.md) | `fun <T> constructBFSPathToStart(target: `[`Node`](-node/index.md)`<T>): List<`[`Node`](-node/index.md)`<T>>`<br>After performing the BFS, this function computes the shortes path from the [target](construct-b-f-s-path-to-start.md#com.github.mseleng.iv122.util$constructBFSPathToStart(com.github.mseleng.iv122.util.Node((com.github.mseleng.iv122.util.constructBFSPathToStart.T)))/target) to the BFS starting node |
 | [drawSurrounding](draw-surrounding.md) | `fun drawSurrounding(point: `[`Coordinates`](-coordinates/index.md)`, img: `[`BufferedImage`](http://docs.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html)`, color: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`): Unit`<br>Fills the surroundings (3x3 grid) of the given point in the given image |
 | [e](e.md) | `fun e(eps: Double = 0.000001): Double`<br>Approximates the Euler's number |
 | [fileWithName](file-with-name.md) | `fun fileWithName(rootDirName: String = "iv122_outputs", assignmentNo: Int, name: String): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)<br>Returns an instance of [File](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) somewhere in the `/outputs/` directory |

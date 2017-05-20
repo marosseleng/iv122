@@ -8,8 +8,8 @@ title: Style.stroke - iv122
 
 `val stroke: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`
 
-the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the stroke
+the Color of the stroke
 
 ### Property
 
-`stroke` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the stroke
+`stroke` - the Color of the stroke

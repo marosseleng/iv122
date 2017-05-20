@@ -7,3 +7,9 @@ title: Node.value - iv122
 # value
 
 `val value: T`
+
+the value associated with this node
+
+### Property
+
+`value` - the value associated with this node

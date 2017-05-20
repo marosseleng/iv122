@@ -7,3 +7,6 @@ title: SearchState.NOT_DISCOVERED - iv122
 # NOT_DISCOVERED
 
 `NOT_DISCOVERED`
+
+Node has not been discovered yet
+

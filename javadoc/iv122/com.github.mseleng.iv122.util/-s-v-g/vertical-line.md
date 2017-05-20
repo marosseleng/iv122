@@ -16,7 +16,7 @@ Adds the vertical line
 
 `height` - the desired height of the line
 
-`style` - the desired style of the line (default: [defaultLineStyle](../default-line-style.md))
+`style` - the desired style of the line (default: defaultLineStyle)
 
 **Return**
 this

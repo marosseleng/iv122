@@ -32,7 +32,7 @@ y+        +
 
 bl       x      br
 
-This function uses the [linearInterpolation](linear-interpolation.md) function three times:
+This function uses the linearInterpolation function three times:
 
 1. computes the value q by interpolating the values [tl](bilinear-interpolation.md#com.github.mseleng.iv122.assignment1$bilinearInterpolation(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/tl) and [tr](bilinear-interpolation.md#com.github.mseleng.iv122.assignment1$bilinearInterpolation(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/tr)
 1. computes the value r by interpolating the values [bl](bilinear-interpolation.md#com.github.mseleng.iv122.assignment1$bilinearInterpolation(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/bl) and [br](bilinear-interpolation.md#com.github.mseleng.iv122.assignment1$bilinearInterpolation(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/br)

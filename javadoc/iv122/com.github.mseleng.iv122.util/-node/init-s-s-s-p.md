@@ -7,3 +7,6 @@ title: Node.initSSSP - iv122
 # initSSSP
 
 `fun initSSSP(): Unit`
+
+Initializes this node for the Single-source-shortest-path algorithms
+

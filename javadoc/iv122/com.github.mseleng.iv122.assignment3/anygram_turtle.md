@@ -17,5 +17,5 @@ Creates the regular polygon with [n](anygram_turtle.md#com.github.mseleng.iv122.
 `length` - the length of polygon's edges
 
 **Return**
-the list of [Line](../com.github.mseleng.iv122.util/-line.md)s representing the polygon with its inner star
+the list of Lines representing the polygon with its inner star
 

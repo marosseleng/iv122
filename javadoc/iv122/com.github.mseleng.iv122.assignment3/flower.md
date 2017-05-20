@@ -17,5 +17,5 @@ Creates the "flower" of 12 dodekagons
 `offset` - the coordinates of the top-left vertex
 
 **Return**
-the list of SVG [Line](../com.github.mseleng.iv122.util/-line.md)s
+the list of SVG Lines
 

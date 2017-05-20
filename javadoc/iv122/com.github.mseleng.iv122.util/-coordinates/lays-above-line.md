@@ -7,3 +7,6 @@ title: Coordinates.laysAboveLine - iv122
 # laysAboveLine
 
 `fun laysAboveLine(line: `[`ParametricLine`](../-parametric-line/index.md)`): Boolean`
+
+Returns true if this lays above the [line](lays-above-line.md#com.github.mseleng.iv122.util.Coordinates$laysAboveLine(com.github.mseleng.iv122.util.ParametricLine)/line)
+

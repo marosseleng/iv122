@@ -8,8 +8,8 @@ title: Style.fill - iv122
 
 `val fill: `[`Color`](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html)`?`
 
-the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the fill
+the Color of the fill
 
 ### Property
 
-`fill` - the [Color](http://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) of the fill
+`fill` - the Color of the fill

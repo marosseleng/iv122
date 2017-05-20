@@ -6,7 +6,7 @@ title: Coordinates.toTriple - iv122
 
 # toTriple
 
-`fun toTriple(): <ERROR CLASS>`
+`fun toTriple(): <ERROR CLASS><Double, Double, Double>`
 
 Returns the coordinates represented as the triple (for homogeneous transformations)
 

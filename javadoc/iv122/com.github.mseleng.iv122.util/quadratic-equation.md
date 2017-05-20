@@ -21,6 +21,6 @@ ax^2 + bx + c = 0
 `c` - the absolute coefficient
 
 **Return**
-a pair of [Double.NEGATIVE_INFINITY](#) iff the discriminant is less than 0;
+a pair of Double.NEGATIVE_INFINITY iff the discriminant is less than 0;
 a pair of same values iff the discriminant is zero; the roots of the equation otherwise
 

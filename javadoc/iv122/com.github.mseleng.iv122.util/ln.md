@@ -10,7 +10,7 @@ title: ln - iv122
 
 Approximates the natural logarithm of the given [x](ln.md#com.github.mseleng.iv122.util$ln(kotlin.Double, kotlin.Double)/x)
 
-ln(x) = 2 * SUM(n in [0,inf](#)) ((1/(2n+1)) * (((x-1)/(x+1))^(2n+1)))
+ln(x) = 2 * SUM(n in &lt;0,inf&gt;) ((1/(2n+1)) * (((x-1)/(x+1))^(2n+1)))
 WIKI: https://en.wikipedia.org/wiki/Logarithm#Calculation
 
 ### Parameters
